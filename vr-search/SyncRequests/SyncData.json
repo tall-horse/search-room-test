@@ -1,0 +1,159 @@
+{
+  "version": "1.0.0",
+  "interactables": [
+    {
+      "id": "3a284567-8a8d-4a59-a02f-09394ade5669",
+      "display_name": "Drawer",
+      "description": "A drawer you can open",
+      "tags": [
+        "BlueTea.Core.Tags.Default",
+        "BlueTea.Core.Tags.Clickable",
+        "BlueTea.Core.Tags.Mesh"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "action_category": "Interaction",
+      "type": "ClickAction",
+      "version": "0.1.0",
+      "description": "Wait for the player to click on interactables",
+      "properties": [
+        {
+          "name": "Targets",
+          "default_value": [
+            "Drawer"
+          ],
+          "sorting": 0,
+          "description": "The interactables to click",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [
+            {
+              "type": "tag",
+              "values": [
+                "BlueTea.Core.Tags.Clickable"
+              ]
+            },
+            {
+              "type": "string",
+              "values": [
+                "All"
+              ]
+            }
+          ],
+          "siblings": [],
+          "type": "interactable[]"
+        },
+        {
+          "name": "ClickMode",
+          "default_value": "Any",
+          "sorting": 1,
+          "description": "Should the user click on any or all of the listed targets",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [
+            {
+              "type": "string",
+              "values": [
+                "Any",
+                "All"
+              ]
+            }
+          ],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 2,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 3,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    }
+  ],
+  "action_property_groups": [
+    {
+      "sorting": 0,
+      "name": "Default",
+      "collapsed": true
+    }
+  ],
+  "action_categories": [
+    {
+      "name": "Audio",
+      "description": "This category includes actions that will control audio (play/stop) in the game",
+      "icon": "volume-high"
+    },
+    {
+      "name": "Instruction",
+      "description": "This category includes actions that will instruct the player. Think of Text To Speech (TTS).",
+      "icon": "info"
+    },
+    {
+      "name": "Interaction",
+      "description": "This category includes actions that need input or response from the player. Think of it as tasks where you have to do something, like clicking a button or typing in information",
+      "icon": "computer-mouse"
+    },
+    {
+      "name": "Level Flow",
+      "description": "This category exist with actions that controls the flow of your level.",
+      "icon": "arrow-right"
+    },
+    {
+      "name": "Scoring",
+      "description": "This category exist with actions that controls level scoring.",
+      "icon": "list-check"
+    },
+    {
+      "name": "Timers",
+      "description": "This category includes actions that make use of timers",
+      "icon": "clock"
+    },
+    {
+      "name": "Default",
+      "description": "Default category for actions",
+      "icon": "circle"
+    }
+  ]
+}

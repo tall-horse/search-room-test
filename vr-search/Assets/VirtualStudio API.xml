@@ -1,0 +1,2503 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VirtualStudio API</name>
+    </assembly>
+    <members>
+        <member name="T:VirtualStudio.Actions.ActionAttribute">
+            <summary>
+            An attribute used to set the version, description and categories of an action
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Actions.ActionAttribute.Version">
+            <summary>
+            The version of the action
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Actions.ActionAttribute.Description">
+            <summary>
+            The description of the action
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Actions.ActionAttribute.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VirtualStudio.Actions.ActionAttribute"/> class with the specified version, description, and action categories.
+            </summary>
+            <param name="version">The version of the action.</param>
+            <param name="description">A brief description of the action.</param>
+        </member>
+        <member name="T:VirtualStudio.Actions.ActionPropertyInformation">
+            <summary>
+            Represents information about an action property.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyInformation.Name">
+            <summary>
+            The name of the property.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyInformation.DefaultValue">
+            <summary>
+            The default value of the property.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyInformation.Sorting">
+            <summary>
+            The sorting order of the property.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyInformation.Description">
+            <summary>
+            The description of the property.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyInformation.Constraints">
+            <summary>
+            The constraints applied to the property.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyInformation.PropertyGroup">
+            <summary>
+            The property group to which the property belongs.
+            Default value is "Default".
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyInformation.IsRequired">
+            <summary>
+            A value indicating whether the property is required.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyInformation.IsHidden">
+            <summary>
+            A value indicating whether the property is hidden.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyInformation.MimeTypes">
+            <summary>
+            The list of supported MIME types for the property.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyInformation.IsTranslatable">
+            <summary>
+            A value indicating whether the property is translatable.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Actions.ActionPropertyInformation.Type">
+            <summary>
+            The type of the property.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyInformation.Choices">
+            <summary>
+            The list of possible choices for the property.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyInformation.Siblings">
+            <summary>
+            The list of action properties related to this one.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Actions.ActionPropertyType">
+            <summary>
+            Represents the type of properties for an action.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyType.Null">
+            <summary>
+            Represents a null value.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyType.Boolean">
+            <summary>
+            Represents a boolean value.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyType.Color">
+            <summary>
+            Represents a color value.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyType.Float">
+            <summary>
+            Represents a floating point number value.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyType.GameCharacter">
+            <summary>
+            Represents a game character value.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyType.Int">
+            <summary>
+            Represents an integer value.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyType.Media">
+            <summary>
+            Represents a media value.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyType.SSML">
+            <summary>
+            Represents SSML (Speech Synthesis Markup Language) text.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyType.String">
+            <summary>
+            Represents a string value.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyType.Strings">
+            <summary>
+            Represents an array of string values.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyType.Text">
+            <summary>
+            Represents text.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyType.Interactable">
+            <summary>
+            Represents an interactable object.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ActionPropertyType.Interactables">
+            <summary>
+            Represents an array of interactable objects.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Actions.Categories.ActionCategory">
+            <summary>
+            Represents a category for an action.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Actions.Categories.ActionCategory.Name">
+            <summary>
+            the name of the action category.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Actions.Categories.ActionCategory.Description">
+            <summary>
+            the description of the action category.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Actions.Categories.ActionCategory.Icon">
+            <summary>
+            the icon associated with the action category.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Actions.ChoiceType">
+            <summary>
+            Represents the type of choices available for an action property.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ChoiceType.Tag">
+            <summary>
+            Represents choices that are tags.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.ChoiceType.String">
+            <summary>
+            Represents choices that are strings.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Actions.Constraints.Between">
+            <summary>
+            Represents a constraint that checks whether a float value falls within a specified range.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.Constraints.Between.Min">
+            <summary>
+            Gets or sets the minimum allowed value for the constraint.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.Constraints.Between.Max">
+            <summary>
+            Gets or sets the maximum allowed value for the constraint.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Actions.Constraints.Between.#ctor(System.Single,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VirtualStudio.Actions.Constraints.Between"/> class with the specified minimum and maximum values.
+            </summary>
+            <param name="min">The minimum allowed value.</param>
+            <param name="max">The maximum allowed value.</param>
+        </member>
+        <member name="M:VirtualStudio.Actions.Constraints.Between.Validate(System.Object)">
+            <summary>
+            Validates whether the provided float value falls within the specified range.
+            </summary>
+            <param name="input">The float value to be validated.</param>
+            <returns>
+              <c>true</c> if the input value is within the specified range;
+              otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:VirtualStudio.Actions.Constraints.Constraint">
+            <summary>
+            Represents a base class for constraints that define validation rules.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.Constraints.Constraint.RuleName">
+            <summary>
+            Rule name for when it doesn't match the classname
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Actions.Constraints.Constraint.Rule">
+            <summary>
+            Gets the type of the constraint in snake case.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.Constraints.Constraint.Parameters">
+            <summary>
+            Parameters for the specified rule
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Actions.Constraints.Constraint.Validate(System.Object)">
+            <summary>
+            Validates the specified value against the constraint rules.
+            </summary>
+            <param name="value">The value to be validated.</param>
+            <returns>
+              <c>true</c> if the value satisfies the constraint rules;
+              otherwise, <c>false</c>.
+            </returns>
+            <exception cref="T:System.NotImplementedException">Thrown when validation is not implemented for this constraint.</exception>
+        </member>
+        <member name="T:VirtualStudio.Actions.Constraints.GreaterThan">
+            <summary>
+            Represents a constraint for validating whether a numerical value is greater than a specified threshold.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.Constraints.GreaterThan.Value">
+            <summary>
+            The threshold value for comparison.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Actions.Constraints.GreaterThan.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VirtualStudio.Actions.Constraints.GreaterThan"/> class with the specified threshold value.
+            </summary>
+            <param name="value">The threshold value to compare against.</param>
+        </member>
+        <member name="M:VirtualStudio.Actions.Constraints.GreaterThan.Validate(System.Object)">
+            <summary>
+            Validates whether the provided input value is greater than the specified threshold.
+            </summary>
+            <param name="input">The input value to be validated.</param>
+            <returns>True if the input value is greater than the threshold; otherwise, false.</returns>
+        </member>
+        <member name="T:VirtualStudio.Actions.Constraints.GreaterThanOrEqual">
+            <summary>
+            Represents a constraint that checks whether a numerical value is greater than or equal to a specified threshold.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.Constraints.GreaterThanOrEqual.Value">
+            <summary>
+            Gets or sets the threshold value for the constraint.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Actions.Constraints.GreaterThanOrEqual.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VirtualStudio.Actions.Constraints.GreaterThanOrEqual"/> class with the specified threshold value.
+            </summary>
+            <param name="value">The threshold value to compare against.</param>
+        </member>
+        <member name="M:VirtualStudio.Actions.Constraints.GreaterThanOrEqual.Validate(System.Object)">
+            <summary>
+            Validates whether the provided input value is greater than or equal to the threshold.
+            </summary>
+            <param name="input">The input value to be validated.</param>
+            <returns>
+              <c>true</c> if the input value is greater than or equal to the threshold;
+              otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:VirtualStudio.Actions.Constraints.LessThan">
+            <summary>
+            Represents a constraint that checks whether a numerical value is less than a specified threshold.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.Constraints.LessThan.Value">
+            <summary>
+            Gets or sets the threshold value for the constraint.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Actions.Constraints.LessThan.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VirtualStudio.Actions.Constraints.LessThan"/> class with the specified threshold value.
+            </summary>
+            <param name="value">The threshold value to compare against.</param>
+        </member>
+        <member name="M:VirtualStudio.Actions.Constraints.LessThan.Validate(System.Object)">
+            <summary>
+            Validates whether the provided input value is less than the threshold.
+            </summary>
+            <param name="input">The input value to be validated.</param>
+            <returns>
+              <c>true</c> if the input value is less than the threshold;
+              otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:VirtualStudio.Actions.Constraints.LessThanOrEqual">
+            <summary>
+            Represents a constraint that checks whether a numerical value is less than or equal to a specified threshold.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.Constraints.LessThanOrEqual.Value">
+            <summary>
+            Gets or sets the threshold value for the constraint.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Actions.Constraints.LessThanOrEqual.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VirtualStudio.Actions.Constraints.LessThanOrEqual"/> class with the specified threshold value.
+            </summary>
+            <param name="value">The threshold value to compare against.</param>
+        </member>
+        <member name="M:VirtualStudio.Actions.Constraints.LessThanOrEqual.Validate(System.Object)">
+            <summary>
+            Validates whether the provided input value is less than or equal to the threshold.
+            </summary>
+            <param name="input">The input value to be validated.</param>
+            <returns>
+              <c>true</c> if the input value is less than or equal to the threshold;
+              otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:VirtualStudio.Actions.Constraints.Parameters">
+            <summary>
+            Represents parameters with optional values.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.Constraints.Parameters.Min">
+            <summary>
+            The minimum value.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.Constraints.Parameters.Max">
+            <summary>
+            The maximum value.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.Constraints.Parameters.Value">
+            <summary>
+            The specific value.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Actions.Constraints.Regex">
+            <summary>
+            Represents a regular expression constraint for validation.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Actions.Constraints.Regex.Value">
+            <summary>
+            Gets the regular expression pattern used for validation.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Actions.Constraints.Regex.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VirtualStudio.Actions.Constraints.Regex"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Actions.Constraints.Regex.Validate(System.Object)">
+            <summary>
+            Validates the input object against the specified regular expression pattern.
+            </summary>
+            <param name="input">The object to be validated.</param>
+            <returns>True if the input matches the regular expression pattern; otherwise, false.</returns>
+        </member>
+        <member name="T:VirtualStudio.Actions.PropertyGroups.ActionPropertyGroup">
+            <summary>
+            Represents a group of properties associated with an action.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Actions.PropertyGroups.ActionPropertyGroup.Name">
+            <summary>
+            The name of the property group.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Actions.PropertyGroups.ActionPropertyGroup.Collapsed">
+            <summary>
+            A value indicating whether the property group is collapsed.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.PropertyGroups.ActionPropertyGroup.Sorting">
+            <summary>
+            The sorting order of the property group.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Actions.Sibling">
+            <summary>
+            The Sibling Class allows connections between ActionPropertyInformation fields
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.Sibling.Name">
+            <summary>
+            The name of the Sibling ActionPropertyInformation
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Actions.Sibling.#ctor(System.Func{VirtualStudio.Actions.ActionPropertyInformation},VirtualStudio.Actions.SiblingPurposeType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VirtualStudio.Actions.Sibling"/> class.
+            Evaluates the name of the <see cref="T:VirtualStudio.Actions.ActionPropertyInformation"/> passed.
+            </summary>
+            <param name="method">A function that returns an <see cref="T:VirtualStudio.Actions.ActionPropertyInformation"/> object. The name of the method is used to set the Name property, with "Info" removed from the end.</param>
+            <param name="purpose">The purpose of the sibling, specified as a <see cref="T:VirtualStudio.Actions.SiblingPurposeType"/>.</param>
+        </member>
+        <member name="F:VirtualStudio.Actions.Sibling.Purpose">
+            <summary>
+            Specifies the purpose of the sibling.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Actions.SiblingPurposeType">
+            <summary>
+            Specifies the purpose type for a sibling object within the VirtualStudio.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.SiblingPurposeType.Null">
+            <summary>
+            Represents a null or undefined purpose.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.SiblingPurposeType.Audio">
+            <summary>
+            Represents an audio-related purpose.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Actions.SiblingPurposeType.GameCharacter">
+            <summary>
+            Represents a game character purpose.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Auth.Credentials">
+            <summary>
+            Credentials class that is used for setting up the VirtualStudio Client.
+            Email, password and device ID (this should be identifiable for a user) are required for requesting a token.
+            </summary>
+            <example>
+            Credentials credentials = new Credentials(email, password, deviceID);
+            </example>
+        </member>
+        <member name="P:VirtualStudio.Auth.Credentials.Email">
+            <summary>
+            Email address to login with
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Auth.Credentials.Password">
+            <summary>
+            Password to login with
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Auth.Credentials.DeviceName">
+            <summary>
+            Unique device ID. This should be generated per installation. The user should be able to identify an installation,
+            as in the future we will likely support functionality to allow the user to logout remotely from installations.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Auth.Credentials.IsRememberMeEnabled">
+            <summary>
+            Should the token information be remembered for automatic logging in of the user to VirtualStudio
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Auth.Credentials.#ctor(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Constructor for setting up the credentials. This class is mandatory when setting up a VirtualStudio Client.
+            </summary>
+            <param name="email">Email address to login with.</param>
+            <param name="password">Password for the user.</param>
+            <param name="deviceName">Unique device ID that is set per installation.</param>
+            <param name="isRememberMeEnabled">Should the token information be remembered for automatic logging in of the user to VirtualStudio</param>
+        </member>
+        <member name="M:VirtualStudio.Auth.Credentials.IsValidEmail(System.String)">
+            <summary>
+            Validates whether the given string represents a valid email address.
+            </summary>
+            <param name="email">The email address to be validated.</param>
+            <returns>True if the email address is valid; otherwise, false.</returns>
+        </member>
+        <member name="T:VirtualStudio.Client">
+            <summary>
+            The Client is main entry point for accessing the VirtualStudio instance.
+            When set up, methods are available to get data from the API and use in your game.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Client.CUSTOMER_KEY">
+            <summary>
+            The customer key will be supplied by BlueTea. Fill in this key when you start the Client.
+            This key is used to identify potential issues through logging and is also used for support questions where needed.
+            Make sure to fill in the correct key!
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Client.Exception">
+            <summary>
+            The Exception action can be used to receive thrown exceptions when the VirtualStudio instance is contacted.
+            Subscribe to this event and process the error messages to display popups to inform the user.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Client.AuthenticationException">
+            <summary>
+            The Authentication Exception action can be used to receive thrown exceptions specifically for authentication errors.
+            Subscribe to this event and process the error messages to display popups to inform the user.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Client.IsOnline">
+            <summary>
+            Set the online status of the Client. Can be used to provide offline functionality to the game.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Client.ClientConfiguration">
+            <summary>
+            Client configuration
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Client.Mapper">
+            <summary>
+            Mapper
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Client.#ctor(VirtualStudio.ClientConfiguration)">
+            <summary>
+            Create a new client to connect with the VirtualStudio Instance.
+            Make sure to provide the client configuration with valid credentials.
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:VirtualStudio.Client.SetCredentials(VirtualStudio.Auth.Credentials)">
+            <summary>
+            Set the credentials of the user. These credentials are used for retrieving the access token.
+            </summary>
+            <param name="credentials">The Credentials instance that is used for retrieving the access token.</param>
+        </member>
+        <member name="M:VirtualStudio.Client.DownloadMedia(VirtualStudio.Models.Model,System.Action{System.Collections.Generic.List{VirtualStudio.Models.Media}})">
+            <summary>
+            The Download Media method is used for downloading all media files located in a Model.
+            The main purpose for this method is to download media files that are used in lessons.
+            </summary>
+            <param name="model">The model that is supplied here will be searched for Media objects. The URLs are then used to download the files and store on disk.</param>
+            <param name="callback">The callback that is supplied here will be triggered when all files are downloaded. When all files are downloaded, the level can be started.</param>
+        </member>
+        <member name="M:VirtualStudio.Client.RemoveCredentials">
+            <summary>
+            Remove the tokens file stored in the local storage
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Client.Authenticate(System.Action{VirtualStudio.Models.User})">
+            <summary>
+            Get the current user based on provided credentials. This method can also be used to retrieve User data.
+            </summary>
+            <param name="callback">Callback provided by the user. This callback will return the User data when received from the VirtualStudio API.</param>
+        </member>
+        <member name="M:VirtualStudio.Client.GetGame(System.String,System.Action{VirtualStudio.Models.Game})">
+            <summary>
+            Get the game information; such as ID, name, description and intro.
+            </summary>
+            <param name="gameId">The Game ID to retrieve the information from.</param>
+            <param name="callback">The callback to pass the Game model to.</param>
+        </member>
+        <member name="M:VirtualStudio.Client.GetGameVersion(System.String,System.String,System.Action{VirtualStudio.Models.GameVersion})">
+            <summary>
+            Get the Game version. This call is used to construct the game tree structure (chapters and levels).
+            </summary>
+            <param name="gameId">The game ID to use. This ID should be hardcoded in the build.</param>
+            <param name="gameVersionId">The game version ID to retrieve the version data from.
+            This can be retrieved in an earlier call based on the semver version number stored in the build data.</param>
+            <param name="callback">The callback to receive the GameVersion data in.</param>
+        </member>
+        <member name="M:VirtualStudio.Client.GetPlatforms(System.Action{System.Collections.Generic.List{VirtualStudio.Models.Platform}})">
+            <summary>
+            Get all platforms the game supports 
+            </summary>
+            <param name="callback">The callback to receive the platform data in.</param>
+        </member>
+        <member name="M:VirtualStudio.Client.GetLocales(System.Action{System.Collections.Generic.List{VirtualStudio.Models.Locale}})">
+            <summary>
+            Get all supported Locales for the game. 
+            </summary>
+            <param name="callback">The callback to receive the supported Locales data.</param>
+        </member>
+        <member name="M:VirtualStudio.Client.GetTrophies(System.String,System.Action{System.Collections.Generic.List{VirtualStudio.Models.Trophy}})">
+            <summary>
+            Get all game trophies 
+            </summary>
+            <param name="gameId">The game ID to retrieve the trophies for</param>
+            <param name="callback">The callback to receive the trophies data in.</param>
+        </member>
+        <member name="M:VirtualStudio.Client.GetLevel(System.String,System.String,System.String,System.Action{VirtualStudio.Models.Level})">
+            <summary>
+            Get Level data. This call is used to retrieve the complete level data and should only be called when loading the level as this is costly call.
+            </summary>
+            <param name="gameId">The game ID to use. This ID should be hardcoded in the build.</param>
+            <param name="gameVersionId">The game version ID to retrieve the version data from.
+            This can be retrieved in an earlier call based on the semver version number stored in the build data.</param>
+            <param name="levelId">The level ID. This can be retrieved from the GetGameVersion call.</param>
+            <param name="callback">The callback to receive the Level data in.</param>
+        </member>
+        <member name="M:VirtualStudio.Client.IsAuthenticationTokenAvailable">
+            <summary>
+            Checks if the Authentication token is available for use.
+            </summary>
+            <returns>Returns true if the token is available.</returns>
+        </member>
+        <member name="M:VirtualStudio.Client.StartSession(VirtualStudio.DTO.Session,System.Action{VirtualStudio.Response.SessionResponse})">
+            <summary>
+            Initiates a new level session in the VirtualStudio instance.
+            </summary>
+            <param name="dataTransferObject">The session to start.</param>
+            <param name="callback">Callback to handle the session response.</param>
+        </member>
+        <member name="M:VirtualStudio.Client.EndSession(VirtualStudio.DTO.Session,System.Action{VirtualStudio.Response.SessionResponse})">
+            <summary>
+            Ends an existing level session in the VirtualStudio instance.
+            </summary>
+            <param name="dataTransferObject">The session to end.</param>
+            <param name="callback">Callback to handle the session response.</param>
+        </member>
+        <member name="M:VirtualStudio.Client.SendScore(VirtualStudio.DTO.StepScore,System.Action{VirtualStudio.Response.ScoreResponse})">
+            <summary>
+            Sends the step score information based on the active session to the VirtualStudio instance.
+            </summary>
+            <param name="dataTransferObject">The step score to send.</param>
+            <param name="callback">Callback to handle the score response.</param>
+        </member>
+        <member name="T:VirtualStudio.ClientConfiguration">
+            <summary>
+            Settings class for the Client to use. This class is mandatory when setting up a Client instance.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.ClientConfiguration.BaseUrl">
+            <summary>
+            Base URL the Client should connect to. Usually the structure of the URL looks as follows: https://mygame-api.virtualstudio.nl
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.ClientConfiguration.LocalPath">
+            <summary>
+            The local path to store JSON data for offline use. For Unity games it is recommended to pass Application.persistentDataPath here.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.ClientConfiguration.ProxySettings">
+            <summary>
+            ProxySettings class to store address, port, username, password and domain
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.ClientConfiguration.#ctor(System.String,System.String,VirtualStudio.LoggingConfiguration)">
+            <summary>
+            Create a new ClientConfiguration, used for connecting to the VirtualStudio instance
+            </summary>
+            <param name="baseUrl">The base URL of the VirtualStudio instance</param>
+            <param name="localPath">The local path to store JSON data for use when offline</param>
+            <param name="loggingConfiguration">Configuration settings that will be used for logging</param>
+        </member>
+        <member name="M:VirtualStudio.ClientConfiguration.#ctor(System.String,System.String,VirtualStudio.LoggingConfiguration,VirtualStudio.ProxySettings)">
+            <summary>
+            Create a new ClientConfiguration, used for connecting to the VirtualStudio instance, including proxy settings
+            </summary>
+            <param name="baseUrl">The base URL of the VirtualStudio instance</param>
+            <param name="localPath">The local path to store JSON data for use when offline</param>
+            <param name="loggingConfiguration">Configuration settings that will be used for logging</param>
+            <param name="proxySettings">The proxy settings to use when connecting to VirtualStudio</param>
+        </member>
+        <member name="T:VirtualStudio.Dispatchers.Dispatcher`1">
+            <summary>
+            Abstract base class for dispatchers implementing common functionality for periodic execution.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Dispatchers.Dispatcher`1.BATCH_SIZE">
+            <summary>
+            The batch size for processing cached items.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Dispatchers.Dispatcher`1.DEFAULT_TIME_INTERVAL">
+            <summary>
+            Default time interval for timer, set to 10,000 milliseconds (10 seconds).
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Dispatchers.Dispatcher`1.MAX_RETRIES">
+            <summary>
+            Maximum number of retries for the dispatcher.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Dispatchers.Dispatcher`1.CachedItems">
+            <summary>
+            List to store cached items.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Dispatchers.Dispatcher`1.ProcessedCachedItems">
+            <summary>
+            List to store processed cached items.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.Dispatcher`1.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the Dispatcher class.
+            </summary>
+            <param name="cachePath">The path where the local cache is stored.</param>
+            <param name="filePrefix">The file prefix for cached files.</param>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.Dispatcher`1.Start">
+            <summary>
+            Starts the dispatcher by initializing cache, processing previous cache, and setting up the timer.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.Dispatcher`1.Stop">
+            <summary>
+            Stops the dispatcher by stopping and disposing the timer.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.Dispatcher`1.GetCache">
+            <summary>
+            Method to get the cache for the dispatcher.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.Dispatcher`1.ProcessCache">
+            <summary>
+            Method to process the cache during each timer interval.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.Dispatcher`1.ProcessBatchItem(`0)">
+            <summary>
+            Method to process a batch item from the cache.
+            </summary>
+            <param name="item">The item to be processed.</param>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.Dispatcher`1.RemoveProcessedItems">
+            <summary>
+            Removes processed items from the cached items list.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.Dispatcher`1.Reset">
+            <summary>
+            Resets the dispatcher's internal timer state.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.Dispatcher`1.Failed">
+            <summary>
+            Handles the case when the dispatcher operation fails.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.Dispatcher`1.UpdateTimeInterval(System.Double)">
+            <summary>
+            Updates the timer interval with the specified time in milliseconds.
+            </summary>
+            <param name="timeInMilliseconds">The new time interval in milliseconds.</param>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.Dispatcher`1.WriteItemToCache(System.String,System.String)">
+            <summary>
+            Writes an item to the cache with the specified file name and content.
+            </summary>
+            <param name="fileName">The file name for the cached item.</param>
+            <param name="content">The content to be written to the cache.</param>
+        </member>
+        <member name="T:VirtualStudio.Dispatchers.DispatchManager">
+            <summary>
+            Manages a collection of dispatchers and provides methods to start and stop them.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Dispatchers.DispatchManager.CACHE_FOLDER">
+            <summary>
+            Default folder name for caching.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.DispatchManager.#ctor">
+            <summary>
+            Initializes a new instance of the DispatchManager
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.DispatchManager.Finalize">
+            <summary>
+            Deconstructor to clean up resources
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.DispatchManager.AddDispatcher(VirtualStudio.Dispatchers.IDispatcher)">
+            <summary>
+            Adds a dispatcher to the manager's collection.
+            </summary>
+            <param name="dispatcher">The dispatcher to be added.</param>
+        </member>
+        <member name="T:VirtualStudio.Dispatchers.IDispatcher">
+            <summary>
+            Interface for dispatchers providing methods to start, stop, and handle caching operations.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.IDispatcher.Start">
+            <summary>
+            Starts the dispatcher.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.IDispatcher.Stop">
+            <summary>
+            Stops the dispatcher.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.IDispatcher.GetCache">
+            <summary>
+            Abstract method to get the cache for the dispatcher from the local storage.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Dispatchers.IDispatcher.ProcessCache">
+            <summary>
+            Abstract method to process the cache during each timer interval.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Exception.NoCacheAvailableException">
+            <summary>
+            The NoCacheAvailable exception is thrown whenever there isn't a local file available to load and the user is currently in offline mode.
+            The developer can then decide not to load the level and require the user to go online.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Exception.NoCacheAvailableException.#ctor(System.String)">
+            <summary>
+            Constructor for the exception. A message can be passed to display to the developer.
+            </summary>
+            <param name="message">The message to be shown in the error.</param>
+        </member>
+        <member name="T:VirtualStudio.Exception.ResponseNullException">
+            <summary>
+            The ResponseNullException will occur whenever there is an issue with retrieving data from VirtualStudio and the result is a null value.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Exception.ResponseNullException.#ctor(System.String)">
+            <summary>
+            Constructor for the exception. A message can be passed to display to the developer.
+            </summary>
+            <param name="message">The message to be shown in the error.</param>
+        </member>
+        <member name="T:VirtualStudio.Extensions.StringExtensions">
+            <summary>
+            VirtualStudio API String extensions
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Extensions.StringExtensions.ToMD5Hash(System.String)">
+            <summary>
+            Create an MD5 hash of a given string
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VirtualStudio.JSON.Converters.ToStringJsonConverter">
+            <summary>
+            Custom JSON converter that serializes objects to their string representations.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.JSON.Converters.ToStringJsonConverter.CanConvert(System.Type)">
+            <summary>
+            Determines whether the converter can convert objects of the specified type.
+            </summary>
+            <param name="objectType">The type of the object to be converted.</param>
+            <returns>Always returns true.</returns>
+        </member>
+        <member name="M:VirtualStudio.JSON.Converters.ToStringJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Converts an object to a JSON string and writes it to the provided JsonWriter.
+            </summary>
+            <param name="writer">The JsonWriter used to write the JSON.</param>
+            <param name="value">The object to be converted to a JSON string.</param>
+            <param name="serializer">The JsonSerializer used for the conversion.</param>
+        </member>
+        <member name="P:VirtualStudio.JSON.Converters.ToStringJsonConverter.CanRead">
+            <summary>
+            Indicates whether the converter supports reading JSON.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.JSON.Converters.ToStringJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Throws a JsonReaderException, indicating that deserialization is not supported.
+            </summary>
+            <param name="reader">The JsonReader used for reading JSON.</param>
+            <param name="objectType">The type of the object being deserialized.</param>
+            <param name="existingValue">The existing value of the object being deserialized.</param>
+            <param name="serializer">The JsonSerializer used for deserialization.</param>
+            <returns>This method always throws an exception, so the return statement is unreachable.</returns>
+            <exception cref="T:Newtonsoft.Json.JsonReaderException"></exception>
+        </member>
+        <member name="T:VirtualStudio.LoggingConfiguration">
+            <summary>
+            The LoggingConfiguration class supplies some settings that can be adjusted by the user.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.LoggingConfiguration.RestrictedToMinimumLevel">
+            <summary>
+            The RestrictedToMinimumLevel is the log level that is passed on to the Sentry instance. You can pass the following LogEventLevel options:
+            Verbose, Debug, Information, Warning, Error, Fatal.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.LoggingConfiguration.LogFilePath">
+            <summary>
+            The LogFilePath supplied is where the log messages will be saved on disk.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.LoggingConfiguration.#ctor(System.String,Serilog.Events.LogEventLevel)">
+            <summary>
+            The LoggingConfiguration constructor allows you to set the Logging file path and the LogEventLevel. See the properties for more information on these.
+            </summary>
+            <param name="logFilePath">The Log file path to save to. See LogFilePath documentation.</param>
+            <param name="restrictedToMinimumLevel">The minimum level to log. See RestrictedToMinimumLevel documentation.</param>
+        </member>
+        <member name="T:VirtualStudio.MimeTypes.MimeType">
+            <summary>
+            Represents a set of MIME types for different content formats.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.PLAINTEXT">
+            <summary>
+            Plain text MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.HTML">
+            <summary>
+            HTML MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.XML">
+            <summary>
+            XML MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.JSON">
+            <summary>
+            JSON MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.CSV">
+            <summary>
+            CSV MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.JPEG">
+            <summary>
+            JPEG image MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.PNG">
+            <summary>
+            PNG image MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.GIF">
+            <summary>
+            GIF image MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.BMP">
+            <summary>
+            BMP image MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.SVG">
+            <summary>
+            SVG image MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.MP3">
+            <summary>
+            MP3 audio MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.OGG">
+            <summary>
+            OGG audio MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.WAV">
+            <summary>
+            WAV audio MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.AVI">
+            <summary>
+            AVI video MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.MP4">
+            <summary>
+            MP4 video MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.WEBM">
+            <summary>
+            WEBM video MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.OGGVIDEO">
+            <summary>
+            OGG video MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.PDF">
+            <summary>
+            PDF document MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.ZIP">
+            <summary>
+            ZIP archive MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.GZIP">
+            <summary>
+            GZIP archive MIME type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.MimeTypes.MimeType.OCTETSTREAMDEFAULT">
+            <summary>
+            Default binary MIME type.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Action">
+            <inheritdoc cref="T:VirtualStudio.Models.Interfaces.IAction"/>
+        </member>
+        <member name="M:VirtualStudio.Models.Action.IdInfo">
+            <summary>
+            Retrieves information about the id property.
+            </summary>
+            <returns>An instance of <see cref="T:VirtualStudio.Actions.ActionPropertyInformation"/> containing details about the id property.</returns>
+        </member>
+        <member name="P:VirtualStudio.Models.Action.Id">
+            <inheritdoc cref="P:VirtualStudio.Models.Interfaces.IAction.Id"/>
+        </member>
+        <member name="P:VirtualStudio.Models.Action.Name">
+            <inheritdoc cref="P:VirtualStudio.Models.Interfaces.IAction.Name"/>
+        </member>
+        <member name="M:VirtualStudio.Models.Action.DelayInfo">
+            <summary>
+            Retrieves information about the delay property.
+            </summary>
+            <returns>An instance of <see cref="T:VirtualStudio.Actions.ActionPropertyInformation"/> containing details about the delay property.</returns>
+        </member>
+        <member name="P:VirtualStudio.Models.Action.Delay">
+            <inheritdoc cref="P:VirtualStudio.Models.Interfaces.IAction.Delay"/>
+        </member>
+        <member name="P:VirtualStudio.Models.Action.IsActive">
+            <inheritdoc cref="P:VirtualStudio.Models.Interfaces.IAction.IsActive"/>
+        </member>
+        <member name="P:VirtualStudio.Models.Action.ErrorState">
+            <inheritdoc cref="P:VirtualStudio.Models.Interfaces.IAction.ErrorState"/>
+        </member>
+        <member name="P:VirtualStudio.Models.Action.Sorting">
+            <inheritdoc cref="P:VirtualStudio.Models.Interfaces.IAction.Sorting"/>
+        </member>
+        <member name="P:VirtualStudio.Models.Action.ContentUpdatedAt">
+            <inheritdoc cref="P:VirtualStudio.Models.Interfaces.IAction.ContentUpdatedAt"/>
+        </member>
+        <member name="P:VirtualStudio.Models.Action.Type">
+            <inheritdoc cref="P:VirtualStudio.Models.Interfaces.IAction.Type"/>
+        </member>
+        <member name="P:VirtualStudio.Models.Action.Version">
+            <inheritdoc cref="P:VirtualStudio.Models.Interfaces.IAction.Version"/>
+        </member>
+        <member name="P:VirtualStudio.Models.Action.Description">
+            <inheritdoc cref="P:VirtualStudio.Models.Interfaces.IAction.Description"/>
+        </member>
+        <member name="P:VirtualStudio.Models.Action.ActionCategory">
+            <inheritdoc cref="P:VirtualStudio.Models.Interfaces.IAction.ActionCategory"/>
+        </member>
+        <member name="P:VirtualStudio.Models.Action.Properties">
+            <inheritdoc cref="P:VirtualStudio.Models.Interfaces.IAction.Properties"/>
+        </member>
+        <member name="P:VirtualStudio.Models.Action.Finished">
+            <inheritdoc cref="P:VirtualStudio.Models.Interfaces.IAction.Finished"/>
+        </member>
+        <member name="P:VirtualStudio.Models.Action.Failed">
+            <inheritdoc cref="P:VirtualStudio.Models.Interfaces.IAction.Failed"/>
+        </member>
+        <member name="P:VirtualStudio.Models.Action.Stopped">
+            <inheritdoc cref="P:VirtualStudio.Models.Interfaces.IAction.Stopped"/>
+        </member>
+        <member name="M:VirtualStudio.Models.Action.Initialize">
+            <inheritdoc cref="M:VirtualStudio.Models.Interfaces.IAction.Initialize"/>
+        </member>
+        <member name="M:VirtualStudio.Models.Action.Execute">
+            <inheritdoc cref="M:VirtualStudio.Models.Interfaces.IAction.Execute"/>
+        </member>
+        <member name="M:VirtualStudio.Models.Action.OnFinished">
+            <inheritdoc cref="M:VirtualStudio.Models.Interfaces.IAction.OnFinished"/>
+        </member>
+        <member name="M:VirtualStudio.Models.Action.OnFailed">
+            <inheritdoc cref="M:VirtualStudio.Models.Interfaces.IAction.OnFailed"/>
+        </member>
+        <member name="M:VirtualStudio.Models.Action.OnStopped">
+            <inheritdoc cref="M:VirtualStudio.Models.Interfaces.IAction.OnStopped"/>
+        </member>
+        <member name="M:VirtualStudio.Models.Action.Dispose">
+            <inheritdoc cref="M:VirtualStudio.Models.Interfaces.IAction.Dispose"/>
+        </member>
+        <member name="T:VirtualStudio.Models.ActionDefinition">
+            <summary>
+            The Definition of the Action. This data is used to match the Action to game logic.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionDefinition.Name">
+            <summary>
+            The class name of the Action to match on when executing game logic.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionDefinition.Description">
+            <summary>
+            The Description of the Action.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.ActionProperty">
+            <summary>
+            An Action Property is used to retrieve the data filled in by the user in the backend (VirtualStudio)
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionProperty.Value">
+            <summary>
+            The value filled in by the user in VirtualStudio.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionProperty.ValueType">
+            <summary>
+            The type of the value that is retrieved.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionProperty.ErrorState">
+            <summary>
+            Does the Action Property have error states?
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionProperty.Media">
+            <summary>
+            The media file that is attached to the action property
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionProperty.ActionPropertyDefinition">
+            <summary>
+            The definition of the Action Property.
+            Here the information resides to match the Action Property to the properties inside the Action game logic.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.ActionPropertyChoice">
+            <summary>
+            Represents a set of choices for an action property.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionPropertyChoice.Type">
+            <summary>
+            The type of choice
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionPropertyChoice.Values">
+            <summary>
+            the available choices.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Models.ActionPropertyChoice.#ctor(System.String[],VirtualStudio.Actions.ChoiceType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VirtualStudio.Models.ActionPropertyChoice"/> class.
+            </summary>
+            <param name="values">The array of choices.</param>
+            <param name="choiceType">The type of choices.</param>
+        </member>
+        <member name="T:VirtualStudio.Models.ActionPropertyDefinition">
+            <summary>
+            The Action Property Definition contains the information about the field filled in by the user.
+            This data is used to match the field to the game logic.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionPropertyDefinition.Name">
+            <summary>
+            The Name of the Action Property.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionPropertyDefinition.Type">
+            <summary>
+            The Type of the Action Property.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionPropertyDefinition.Description">
+            <summary>
+            The Description of the Action Property.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionPropertyDefinition.IsTranslatable">
+            <summary>
+            Is the Action Property translatable?
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionPropertyDefinition.IsRequired">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionPropertyDefinition.ReferenceName">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.ActionScore">
+            <summary>
+            Represents the score and status of an action within the VirtualStudio instance.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionScore.ActionId">
+            <summary>
+            Gets or sets the identifier of the action associated with this score.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionScore.IsFailed">
+            <summary>
+            Gets or sets a value indicating whether the action is marked as failed.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionScore.Penalty">
+            <summary>
+            Gets or sets the penalty associated with the action.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.ActionScore.Message">
+            <summary>
+            Gets or sets an additional message related to the action score.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Chapter">
+            <summary>
+            The Chapter model contains all information about the chapter and which chapters and levels are below in the tree. 
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Chapter.Name">
+            <summary>
+            The name of the chapter.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Chapter.Description">
+            <summary>
+            The description of the chapter.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Chapter.Introduction">
+            <summary>
+            The introduction to the chapter.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Chapter.IsActive">
+            <summary>
+            Is the chapter active? Do not show if the chapter is not active.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Chapter.IsLocked">
+            <summary>
+            Determines whether a chapter is locked by trophy dependencies
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Chapter.HasErrorState">
+            <summary>
+            Does the chapter have error states? Display this information to the user, if needed.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Chapter.Sorting">
+            <summary>
+            The sorting of the chapter in the tree.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Chapter.Media">
+            <summary>
+            The image that represents the chapter
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Chapter.Chapters">
+            <summary>
+            The list of chapters below this chapter. Can be empty.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Chapter.Levels">
+            <summary>
+            The list of levels below this chapter. Can be empty.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Customer">
+            <summary>
+            Customer information
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Customer.Name">
+            <summary>
+            Name of the customer
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Customer.IsDemo">
+            <summary>
+            Is the customer a demo customer. When a customer is a demo customer it can view all levels but can only play levels that are marked as demo level
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Customer.IsEnabled">
+            <summary>
+            Is the customer enabled. If a customer is disabled you get a 403 error when that customer login. 
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Customer.StartDate">
+            <summary>
+            Start date
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Customer.StopDate">
+            <summary>
+            Stop date
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Dealer">
+            <summary>
+            Dealer information
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Dealer.Name">
+            <summary>
+            Name of the dealer
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Dealer.IsEnabled">
+            <summary>
+            Is the dealer active
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Dealer.StartDate">
+            <summary>
+            Start date
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Dealer.StopDate">
+            <summary>
+            Stop date
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Game">
+            <summary>
+            The Game model contains all information about the game itself. 
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Game.Name">
+            <summary>
+            The name of the game.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Game.Description">
+            <summary>
+            A short description of the game.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Game.Introduction">
+            <summary>
+            A short textual introduction to the game.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Game.IsActive">
+            <summary>
+            Is the game enabled or not.
+            This can be used to check if the game can be logged in to.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Game.HasErrorState">
+            <summary>
+            Does the game have error states.
+            In case the game has error states, the game cannot be played.
+            The user should be notified when this is the case.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.GameVersion">
+            <summary>
+            The Game Version model contains all information about the structure of chapters, subchapters and levels. 
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.GameVersion.Version">
+            <summary>
+            The Semver version. See https://semver.org.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.GameVersion.IsPublished">
+            <summary>
+            Has the version been published? The version should not be available to non-admins if not published.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.GameVersion.IsSynced">
+            <summary>
+            Has the version been synced? The version should not be playable if the data from the previous version has not been synced.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.GameVersion.HasErrorState">
+            <summary>
+            Does the version have error states? The version should not be playable if it has error states.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.GameVersion.Chapters">
+            <summary>
+            The list of chapters belonging to this version. See Chapter model for more information.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Models.GameVersion.FlattenChapters">
+            <summary>
+            Flatten returns a list of chapters without hierarchical structure. Example to find a level by Id:
+            return GameVersion.Flatten().FirstOrDefault(chapter => chapter.Levels?.Any(level => level.Id == Level.Id) ?? false);
+            </summary>
+            <returns>List of Chapters without hierarchical structure</returns>
+        </member>
+        <member name="T:VirtualStudio.Models.Interfaces.IAction">
+            <summary>
+            Actions contain the main information for Level content.
+            The Action logic is contained within the game engine,
+            and the data that is retrieved from VirtualStudio is matched with this logic through reflection.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Models.Interfaces.IAction.Finished">
+            <summary>
+            This event is called when the action is finished successful
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Models.Interfaces.IAction.Failed">
+            <summary>
+            This event is called when the action has failed
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Models.Interfaces.IAction.Stopped">
+            <summary>
+            This event is called when the action is stopped
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Models.Interfaces.IAction.Id">
+            <summary>
+            The ID of the Action.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Models.Interfaces.IAction.Name">
+            <summary>
+            The name of the Action inside VirtualStudio.
+            The name of the Action itself that is used to match game logic is within the Action Definition.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Models.Interfaces.IAction.Delay">
+            <summary>
+            The delay that should be applied before the action is ran.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Models.Interfaces.IAction.IsActive">
+            <summary>
+            Is the Action activated? The Action should be skipped if it is disabled.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Models.Interfaces.IAction.ErrorState">
+            <summary>
+            Does the Action have error states?
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Models.Interfaces.IAction.Sorting">
+            <summary>
+            The sorting of the Action. Lower is earlier in the hierarchy.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Models.Interfaces.IAction.ContentUpdatedAt">
+            <summary>
+            When was the Action last updated?
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Models.Interfaces.IAction.Type">
+            <summary>
+            Action class name 
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Models.Interfaces.IAction.Version">
+            <summary>
+            Gets the version information of the action.
+            This property returns the version string associated with the current instance of the action.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Models.Interfaces.IAction.Description">
+            <summary>
+            Gets the description of the action.
+            This property returns a textual description or summary of the action, providing additional context about its purpose/functionality.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Models.Interfaces.IAction.Properties">
+            <summary>
+            Gets the list of action properties associated with the action.
+            This property returns a list of ActionPropertyInformation, each containing information about a specific property or attribute of the action.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Models.Interfaces.IAction.ActionCategory">
+            <summary>
+            Gets the list of action categories associated with the action.
+            This property returns a list of strings representing the categories that the action belong to.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Models.Interfaces.IAction.Initialize">
+            <summary>
+            Action Initialize method. First method that is been called when action is activated
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Models.Interfaces.IAction.Execute">
+            <summary>
+            Action Execute method. Is executed when action is activated in the step
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Models.Interfaces.IAction.OnFinished">
+            <summary>
+            This method is called when the action has successfully executed.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Models.Interfaces.IAction.OnFailed">
+            <summary>
+            This method is called when the action has failed.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Models.Interfaces.IAction.OnStopped">
+            <summary>
+            This method is called when the action is stopped.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Models.Interfaces.IAction.Dispose">
+            <summary>
+            This method is called when the action has finished, failed or has been killed.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Level">
+            <summary>
+            The Level model contains all information about the level. It is the base of the learning content. 
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Level.Name">
+            <summary>
+            The name of the level.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Level.Description">
+            <summary>
+            A short description of the level.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Level.Introduction">
+            <summary>
+            A short textual introduction to the level.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Level.Reference">
+            <summary>
+            TODO: Do we need this? What is it used for?
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Level.PassingPercentage">
+            <summary>
+            The passing percentage of the level.
+            The user will fail the level and have to retry if their result is lower than the passing percentage.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Level.Sorting">
+            <summary>
+            The sorting of the level within the tree hierarchy. Lower is at the top of the tree structure.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Level.IsActive">
+            <summary>
+            Is the level enabled or not?
+            This can be used to check if the level can be played.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Level.HasErrorState">
+            <summary>
+            Does the level have error states?
+            In case the level has error states, the level cannot be played.
+            The user should be notified when this is the case.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Level.IsDemo">
+            <summary>
+            Is this a demo level?
+            If the level is a demo level, all users can play the level, even without the Player role.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Level.IsLocked">
+            <summary>
+            Determines whether a level is locked by trophy dependencies
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Level.ContentUpdatedAt">
+            <summary>
+            The time the content was updated at.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Level.Steps">
+            <summary>
+            List of Steps. See the Steps documentation for more information.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Level.Media">
+            <summary>
+            The image that represents the level
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Level.TrophyDependencies">
+            <summary>
+            Required trophies needed to unlock the level
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Models.Level.IsValid(System.Collections.Generic.List{System.String}@)">
+            <summary>
+            This method checks if the level contains actions that cannot be found.
+            </summary>
+            <param name="errorMessages">Out parameter that contains a list of unique error messages</param>
+            <returns>True if the level has no errors, false if the level contains errors</returns>
+        </member>
+        <member name="T:VirtualStudio.Models.Locale">
+            <summary>
+            Represents one supported language in the game.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Locale.Tag">
+            <summary>
+            The tag of the language.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Locale.Description">
+            <summary>
+            The Description of the language. 
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Locale.Default">
+            <summary>
+            True if this is the default language. 
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Media">
+            <summary>
+            The Media model will have all the information for media objects that are used within lessons.
+            This model is used by the MediaManager class to download media files and store them locally for future use.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Media.Name">
+            <summary>
+            Name of the media file
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Media.MimeType">
+            <summary>
+            MimeType of the media file
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Media.LocalPath">
+            <summary>
+            The LocalPath field contains the path to the file stored on disc
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Media.Url">
+            <summary>
+            The download Uri of the media object. This will be a CDN link.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Models.Media.Hash">
+            <summary>
+            MD5 hash of the URL
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Model">
+            <summary>
+            Abstract Model class. All models inherit from this class.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Model.Id">
+            <summary>
+            The Id of the model.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Model.CreatedAt">
+            <summary>
+            When the model was created.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Model.UpdatedAt">
+            <summary>
+            When the model was last updated.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.Models.Model.JsonSerializerSettings">
+            <summary>
+            The default JSON Serializer settings. Here the MemberNameContractResolver is added.
+            The MemberNameContractResolver provides conversion rules for converting from DataTransferObjects to Models.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Models.Model.Convert``1(AutoMapper.IMapper)">
+            <summary>
+            Converts the current instance of the model to the specified type using the provided mapper.
+            </summary>
+            <typeparam name="T">The target type to convert to.</typeparam>
+            <param name="mapper">The AutoMapper instance to perform the conversion.</param>
+            <returns>An instance of the target type.</returns>
+        </member>
+        <member name="T:VirtualStudio.Models.Permissions.Policies.GameCharacterPolicy">
+            <summary>
+            Permission policy for game characters
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.GameCharacterPolicy.Index">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to view game characters index.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.GameCharacterPolicy.Show">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to view game character details.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.GameCharacterPolicy.Create">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to create game characters.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.GameCharacterPolicy.Update">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to update game characters.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Permissions.Policies.GamePolicy">
+            <summary>
+            Permission policy for games
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.GamePolicy.Index">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to view games index.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.GamePolicy.Show">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to view game details.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.GamePolicy.Update">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to update game details.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Permissions.Policies.GameSessionPolicy">
+            <summary>
+            Permission policy for game sessions
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.GameSessionPolicy.Create">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to create game sessions.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Permissions.Policies.GameVersionPolicy">
+            <summary>
+            Permission policy for game versions
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.GameVersionPolicy.Create">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to create game versions.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.GameVersionPolicy.Index">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to view game versions index.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.GameVersionPolicy.Show">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to view game version details.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.GameVersionPolicy.Update">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to update game version details.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Permissions.Policies.LevelPolicy">
+            <summary>
+            Permission policy for levels
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.LevelPolicy.Index">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to view levels index.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.LevelPolicy.Show">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to view level details.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.LevelPolicy.Create">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to create levels.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.LevelPolicy.Update">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to update levels.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.LevelPolicy.Destroy">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to destroy levels.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.LevelPolicy.PlayDisabled">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to disable level play.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Permissions.Policies.PlatformPolicy">
+            <summary>
+            Permission policy for platforms
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.PlatformPolicy.Index">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to view platforms index.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.PlatformPolicy.Show">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to view platform details.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.PlatformPolicy.Create">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to create platforms.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.PlatformPolicy.Update">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to update platforms.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.PlatformPolicy.Destroy">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to destroy platforms.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Permissions.Policies.TrophyPolicy">
+            <summary>
+            Permission policy for trophies
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.TrophyPolicy.Index">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to view trophies index.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.TrophyPolicy.Show">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to view trophy details.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.TrophyPolicy.Create">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to create trophies.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.TrophyPolicy.Update">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to update trophies.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.TrophyPolicy.Destroy">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to destroy trophies.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Permissions.Policies.UserPolicy">
+            <summary>
+            Permission policy for users
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.UserPolicy.Index">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to view users index.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.UserPolicy.Show">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to view user details.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.UserPolicy.Create">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to create users.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.UserPolicy.Update">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to update users.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.Policies.UserPolicy.Destroy">
+            <summary>
+            Gets or sets a value indicating whether the user has permission to destroy users.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Permissions.UserPermissionFlags">
+            <summary>
+            Represents user permission flags for various VirtualStudio features.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.UserPermissionFlags.GamePolicy">
+            <summary>
+            Permission policy for games
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.UserPermissionFlags.GameCharacterPolicy">
+            <summary>
+            Permission policy for game characters
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.UserPermissionFlags.GameVersionPolicy">
+            <summary>
+            Permission policy for game versions
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.UserPermissionFlags.LevelPolicy">
+            <summary>
+            Permission policy for levels
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.UserPermissionFlags.GameSessionPolicy">
+            <summary>
+            Permission policy for game sessions
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.UserPermissionFlags.PlatformPolicy">
+            <summary>
+            Permission policy for platforms
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.UserPermissionFlags.TrophyPolicy">
+            <summary>
+            Permission policy for trophies
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Permissions.UserPermissionFlags.UserPolicy">
+            <summary>
+            Permission policy for users
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Platform">
+            <summary>
+            Platform the game supports
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Platform.Name">
+            <summary>
+            Name of the platform
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Platform.Icon">
+            <summary>
+            Platform Icon
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Platform.Slug">
+            <summary>
+            Platform slug. (eg. windowseditor, macoseditor, Android APK, Mac OS, Windows etc)
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Session">
+            <summary>
+            Represents a session within the VirtualStudio application, containing information about the session's duration, level, scores, and completion status.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Session.SessionId">
+            <summary>
+            Gets or sets the unique identifier of the session.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Session.StartTime">
+            <summary>
+            Gets or sets the start time of the session.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Session.EndTime">
+            <summary>
+            Gets or sets the end time of the session.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Session.LevelId">
+            <summary>
+            Gets or sets the identifier of the level associated with the session.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Session.Version">
+            <summary>
+            Gets or sets the version of the game related to the session.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Session.PlatformId">
+            <summary>
+            Gets or sets the platform identifier associated with the session.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Session.TotalScore">
+            <summary>
+            Gets or sets the total score achieved in the level.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Session.ScorePercentage">
+            <summary>
+            Gets or sets the percentage score achieved in the level.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Session.PassingPercentage">
+            <summary>
+            Gets or sets the passing percentage required for passing the level.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Session.IsFinished">
+            <summary>
+            Gets or sets a value indicating whether the session is finished/completed.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Session.StepScores">
+            <summary>
+            Gets or sets an array of StepScores representing scores and statuses for individual steps within the level.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Step">
+            <summary>
+            Steps are groups of Actions.
+            These Actions can be grouped into linear or non-linear Steps.
+            TODO add more documentation on Steps
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Step.Name">
+            <summary>
+            The Name of the Step. Filled in by the user in VirtualStudio.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Step.Description">
+            <summary>
+            The Description of the Step. Filled in by the user in VirtualStudio.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Step.Type">
+            <summary>
+            The Type of the Step. Linear or Non-linear.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Step.MaximumScore">
+            TODO change to int only
+            <summary>
+            The Maximum score the user can get in this Step.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Step.Repeatable">
+            <summary>
+            Is the Step repeatable? Can the Player do this Step multiple times? 0 is infinitely repeatable.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Step.IsActive">
+            <summary>
+            Is the Step active?
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Step.HasErrorState">
+            <summary>
+            Does the Step have error states?
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Step.Sorting">
+            <summary>
+            What is the sorting of the Step in the level?
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Step.Randomization">
+            <summary>
+            The amount of non-linear steps that will be executed within a linear step.
+            Steps marked as required will always be included, even if the repeatable amount is exceeded.
+            This property is only relevant for linear steps. 
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Step.AddToChecklist">
+            <summary>
+            Add the Step name to the checklist in the game.
+            When this property is marked the name of the step will be added to the checklist
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Step.IsRequired">
+            <summary>
+            Is the Step required to be completed?
+            This property is only relevant for non linear steps.
+            When this property is marked on non linear and the linear step has 'Non linear random' set the 'Required' non linear are always added first before the non Required non linear steps.
+            Non linear steps that are marked 'Required' are always active, even when 'Non linear random' is set to zero.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Step.IsOpportunity">
+            <summary>
+            Is the Step an opportunity?
+            This works only on non linear steps.
+            When not all actions in the non linear step are completed (e.g. because op StopStepAction) the name of the non linear step will be added to the list missed opportunities
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Step.IsIntended">
+            <summary>
+            Is the Step intended to be completed?
+            This works only on non linear steps.
+            When all actions of a step are finished you get the Max Score of the step. If you dont complete the step you lose all the Max Score of the step.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Step.ContentUpdatedAt">
+            <summary>
+            When was the Step content last updated at?
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Step.Actions">
+            <summary>
+            The list of Actions contained in this Step.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Step.Children">
+            <summary>
+            The list of child steps contained in this linear Step.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.StepScore">
+            <summary>
+            Represents the scoring details for a specific step within a VirtualStudio session.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.StepScore.SessionId">
+            <summary>
+            Gets or sets the identifier of the session associated with this step score.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.StepScore.StepId">
+            <summary>
+            Gets or sets the identifier of the step associated with this score.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.StepScore.IsFailed">
+            <summary>
+            Gets or sets a boolean indicating whether the step is marked as failed.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.StepScore.MaxScore">
+            <summary>
+            Gets or sets the maximum possible score for the step.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.StepScore.Penalty">
+            <summary>
+            Gets or sets the penalty associated with the step score.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.StepScore.StartTime">
+            <summary>
+            Gets or sets the start time of the step within the session.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.StepScore.EndTime">
+            <summary>
+            Gets or sets the end time of the step within the session.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.StepScore.ActionScores">
+            <summary>
+            Gets or sets an array of ActionScores representing scores and statuses for individual actions within the step.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.Trophy">
+            <summary>
+            Trophy can unlock levels.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Trophy.Name">
+            <summary>
+            The Name of the trophy.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.Trophy.Description">
+            <summary>
+            The Description of the trophy. 
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Models.User">
+            <summary>
+            The User class is used for retrieving data of the current user.
+            It can also be used to check if the login process has succeeded, by checking if the values are filled correctly.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.User.FirstName">
+            <summary>
+            The firstname of the user.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.User.LastName">
+            <summary>
+            The lastname of the user.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.User.Trophies">
+            <summary>
+            List of trophies the user has unlocked by completing levels.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.User.Permissions">
+            <summary>
+            List of user permissions
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.User.Customer">
+            <summary>
+            Customer information
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Models.User.Dealer">
+            <summary>
+            Dealer information
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Models.User.IsDemoUser">
+            <summary>
+            Is the user marked as a demo user. A demo user can see all levels in the game but can only play levels that are also marked as demo levels.
+            </summary>
+            <returns>True if the user is a demo user</returns>
+        </member>
+        <member name="T:VirtualStudio.ProxySettings">
+            <summary>
+            The ProxySettings class supplies a storage for proxy credentials. This class is optional when creating a new Client instance.
+            </summary>
+            <example>
+            ProxySettings proxySettings = new ProxySettings(address, port, userName, password, domain);
+            </example>
+        </member>
+        <member name="P:VirtualStudio.ProxySettings.Address">
+            <summary>
+            The Address the proxy should connect to.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.ProxySettings.Port">
+            <summary>
+            The Port the proxy should use combined with the Address.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.ProxySettings.UserName">
+            <summary>
+            The Username for logging in to the proxy.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.ProxySettings.Password">
+            <summary>
+            The Password for logging in to the proxy.
+            </summary>
+        </member>
+        <member name="P:VirtualStudio.ProxySettings.Domain">
+            <summary>
+            The Domain the proxy should connect to.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.ProxySettings.#ctor(System.String,System.Int32)">
+            <summary>
+            ProxySettings constructor with setup for only Address and Port properties.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.ProxySettings.#ctor(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            ProxySettings constructor with setup for Address, Port, Username and Password properties.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.ProxySettings.#ctor(System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            ProxySettings constructor with setup for all properties.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Sessions.SessionManager">
+            <summary>
+            Class responsible for building and managing sessions in the VirtualStudio environment.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Sessions.SessionManager.#ctor(VirtualStudio.Client)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VirtualStudio.Sessions.SessionManager"/> class.
+            </summary>
+            <param name="client">API client.</param>
+        </member>
+        <member name="M:VirtualStudio.Sessions.SessionManager.CreateSession(System.Nullable{System.DateTime},System.String,System.String,System.String,System.Int32,System.Action{VirtualStudio.Models.Session})">
+            <summary>
+            Starts a new session with the specified parameters.
+            </summary>
+            <param name="startTime">The start time of the session.</param>
+            <param name="levelId">The ID of the level.</param>
+            <param name="version">The version of the game.</param>
+            <param name="platformId">The ID of the platform associated with the game.</param>
+            <param name="passingPercentage">The passing percentage for the level.</param>
+            <param name="callback">A callback function to be invoked with the created session.</param>
+            <returns>Score session</returns>
+        </member>
+        <member name="M:VirtualStudio.Sessions.SessionManager.AddStepScore(VirtualStudio.Models.Session,System.String,System.Boolean,System.Int32,System.Int32,System.DateTime,System.DateTime,VirtualStudio.Models.ActionScore[],System.Action{VirtualStudio.Models.Session})">
+            <summary>
+            Adds a step score to the session.
+            </summary>
+            <param name="session">Score session</param>
+            <param name="stepId">The ID of the step.</param>
+            <param name="isFailed">A flag indicating whether the step has failed.</param>
+            <param name="maxScore">The maximum score achievable for the step.</param>
+            <param name="penalty">The penalty associated with the step.</param>
+            <param name="startTime">The start time of the step.</param>
+            <param name="endTime">The end time of the step.</param>
+            <param name="actionScores">An array of action scores associated with the step.</param>
+            <param name="callback">A callback function to be invoked with the updated session.</param>
+            <returns>Score session</returns>
+        </member>
+        <member name="M:VirtualStudio.Sessions.SessionManager.ActionScore(System.String,System.Boolean,System.Int32,System.String)">
+            <summary>
+            Creates an action score with the specified parameters.
+            </summary>
+            <param name="actionId">The ID of the action.</param>
+            <param name="isFailed">A flag indicating whether the action has failed.</param>
+            <param name="penalty">The penalty associated with the action.</param>
+            <param name="message">A message describing the action score.</param>
+            <returns>An ActionScore object with the specified parameters.</returns>
+        </member>
+        <member name="M:VirtualStudio.Sessions.SessionManager.EndSession(VirtualStudio.Models.Session,System.Nullable{System.DateTime},System.Int32,System.Int32,System.Boolean,System.Action{VirtualStudio.Models.Session})">
+            <summary>
+            Ends the current session with the specified parameters.
+            </summary>
+            <param name="session">Score session</param>
+            <param name="endTime">The end time of the session.</param>
+            <param name="totalScore">The total score achieved in the session.</param>
+            <param name="scorePercentage">The percentage of the total score achieved.</param>
+            <param name="isFinished">A flag indicating whether the session is marked as finished.</param>
+            <param name="callback">A callback function to be invoked with the updated session.</param>
+            <returns>Score session</returns>
+        </member>
+        <member name="T:VirtualStudio.Types.ActionErrorState">
+            <summary>
+            The ActionErrorState enum defines which type of error state is present on the action.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Types.ActionErrorState.NoError">
+            <summary>
+            No errors are present on the Action.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Types.ActionErrorState.DefinitionMissing">
+            <summary>
+            The ActionDefinition is missing for the action.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Types.ActionErrorState.PropertyError">
+            <summary>
+            One of the underlying Action properties has an error.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Types.ActionPropertyErrorState">
+            <summary>
+            The ActionPropertyErrorState enum defines which type of error state is present on the action property.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Types.ActionPropertyErrorState.NoError">
+            <summary>
+            No errors are present on the Action.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Types.ActionPropertyErrorState.TypeError">
+            <summary>
+            The type of the Action property is invalid.
+            For example: A field has a string value, while an int is expected.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Types.ActionPropertyErrorState.ConstraintError">
+            <summary>
+            The constraint of the Action property is not met.
+            For example: A target object list might not have the selected target object available.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Types.StepType">
+            <summary>
+            The StepType defines if a step should be processed sequentially (linear) or in parallel to other steps (non-linear)
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Types.StepType.linear">
+            <summary>
+            Linear steps are processed sequentially.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Types.StepType.non_linear">
+            <summary>
+            Non-linear steps are processed in parallel.
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Utility.CompletionHandler">
+            <summary>
+            Manages the execution and completion of a collection of tasks with support for synchronization and timeout.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Utility.CompletionHandler.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VirtualStudio.Utility.CompletionHandler"/> class with a specified timeout.
+            </summary>
+            <param name="timeout">The maximum time to wait for all tasks to complete, in milliseconds.</param>
+        </member>
+        <member name="M:VirtualStudio.Utility.CompletionHandler.AddTask(System.Action)">
+            <summary>
+            Adds a task to be executed. If tasks are already running, the new task may start immediately.
+            </summary>
+            <param name="action">The action representing the task to be added.</param>
+        </member>
+        <member name="M:VirtualStudio.Utility.CompletionHandler.Run">
+            <summary>
+            Starts and waits for all tasks to complete or for the timeout to expire.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Utility.CompletionHandler.Failed">
+            <summary>
+            Marks the current task handling as failed. This will trigger the completion event and notify any waiting processes.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Utility.CompletionHandler.Completed">
+            <summary>
+            Marks a task as completed. If all tasks are completed, this will trigger the completion event.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Utility.CompletionHandler.Reset">
+            <summary>
+            Reset the tasks list and the amount of actions running
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Utility.FileCategory">
+            <summary>
+            Represents the category of a file.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Utility.FileCategory.Video">
+            <summary>
+            Represents a video file.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Utility.FileCategory.Image">
+            <summary>
+            Represents an image file.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Utility.FileCategory.Unknown">
+            <summary>
+            Represents an unknown file type.
+            </summary>
+        </member>
+        <member name="F:VirtualStudio.Utility.FileCategory.None">
+            <summary>
+            Represents an empty media field
+            </summary>
+        </member>
+        <member name="T:VirtualStudio.Utility.FileTypeUtility">
+            <summary>
+            Utility class which helps identifying if a media is a Video, Image or something else, by providing the media file path.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Utility.FileTypeUtility.GetFileType(System.String)">
+            <summary>
+            Check if a file is a Video, Image or something else, by providing its path.
+            </summary>
+            <param name="filePath">The path of the media you want to check the type of.</param>
+            <returns>Returns a FileTypes enum, which is either a Video, Image or Unknown type.</returns>
+        </member>
+        <member name="T:VirtualStudio.Utility.StringUtility">
+            <summary>
+            Utility class for string operations.
+            </summary>
+        </member>
+        <member name="M:VirtualStudio.Utility.StringUtility.ConvertToSnakeCase(System.String)">
+            <summary>
+            Converts the input string to snake_case.
+            </summary>
+            <param name="input">The input string to convert.</param>
+            <returns>The converted string in snake_case.</returns>
+        </member>
+    </members>
+</doc>
