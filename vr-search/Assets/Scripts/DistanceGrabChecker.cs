@@ -2,16 +2,17 @@ using System;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
-using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class DistanceGrabChecker : MonoBehaviour
 {
     public XRGrabInteractable interactable;
     public Transform xrController; // Assign the XR controller transform
     public float maxDistance = 2.0f; // Set your maximum grab distance
+    private CallbackTest callbackTest;
 
     private void OnEnable()
     {
+        //interactable.hoverEntered.AddListener();
         interactable.selectEntered.AddListener(OnGrab);
         interactable.selectExited.AddListener(OnRelease);
     }
@@ -23,15 +24,19 @@ public class DistanceGrabChecker : MonoBehaviour
     }
     private void Awake() {
         interactable = GetComponent<XRGrabInteractable>();
+        callbackTest = FindAnyObjectByType<CallbackTest>();
     }
     private void OnRelease(SelectExitEventArgs arg0)
     {
-        StopAllCoroutines();
+        //StopAllCoroutines();
+        Debug.Log("Dropped object is : " + name);
     }
 
     private void OnGrab(SelectEnterEventArgs arg0)
     {
-        StartCoroutine(CheckDistance());
+       // arg0.interactableObject.
+        //StartCoroutine(CheckDistance());
+        Debug.Log("Grabbed object is : " + name);
     }
 
 

@@ -15,7 +15,7 @@ C:/Dima/Projects/search-room-test/vr-search
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63922
+59520
 -job-worker-count
 15
 -background-job-worker-count
@@ -59,14 +59,16 @@ C:/Dima/Projects/search-room-test/vr-search
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [38444]  Target information:
+Player connection [38520]  Target information:
 
-Player connection [38444]  * "[IP] 192.168.178.180 [Port] 0 [Flags] 2 [Guid] 1200476645 [EditorId] 1200476645 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [38520]  * "[IP] 192.168.178.180 [Port] 0 [Flags] 2 [Guid] 43457880 [EditorId] 43457880 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [38444]  * "[IP] 10.2.0.2 [Port] 0 [Flags] 2 [Guid] 1200476645 [EditorId] 1200476645 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [38520]  * "[IP] 10.2.0.2 [Port] 0 [Flags] 2 [Guid] 43457880 [EditorId] 43457880 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [38444] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [38444] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [38520]  * "[IP] 192.168.178.206 [Port] 0 [Flags] 2 [Guid] 43457880 [EditorId] 43457880 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [38520] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [38520] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 15
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
@@ -77,8 +79,8 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 538.99 ms, found 12 plugins.
-Preloading 1 native plugins for Editor in 0.45 ms.
+Refreshing native plugins compatible for Editor in 8.95 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.40 ms.
 Initialize engine version: 6000.0.20f1 (05208a74e9aa)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Dima/Projects/search-room-test/vr-search/Assets
@@ -93,61 +95,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56588
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56536
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Registered in 0.003688 seconds.
-- Loaded All Assemblies, in  0.276 seconds
+Registered in 0.004357 seconds.
+- Loaded All Assemblies, in  0.409 seconds
 Native extension for Android target not found
-CommandWithNoStdoutInvokationFailure: Unable to start ADB server. Please make sure the Android SDK is installed and is properly configured in the Editor. See the Console for more details.
-  at UnityEditor.Android.Command.RunWithShellExecute (System.String command, System.String args, System.String workingdir, System.String errorMsg) [0x00060] in <4bcd7d9ed20d487e953cd146a022cbb3>:0 
-  at UnityEditor.Android.ADB.StartServer () [0x00013] in <4bcd7d9ed20d487e953cd146a022cbb3>:0 
-  at UnityEditor.Android.ADB.Run (System.String[] command, UnityEditor.Android.Command+WaitingForProcessToExit waitingForProcessToExit, System.String errorMsg) [0x0000b] in <4bcd7d9ed20d487e953cd146a022cbb3>:0 
-  at UnityEditor.Android.AndroidDeploymentTargetsExtension.GetKnownTargets (UnityEditor.DeploymentTargets.IDeploymentTargetsMainThreadContext context, UnityEditor.ProgressHandler progressHandler) [0x002ae] in <4bcd7d9ed20d487e953cd146a022cbb3>:0 
-  at UnityEditor.Android.TargetScanWorker.ScanSync () [0x00049] in <4bcd7d9ed20d487e953cd146a022cbb3>:0 
-  at UnityEditor.Android.TargetExtension.OnUsbDevicesChanged (UnityEditor.Hardware.UsbDevice[] usbDevices) [0x00087] in <4bcd7d9ed20d487e953cd146a022cbb3>:0 
-  at UnityEditor.Android.TargetExtension.OnLoad () [0x000af] in <4bcd7d9ed20d487e953cd146a022cbb3>:0 
-  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x000ba] in <72fbd834e62348cf8a5f322f2740f684>:0 
-UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEditor.Modules.ModuleManager:InitializePlatformSupportModules()
-
+Android Extension - Scanning For ADB Devices 288 ms
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  6.576 seconds
-Domain Reload Profiling: 6851ms
-	BeginReloadAssembly (100ms)
+- Finished resetting the current domain, in  0.654 seconds
+Domain Reload Profiling: 1060ms
+	BeginReloadAssembly (136ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (25ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (36ms)
-	LoadAllAssembliesAndSetupDomain (106ms)
-		LoadAssemblies (98ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (172ms)
+		LoadAssemblies (133ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (103ms)
-			TypeCache.Refresh (101ms)
-				TypeCache.ScanAssembly (92ms)
+		AnalyzeDomain (168ms)
+			TypeCache.Refresh (167ms)
+				TypeCache.ScanAssembly (128ms)
 			BuildScriptInfoCaches (0ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (6577ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (654ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (6545ms)
+		SetupLoadedEditorAssemblies (599ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (6391ms)
+			InitializePlatformSupportModulesInManaged (386ms)
 			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (98ms)
-			ProcessInitializeOnLoadMethodAttributes (47ms)
+			BeforeProcessingInitializeOnLoad (6ms)
+			ProcessInitializeOnLoadAttributes (130ms)
+			ProcessInitializeOnLoadMethodAttributes (72ms)
 			AfterProcessingInitializeOnLoad (2ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -156,10 +143,10 @@ Domain Reload Profiling: 6851ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.065 seconds
+- Loaded All Assemblies, in  1.236 seconds
 'Packages/com.unity.xr.openxr/Runtime/OpenXRLoader.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.xr.openxr/Runtime/OpenXRLoaderInternal.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 6.65 ms, found 12 plugins.
+Refreshing native plugins compatible for Editor in 7.66 ms, found 12 plugins.
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
@@ -190,52 +177,52 @@ Mono: successfully reloaded assembly
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.744 seconds
-Domain Reload Profiling: 1804ms
-	BeginReloadAssembly (280ms)
+- Finished resetting the current domain, in  0.692 seconds
+Domain Reload Profiling: 1924ms
+	BeginReloadAssembly (319ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
+		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (21ms)
-	RebuildCommonClasses (27ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (30ms)
-	LoadAllAssembliesAndSetupDomain (715ms)
-		LoadAssemblies (291ms)
+		CreateAndSetChildDomain (23ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (852ms)
+		LoadAssemblies (537ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (496ms)
-			TypeCache.Refresh (387ms)
-				TypeCache.ScanAssembly (352ms)
-			BuildScriptInfoCaches (91ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (744ms)
+		AnalyzeDomain (396ms)
+			TypeCache.Refresh (286ms)
+				TypeCache.ScanAssembly (264ms)
+			BuildScriptInfoCaches (87ms)
+			ResolveRequiredComponents (21ms)
+	FinalizeReload (692ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (586ms)
+		SetupLoadedEditorAssemblies (529ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (55ms)
-			ProcessInitializeOnLoadAttributes (405ms)
-			ProcessInitializeOnLoadMethodAttributes (109ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (67ms)
+			ProcessInitializeOnLoadAttributes (357ms)
+			ProcessInitializeOnLoadMethodAttributes (87ms)
 			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (3ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 7.93 ms, found 12 plugins.
-Preloading 1 native plugins for Editor in 0.06 ms.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 7.05 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
 Unloading 166 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7313 unused Assets / (6.8 MB). Loaded Objects now: 7994.
-Memory consumption went from 202.0 MB to 195.2 MB.
-Total: 7.761200 ms (FindLiveObjects: 0.469200 ms CreateObjectMapping: 0.269700 ms MarkObjects: 4.747400 ms  DeleteObjects: 2.274000 ms)
+Unloading 7387 unused Assets / (7.0 MB). Loaded Objects now: 8069.
+Memory consumption went from 200.8 MB to 193.8 MB.
+Total: 6.699100 ms (FindLiveObjects: 0.480800 ms CreateObjectMapping: 0.257900 ms MarkObjects: 3.842500 ms  DeleteObjects: 2.116900 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 48033.800642 seconds.
-  path: Assets/Scripts/CallbackTest.cs
-  artifactKey: Guid(dd323b828ad902d47bf46778bd158068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/CallbackTest.cs using Guid(dd323b828ad902d47bf46778bd158068) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '61fdc6fb41b27f30c7c67d0d4c7a4ae7') in 0.0043609 seconds
+  Time since last request: 656777.893831 seconds.
+  path: Assets/Scenes/SearchRoom.unity
+  artifactKey: Guid(b2065883a93b5dc47b8848ab04ebda85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SearchRoom.unity using Guid(b2065883a93b5dc47b8848ab04ebda85) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '95ef617c018e8998e175eff1503d4354') in 0.0039938 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 

@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
 public class CallbackTest : MonoBehaviour
 {
+    public Action OnGrabbed;
+    public Action OnDropped;
     public void OnObjectHovered()
     {
         Debug.Log("Object hovered");
@@ -10,13 +13,13 @@ public class CallbackTest : MonoBehaviour
     {
         Debug.Log("Object not hovered");
     }
-    public void OnObjectPicked()
+    public void OnObjectGrabbed()
     {
-        Debug.Log("Object picked up");
+        OnGrabbed?.Invoke();
     }
-
     public void OnObjectDropped()
     {
-        Debug.Log("Object dropped");
+        OnDropped?.Invoke();
     }
+
 }

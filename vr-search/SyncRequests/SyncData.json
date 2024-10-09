@@ -1,8 +1,18 @@
 {
-  "version": "1.0.0",
+  "version": "0.5.0",
   "interactables": [
     {
-      "id": "3a284567-8a8d-4a59-a02f-09394ade5669",
+      "id": "4be8079d-c6e6-4028-9247-78d7511f0b9a",
+      "display_name": "Cube",
+      "description": "Cube to play around",
+      "tags": [
+        "BlueTea.Core.Tags.Default",
+        "BlueTea.Core.Tags.Clickable",
+        "BlueTea.Core.Tags.Mesh"
+      ]
+    },
+    {
+      "id": "99ba2daa-2ce6-4905-a584-8b71cb5dfdd0",
       "display_name": "Drawer",
       "description": "A drawer you can open",
       "tags": [
@@ -13,6 +23,285 @@
     }
   ],
   "actions": [
+    {
+      "action_category": "Interaction",
+      "type": "XRClickAction",
+      "version": "0.2.0",
+      "description": "Wait for the player in XR to click on interactables",
+      "properties": [
+        {
+          "name": "Targets",
+          "default_value": [
+            "Drawer"
+          ],
+          "sorting": 0,
+          "description": "The interactables to click in XR",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [
+            {
+              "type": "tag",
+              "values": [
+                "BlueTea.Core.Tags.Clickable"
+              ]
+            },
+            {
+              "type": "string",
+              "values": [
+                "All"
+              ]
+            }
+          ],
+          "siblings": [],
+          "type": "interactable[]"
+        },
+        {
+          "name": "ClickMode",
+          "default_value": "Any",
+          "sorting": 1,
+          "description": "Should the user click on any or all of the listed targets",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [
+            {
+              "type": "string",
+              "values": [
+                "Any",
+                "All"
+              ]
+            }
+          ],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 2,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 3,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Interaction",
+      "type": "XRReleaseAction",
+      "version": "0.4.0",
+      "description": "Wait for the player in XR to release the interactable",
+      "properties": [
+        {
+          "name": "Targets",
+          "default_value": [
+            "Drawer"
+          ],
+          "sorting": 0,
+          "description": "The interactables to release in XR",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [
+            {
+              "type": "tag",
+              "values": [
+                "BlueTea.Core.Tags.Clickable"
+              ]
+            },
+            {
+              "type": "string",
+              "values": [
+                "All"
+              ]
+            }
+          ],
+          "siblings": [],
+          "type": "interactable[]"
+        },
+        {
+          "name": "ClickMode",
+          "default_value": "Any",
+          "sorting": 1,
+          "description": "Should the user release any or all of the listed targets",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [
+            {
+              "type": "string",
+              "values": [
+                "Any",
+                "All"
+              ]
+            }
+          ],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 2,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 3,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Level Flow",
+      "type": "CheckEventAction",
+      "version": "0.1.0",
+      "description": "This action checks if any or all listed events are triggered.",
+      "properties": [
+        {
+          "name": "Events",
+          "default_value": [],
+          "sorting": 0,
+          "description": "Write the name of the event(s) which will be checked.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string[]"
+        },
+        {
+          "name": "AnyOrAll",
+          "default_value": "Any",
+          "sorting": 1,
+          "description": "Choose if the game will check for all your events to exist, or for any one of them.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [
+            {
+              "type": "string",
+              "values": [
+                "Any",
+                "All"
+              ]
+            }
+          ],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 2,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 3,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
     {
       "action_category": "Interaction",
       "type": "ClickAction",
@@ -91,6 +380,872 @@
           "name": "Delay",
           "default_value": 0.0,
           "sorting": 3,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Level Flow",
+      "type": "ContinueAction",
+      "version": "0.1.0",
+      "description": "This kills all other active sibling steps in the current linear step. It still completes all other actions left in the current non-linear step.",
+      "properties": [
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 0,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 1,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Level Flow",
+      "type": "EndLevelAction",
+      "version": "0.1.0",
+      "description": "The EndLevelAction ends the level and shows the score gained by the user",
+      "properties": [
+        {
+          "name": "ForceFail",
+          "default_value": false,
+          "sorting": 0,
+          "description": "When checked this makes sure the user will fail the level no matter what",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": true,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "boolean"
+        },
+        {
+          "name": "NoMissedOpportunitiesMessage",
+          "default_value": "",
+          "sorting": 1,
+          "description": "The message that will be displayed when the user has no missed opportunities",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "PassedFeedback",
+          "default_value": "",
+          "sorting": 2,
+          "description": "Feedback that is given when the lesson is passed, leave empty when no feedback should be given",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "FailedFeedback",
+          "default_value": "",
+          "sorting": 3,
+          "description": "Feedback that is given when the lesson is failed, leave empty when no feedback should be given",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Title",
+          "default_value": "",
+          "sorting": 4,
+          "description": "Title on the dialog",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": true,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Content",
+          "default_value": "",
+          "sorting": 5,
+          "description": "Content of the dialog",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": true,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 6,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 7,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Interaction",
+      "type": "HideInteractableAction",
+      "version": "0.1.0",
+      "description": "This action ensures that selected interactables will be hidden in the game",
+      "properties": [
+        {
+          "name": "Targets",
+          "default_value": [
+            "Drawer"
+          ],
+          "sorting": 0,
+          "description": "The interactables that will be hidden in the game",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [
+            {
+              "type": "tag",
+              "values": [
+                "BlueTea.Core.Tags.Default"
+              ]
+            },
+            {
+              "type": "string",
+              "values": [
+                "All"
+              ]
+            }
+          ],
+          "siblings": [],
+          "type": "interactable[]"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 1,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 2,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Audio",
+      "type": "PlayAudioAction",
+      "version": "0.1.0",
+      "description": "Start an audio clip either in the world or from an interactable game object.",
+      "properties": [
+        {
+          "name": "Loop",
+          "default_value": false,
+          "sorting": 0,
+          "description": "If the audio should loop.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "boolean"
+        },
+        {
+          "name": "Volume",
+          "default_value": 50,
+          "sorting": 1,
+          "description": "How much should the volume dampen? 75 means you hear 75% of the volume you would normally hear.",
+          "constraints": [
+            {
+              "min": 0.0,
+              "max": 100.0,
+              "parameters": {
+                "min": "0",
+                "max": "100"
+              },
+              "rule": "between"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        },
+        {
+          "name": "Channel",
+          "default_value": "World",
+          "sorting": 2,
+          "description": "Which Audio channel available in the project should be used to play this audio clip.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [
+            {
+              "type": "string",
+              "values": [
+                "Master",
+                "Music",
+                "World",
+                "TTS",
+                "Target",
+                "Ambience"
+              ]
+            }
+          ],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "AudioClip",
+          "default_value": "",
+          "sorting": 3,
+          "description": "The audio sound played",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": true,
+          "is_hidden": false,
+          "mime_types": [
+            "audio/mpeg",
+            "audio/wav",
+            "audio/ogg"
+          ],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "media"
+        },
+        {
+          "name": "AudioName",
+          "default_value": "",
+          "sorting": 4,
+          "description": "The name of the audio file, this name is used as a reference to be able to stop the audio. Overrides the audio if the name is already used.",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "/^[a-z]*$/"
+              },
+              "rule": "regex"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": true,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Target",
+          "default_value": "None",
+          "sorting": 5,
+          "description": "The Interactable from where the audio is played",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [
+            {
+              "type": "string",
+              "values": [
+                "None"
+              ]
+            },
+            {
+              "type": "tag",
+              "values": [
+                "BlueTea.Core.Tags.Default"
+              ]
+            }
+          ],
+          "siblings": [],
+          "type": "interactable"
+        },
+        {
+          "name": "MaxDistance",
+          "default_value": 50.0,
+          "sorting": 6,
+          "description": "Maximum distance is the distance the volume is decreasing to in a linear line",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        },
+        {
+          "name": "MinDistance",
+          "default_value": 5.0,
+          "sorting": 7,
+          "description": "Minimal distance the volume is at 100% of the volume set in the volume property",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 8,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 9,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Level Flow",
+      "type": "RemoveEventAction",
+      "version": "0.1.0",
+      "description": "This action removes the listed events from the triggered events list.",
+      "properties": [
+        {
+          "name": "Events",
+          "default_value": [],
+          "sorting": 0,
+          "description": "Write the name of the event(s) which will be removed.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string[]"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 1,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 2,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Interaction",
+      "type": "ShowInteractableAction",
+      "version": "0.1.0",
+      "description": "This action ensures that selected interactables will be shown in the game",
+      "properties": [
+        {
+          "name": "Targets",
+          "default_value": [
+            "Drawer"
+          ],
+          "sorting": 0,
+          "description": "The interactables that will be shown in the game",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [
+            {
+              "type": "tag",
+              "values": [
+                "BlueTea.Core.Tags.Default"
+              ]
+            },
+            {
+              "type": "string",
+              "values": [
+                "All"
+              ]
+            }
+          ],
+          "siblings": [],
+          "type": "interactable[]"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 1,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 2,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Instruction",
+      "type": "SpeakAction",
+      "version": "0.1.0",
+      "description": "Lets the user listen and read instructions and comments from the game.",
+      "properties": [
+        {
+          "name": "TextToSpeech",
+          "default_value": "<speak></speak>",
+          "sorting": 0,
+          "description": "The punctuated text to speech text.",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "/^(<speak>.*<\\/speak>)$/m"
+              },
+              "rule": "regex"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": true,
+          "choices": [],
+          "siblings": [
+            {
+              "name": "TextToSpeechAudio",
+              "purpose": "audio"
+            },
+            {
+              "name": "SelectedVoice",
+              "purpose": "game_character"
+            }
+          ],
+          "type": "ssml"
+        },
+        {
+          "name": "TextToSpeechAudio",
+          "default_value": "",
+          "sorting": 1,
+          "description": "The TTS audio file",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [
+            "audio/mpeg"
+          ],
+          "is_translatable": true,
+          "choices": [],
+          "siblings": [],
+          "type": "media"
+        },
+        {
+          "name": "SelectedVoice",
+          "default_value": "",
+          "sorting": 2,
+          "description": "The TTS audio voice.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "game_character"
+        },
+        {
+          "name": "Repeatable",
+          "default_value": false,
+          "sorting": 3,
+          "description": "If the TTS can be repeated by the user.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "boolean"
+        },
+        {
+          "name": "InstantComplete",
+          "default_value": false,
+          "sorting": 4,
+          "description": "If true the TTS action will be listened normally, but it will not wait for it to end and immediately call its Finished event and continue on to the next action.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "boolean"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 5,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 6,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Audio",
+      "type": "StopAudioAction",
+      "version": "0.1.0",
+      "description": "Stops an audio clip which was already started from the PlayAudioAction.",
+      "properties": [
+        {
+          "name": "AudioName",
+          "default_value": "",
+          "sorting": 0,
+          "description": "The name as which the audio file is saved, this name is also used to stop the audio. Overrides if the name is already used.",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "/^[a-z]*$/"
+              },
+              "rule": "regex"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": true,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 1,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 2,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Level Flow",
+      "type": "TriggerEventAction",
+      "version": "0.1.0",
+      "description": "This actions trigger events.",
+      "properties": [
+        {
+          "name": "Events",
+          "default_value": [],
+          "sorting": 0,
+          "description": "Write the name of the event(s) which will be triggered.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string[]"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 1,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 2,
           "description": "Delay before the action will execute",
           "constraints": [
             {
