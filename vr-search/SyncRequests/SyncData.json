@@ -1,6 +1,43 @@
 {
-  "version": "0.5.0",
+  "version": "0.9.0",
   "interactables": [
+    {
+      "id": "011e1df4-75c7-4e04-a551-7b0a866bce5b",
+      "display_name": "Drawer Handle",
+      "description": "This is the place were player can grab the drawer door to open or close it.",
+      "tags": [
+        "BlueTea.Core.Tags.Default",
+        "DrawerHandleTag"
+      ]
+    },
+    {
+      "id": "0eabeca2-12d0-4a54-8feb-534395376bb9",
+      "display_name": "Door Handle",
+      "description": "This is the place were player can grab the door door to open or close it.",
+      "tags": [
+        "BlueTea.Core.Tags.Default",
+        "DoorHandleTag"
+      ]
+    },
+    {
+      "id": "11173d6e-ebc7-4fc2-a644-395fe549f00c",
+      "display_name": "PlayerTeleporter",
+      "description": "The thing that teleports player to a desired spot",
+      "tags": [
+        "BlueTea.Core.Tags.Default",
+        "PlayerTeleporterTag"
+      ]
+    },
+    {
+      "id": "172af862-8f73-4f63-b0cc-3df6040b122c",
+      "display_name": "Cube (1)",
+      "description": "Cube to play around",
+      "tags": [
+        "BlueTea.Core.Tags.Default",
+        "BlueTea.Core.Tags.Clickable",
+        "BlueTea.Core.Tags.Mesh"
+      ]
+    },
     {
       "id": "4be8079d-c6e6-4028-9247-78d7511f0b9a",
       "display_name": "Cube",
@@ -9,6 +46,15 @@
         "BlueTea.Core.Tags.Default",
         "BlueTea.Core.Tags.Clickable",
         "BlueTea.Core.Tags.Mesh"
+      ]
+    },
+    {
+      "id": "567a7601-a7ca-4c9d-bf0b-c1b202f3af9b",
+      "display_name": "Door Handle 2",
+      "description": "This is the place were player can grab the door door to open or close it.",
+      "tags": [
+        "BlueTea.Core.Tags.Default",
+        "DoorHandleTag"
       ]
     },
     {
@@ -162,6 +208,104 @@
           "default_value": "Any",
           "sorting": 1,
           "description": "Should the user release any or all of the listed targets",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [
+            {
+              "type": "string",
+              "values": [
+                "Any",
+                "All"
+              ]
+            }
+          ],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 2,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 3,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Level Flow",
+      "type": "XRTeleportAction",
+      "version": "0.6.0",
+      "description": "Teleport the player to a designated area",
+      "properties": [
+        {
+          "name": "Targets",
+          "default_value": [
+            "PlayerTeleporter"
+          ],
+          "sorting": 0,
+          "description": "The teleporter for player",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [
+            {
+              "type": "tag",
+              "values": [
+                "PlayerTeleporterTag"
+              ]
+            },
+            {
+              "type": "string",
+              "values": [
+                "All"
+              ]
+            }
+          ],
+          "siblings": [],
+          "type": "interactable[]"
+        },
+        {
+          "name": "ClickMode",
+          "default_value": "Any",
+          "sorting": 1,
+          "description": "Should player teleport to any or all of the listed targets",
           "constraints": [],
           "property_group": "Default",
           "is_required": false,
