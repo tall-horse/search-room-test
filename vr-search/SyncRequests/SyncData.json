@@ -2,40 +2,12 @@
   "version": "0.9.0",
   "interactables": [
     {
-      "id": "011e1df4-75c7-4e04-a551-7b0a866bce5b",
-      "display_name": "Drawer Handle",
-      "description": "This is the place were player can grab the drawer door to open or close it.",
-      "tags": [
-        "BlueTea.Core.Tags.Default",
-        "DrawerHandleTag"
-      ]
-    },
-    {
-      "id": "0eabeca2-12d0-4a54-8feb-534395376bb9",
-      "display_name": "Door Handle",
-      "description": "This is the place were player can grab the door door to open or close it.",
-      "tags": [
-        "BlueTea.Core.Tags.Default",
-        "DoorHandleTag"
-      ]
-    },
-    {
       "id": "11173d6e-ebc7-4fc2-a644-395fe549f00c",
       "display_name": "PlayerTeleporter",
       "description": "The thing that teleports player to a desired spot",
       "tags": [
         "BlueTea.Core.Tags.Default",
         "PlayerTeleporterTag"
-      ]
-    },
-    {
-      "id": "172af862-8f73-4f63-b0cc-3df6040b122c",
-      "display_name": "Cube (1)",
-      "description": "Cube to play around",
-      "tags": [
-        "BlueTea.Core.Tags.Default",
-        "BlueTea.Core.Tags.Clickable",
-        "BlueTea.Core.Tags.Mesh"
       ]
     },
     {
@@ -49,18 +21,19 @@
       ]
     },
     {
-      "id": "567a7601-a7ca-4c9d-bf0b-c1b202f3af9b",
-      "display_name": "Door Handle 2",
-      "description": "This is the place were player can grab the door door to open or close it.",
-      "tags": [
-        "BlueTea.Core.Tags.Default",
-        "DoorHandleTag"
-      ]
-    },
-    {
       "id": "99ba2daa-2ce6-4905-a584-8b71cb5dfdd0",
       "display_name": "Drawer",
       "description": "A drawer you can open",
+      "tags": [
+        "BlueTea.Core.Tags.Default",
+        "BlueTea.Core.Tags.Clickable",
+        "BlueTea.Core.Tags.Mesh"
+      ]
+    },
+    {
+      "id": "9ddf92f6-9d92-4144-b927-db057b198497",
+      "display_name": "Cube (9ddf92f6-9d92-4144-b927-db057b198497)",
+      "description": "Cube to play around",
       "tags": [
         "BlueTea.Core.Tags.Default",
         "BlueTea.Core.Tags.Clickable",
@@ -343,6 +316,73 @@
           "name": "Delay",
           "default_value": 0.0,
           "sorting": 3,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Scoring",
+      "type": "ApplyPenaltyAction",
+      "version": "0.1.0",
+      "description": "Gives the player a penalty. Penalty can not be greater than the max score of the step.",
+      "properties": [
+        {
+          "name": "Penalty",
+          "default_value": 0,
+          "sorting": 0,
+          "description": "Penalty for failing this action",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gt"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "integer"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 1,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 2,
           "description": "Delay before the action will execute",
           "constraints": [
             {
@@ -733,7 +773,7 @@
         {
           "name": "Targets",
           "default_value": [
-            "Drawer"
+            "PlayerTeleporter"
           ],
           "sorting": 0,
           "description": "The interactables that will be hidden in the game",
@@ -1011,6 +1051,488 @@
       ]
     },
     {
+      "action_category": "Instruction",
+      "type": "QuestionnaireAction",
+      "version": "0.1.0",
+      "description": "Shows a popup dialog with a question and answers.",
+      "properties": [
+        {
+          "name": "Title",
+          "default_value": "Questionnaire_",
+          "sorting": 0,
+          "description": "The questionnaire title this action refers to.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": true,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "QuestionText",
+          "default_value": "",
+          "sorting": 1,
+          "description": "The questionnaire text to show in the question field.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": true,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "QuestionMedia",
+          "default_value": "",
+          "sorting": 2,
+          "description": "The questionnaire image to show in the question field.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [
+            "image/png",
+            "image/jpeg"
+          ],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "media"
+        },
+        {
+          "name": "MultipleAnswers",
+          "default_value": false,
+          "sorting": 3,
+          "description": "If you can choose multiple answers during the questionnaire or you can choose only one answer.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "boolean"
+        },
+        {
+          "name": "Answer1HideAnswerIngame",
+          "default_value": false,
+          "sorting": 4,
+          "description": "If answer number 1 should appear in the questionnaire.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "boolean"
+        },
+        {
+          "name": "Answer1Text",
+          "default_value": "",
+          "sorting": 5,
+          "description": "The text which appears in the answer number 1.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Answer1Media",
+          "default_value": "",
+          "sorting": 6,
+          "description": "The image which appears in answer number 1.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [
+            "image/png",
+            "image/jpeg"
+          ],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "media"
+        },
+        {
+          "name": "Answer2HideAnswerIngame",
+          "default_value": false,
+          "sorting": 7,
+          "description": "If answer number 2 should appear in the questionnaire.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "boolean"
+        },
+        {
+          "name": "Answer2Text",
+          "default_value": "",
+          "sorting": 8,
+          "description": "The text which appears in the answer number 2.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Answer2Media",
+          "default_value": "",
+          "sorting": 9,
+          "description": "The image which appears in answer number 2.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [
+            "image/png",
+            "image/jpeg"
+          ],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "media"
+        },
+        {
+          "name": "Answer3HideAnswerIngame",
+          "default_value": false,
+          "sorting": 10,
+          "description": "If answer number 3 should appear in the questionnaire.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "boolean"
+        },
+        {
+          "name": "Answer3Text",
+          "default_value": "",
+          "sorting": 11,
+          "description": "The text which appears in the answer number 3.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Answer3Media",
+          "default_value": "",
+          "sorting": 12,
+          "description": "The image which appears in answer number 3.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [
+            "image/png",
+            "image/jpeg"
+          ],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "media"
+        },
+        {
+          "name": "Answer4HideAnswerIngame",
+          "default_value": false,
+          "sorting": 13,
+          "description": "If answer number 4 should appear in the questionnaire.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "boolean"
+        },
+        {
+          "name": "Answer4Text",
+          "default_value": "",
+          "sorting": 14,
+          "description": "The text which appears in the answer number 4.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Answer4Media",
+          "default_value": "",
+          "sorting": 15,
+          "description": "The image which appears in answer number 4.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [
+            "image/png",
+            "image/jpeg",
+            "image/bmp",
+            "image/gif"
+          ],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "media"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 16,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 17,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Instruction",
+      "type": "QuestionnaireDefaultResponseAction",
+      "version": "0.1.0",
+      "description": "Handles the default response of a questionnaire.",
+      "properties": [
+        {
+          "name": "QuestionnaireTitle",
+          "default_value": "Questionnaire_",
+          "sorting": 0,
+          "description": "The questionnaire title this response action refers to.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": true,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 1,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 2,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Instruction",
+      "type": "QuestionnaireResponseAction",
+      "version": "0.1.0",
+      "description": "Handles specific response of a questionnaire.",
+      "properties": [
+        {
+          "name": "QuestionnaireTitle",
+          "default_value": "Questionnaire_",
+          "sorting": 0,
+          "description": "The questionnaire title this response action refers to.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": true,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Answer1Selected",
+          "default_value": false,
+          "sorting": 1,
+          "description": "If answer number 1 should have been selected in the questionnaire, in order to run this response action.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "boolean"
+        },
+        {
+          "name": "Answer2Selected",
+          "default_value": false,
+          "sorting": 2,
+          "description": "If answer number 2 should have been selected in the questionnaire, in order to run this response action.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "boolean"
+        },
+        {
+          "name": "Answer3Selected",
+          "default_value": false,
+          "sorting": 3,
+          "description": "If answer number 3 should have been selected in the questionnaire, in order to run this response action.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "boolean"
+        },
+        {
+          "name": "Answer4Selected",
+          "default_value": false,
+          "sorting": 4,
+          "description": "If answer number 4 should have been selected in the questionnaire, in order to run this response action.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "boolean"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 5,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 6,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
       "action_category": "Level Flow",
       "type": "RemoveEventAction",
       "version": "0.1.0",
@@ -1071,6 +1593,237 @@
       ]
     },
     {
+      "action_category": "Timers",
+      "type": "RestartAllTimersAction",
+      "version": "0.1.0",
+      "description": "This action will restart all currently active timers",
+      "properties": [
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 0,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 1,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Timers",
+      "type": "RestartTimerAction",
+      "version": "0.1.0",
+      "description": "Restarts a timer with a specified name.",
+      "properties": [
+        {
+          "name": "TimerName",
+          "default_value": "TimerName",
+          "sorting": 0,
+          "description": "The name of the timer that is going to be used.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": true,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 1,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 2,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Instruction",
+      "type": "ShowDialogAction",
+      "version": "0.1.0",
+      "description": "A popup window, which gives information and/or instructions in form of video/image/text.",
+      "properties": [
+        {
+          "name": "DialogTitle",
+          "default_value": "",
+          "sorting": 0,
+          "description": "The title, which will appear on the of the dialog.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": true,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "DialogDescription",
+          "default_value": "",
+          "sorting": 1,
+          "description": "The description, which will appear in the dialog.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": true,
+          "choices": [],
+          "siblings": [],
+          "type": "text"
+        },
+        {
+          "name": "DialogSubtitle",
+          "default_value": "",
+          "sorting": 2,
+          "description": "The subtitles, which will appear in the dialog.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": true,
+          "choices": [],
+          "siblings": [],
+          "type": "text"
+        },
+        {
+          "name": "Media",
+          "default_value": "",
+          "sorting": 3,
+          "description": "The Media which will appear in the dialog. Could be Image, Video or empty, which will result in only the Title, Subtitle and Description being shown.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [
+            "image/png",
+            "image/jpeg",
+            "video/mp4",
+            "video/x-msvideo",
+            "video/ogg"
+          ],
+          "is_translatable": true,
+          "choices": [],
+          "siblings": [],
+          "type": "media"
+        },
+        {
+          "name": "AutoCloseTimer",
+          "default_value": 0.0,
+          "sorting": 4,
+          "description": "If this number is more than 0, the dialog will close after that many seconds.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 5,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 6,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
       "action_category": "Interaction",
       "type": "ShowInteractableAction",
       "version": "0.1.0",
@@ -1079,7 +1832,7 @@
         {
           "name": "Targets",
           "default_value": [
-            "Drawer"
+            "PlayerTeleporter"
           ],
           "sorting": 0,
           "description": "The interactables that will be shown in the game",
@@ -1284,6 +2037,156 @@
       ]
     },
     {
+      "action_category": "Timers",
+      "type": "StartTimerAction",
+      "version": "0.1.0",
+      "description": "This action starts a timer with the specified duration in seconds",
+      "properties": [
+        {
+          "name": "TimerDuration",
+          "default_value": 60,
+          "sorting": 0,
+          "description": "The duration of the timer that should be created. Format is in seconds",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": true,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "integer"
+        },
+        {
+          "name": "RunInBackground",
+          "default_value": false,
+          "sorting": 1,
+          "description": "Should this timer run in the background?",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": true,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "boolean"
+        },
+        {
+          "name": "ShowInUI",
+          "default_value": false,
+          "sorting": 2,
+          "description": "Should this timer be visible on the screen?",
+          "constraints": [],
+          "property_group": "UI",
+          "is_required": true,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "boolean"
+        },
+        {
+          "name": "TimerName",
+          "default_value": "TimerName",
+          "sorting": 3,
+          "description": "The name of the timer that is going to be used.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": true,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 4,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 5,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Timers",
+      "type": "StopAllTimersAction",
+      "version": "0.1.0",
+      "description": "This action will stop all currently active timers",
+      "properties": [
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 0,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 1,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
       "action_category": "Audio",
       "type": "StopAudioAction",
       "version": "0.1.0",
@@ -1302,6 +2205,66 @@
               "rule": "regex"
             }
           ],
+          "property_group": "Default",
+          "is_required": true,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 1,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 2,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "action_category": "Timers",
+      "type": "StopTimerAction",
+      "version": "0.1.0",
+      "description": "Stop a timer with a specified name.",
+      "properties": [
+        {
+          "name": "TimerName",
+          "default_value": "TimerName",
+          "sorting": 0,
+          "description": "The name of the timer that is going to be used.",
+          "constraints": [],
           "property_group": "Default",
           "is_required": true,
           "is_hidden": false,
@@ -1409,12 +2372,77 @@
           "type": "float"
         }
       ]
+    },
+    {
+      "action_category": "Timers",
+      "type": "WaitForTimerToFinishAction",
+      "version": "0.1.0",
+      "description": "This action will wait for a specific named timer to finish.",
+      "properties": [
+        {
+          "name": "TimerName",
+          "default_value": "TimerName",
+          "sorting": 0,
+          "description": "The name of the timer that is going to be used.",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": true,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Id",
+          "default_value": "",
+          "sorting": 1,
+          "description": "Used for linking lessons",
+          "constraints": [],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": true,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "string"
+        },
+        {
+          "name": "Delay",
+          "default_value": 0.0,
+          "sorting": 2,
+          "description": "Delay before the action will execute",
+          "constraints": [
+            {
+              "parameters": {
+                "value": "0"
+              },
+              "rule": "gte"
+            }
+          ],
+          "property_group": "Default",
+          "is_required": false,
+          "is_hidden": false,
+          "mime_types": [],
+          "is_translatable": false,
+          "choices": [],
+          "siblings": [],
+          "type": "float"
+        }
+      ]
     }
   ],
   "action_property_groups": [
     {
       "sorting": 0,
       "name": "Default",
+      "collapsed": true
+    },
+    {
+      "sorting": 0,
+      "name": "UI",
       "collapsed": true
     }
   ],
