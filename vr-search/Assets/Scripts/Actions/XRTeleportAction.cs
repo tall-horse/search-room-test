@@ -3,13 +3,7 @@ using System.Linq;
 using BlueTea.Core.ActionCategories;
 using BlueTea.Core.Interactables;
 using BlueTea.Core.Interactables.Utility;
-using BlueTea.Core.Tags;
-using BlueTea.Core.Tags.Utility;
 using Unity.XR.CoreUtils;
-using UnityEditor.Playables;
-using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using VirtualStudio.Actions;
 using VirtualStudio.Models;
 
@@ -29,10 +23,6 @@ public class XRTeleportAction : Action
         {
             Interactables = InteractablesUtility.FindAllInteractablesWithTags(new PlayerTeleporterTag());
         }
-        // else
-        // {
-        //     Interactables = InteractablesUtility.FindInteractablesWithNames(Targets);
-        // }
     }
 
     public override void Execute()
