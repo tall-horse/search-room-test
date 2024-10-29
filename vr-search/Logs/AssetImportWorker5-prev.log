@@ -15,7 +15,7 @@ C:/Dima/Projects/search-room-test/vr-search
 -logFile
 Logs/AssetImportWorker5.log
 -srvPort
-50113
+51595
 -job-worker-count
 15
 -background-job-worker-count
@@ -59,14 +59,14 @@ C:/Dima/Projects/search-room-test/vr-search
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [13264]  Target information:
+Player connection [5156]  Target information:
 
-Player connection [13264]  * "[IP] 192.168.178.180 [Port] 0 [Flags] 2 [Guid] 1275733982 [EditorId] 1275733982 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [5156]  * "[IP] 192.168.178.180 [Port] 0 [Flags] 2 [Guid] 3919107583 [EditorId] 3919107583 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [13264]  * "[IP] 10.2.0.2 [Port] 0 [Flags] 2 [Guid] 1275733982 [EditorId] 1275733982 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [5156]  * "[IP] 10.2.0.2 [Port] 0 [Flags] 2 [Guid] 3919107583 [EditorId] 3919107583 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [13264] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [13264] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [5156] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [5156] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 15
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
@@ -77,8 +77,8 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 617.45 ms, found 12 plugins.
-Preloading 1 native plugins for Editor in 0.67 ms.
+Refreshing native plugins compatible for Editor in 9.01 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.52 ms.
 Initialize engine version: 6000.0.20f1 (05208a74e9aa)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Dima/Projects/search-room-test/vr-search/Assets
@@ -93,46 +93,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56348
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56068
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Registered in 0.007750 seconds.
-- Loaded All Assemblies, in  0.673 seconds
+Registered in 0.004113 seconds.
+- Loaded All Assemblies, in  0.344 seconds
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 487 ms
+Android Extension - Scanning For ADB Devices 306 ms
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.788 seconds
-Domain Reload Profiling: 1459ms
-	BeginReloadAssembly (120ms)
+- Finished resetting the current domain, in  0.649 seconds
+Domain Reload Profiling: 991ms
+	BeginReloadAssembly (105ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (0ms)
-	RebuildCommonClasses (188ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (42ms)
-	LoadAllAssembliesAndSetupDomain (312ms)
-		LoadAssemblies (126ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (153ms)
+		LoadAssemblies (103ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (301ms)
-			TypeCache.Refresh (300ms)
-				TypeCache.ScanAssembly (290ms)
+		AnalyzeDomain (151ms)
+			TypeCache.Refresh (149ms)
+				TypeCache.ScanAssembly (135ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (789ms)
+	FinalizeReload (649ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (759ms)
+		SetupLoadedEditorAssemblies (600ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (559ms)
-			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (4ms)
+			InitializePlatformSupportModulesInManaged (385ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (5ms)
 			ProcessInitializeOnLoadAttributes (130ms)
-			ProcessInitializeOnLoadMethodAttributes (61ms)
+			ProcessInitializeOnLoadMethodAttributes (73ms)
 			AfterProcessingInitializeOnLoad (2ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -141,10 +141,10 @@ Domain Reload Profiling: 1459ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.815 seconds
+- Loaded All Assemblies, in  1.026 seconds
 'Packages/com.unity.xr.openxr/Runtime/OpenXRLoader.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.xr.openxr/Runtime/OpenXRLoaderInternal.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 8.02 ms, found 12 plugins.
+Refreshing native plugins compatible for Editor in 7.06 ms, found 12 plugins.
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
@@ -175,118 +175,46 @@ Mono: successfully reloaded assembly
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.813 seconds
-Domain Reload Profiling: 2622ms
-	BeginReloadAssembly (890ms)
+- Finished resetting the current domain, in  0.942 seconds
+Domain Reload Profiling: 1963ms
+	BeginReloadAssembly (372ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (3ms)
+		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (23ms)
-	RebuildCommonClasses (28ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (40ms)
 	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (61ms)
-	LoadAllAssembliesAndSetupDomain (820ms)
-		LoadAssemblies (565ms)
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (545ms)
+		LoadAssemblies (351ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (342ms)
-			TypeCache.Refresh (256ms)
-				TypeCache.ScanAssembly (194ms)
-			BuildScriptInfoCaches (72ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (814ms)
+		AnalyzeDomain (295ms)
+			TypeCache.Refresh (214ms)
+				TypeCache.ScanAssembly (196ms)
+			BuildScriptInfoCaches (68ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (943ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (634ms)
+		SetupLoadedEditorAssemblies (682ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (10ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (99ms)
-			ProcessInitializeOnLoadAttributes (417ms)
-			ProcessInitializeOnLoadMethodAttributes (97ms)
-			AfterProcessingInitializeOnLoad (6ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (63ms)
+			ProcessInitializeOnLoadAttributes (448ms)
+			ProcessInitializeOnLoadMethodAttributes (148ms)
+			AfterProcessingInitializeOnLoad (10ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 15.93 ms, found 12 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 16.20 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
 Unloading 169 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7416 unused Assets / (5.2 MB). Loaded Objects now: 8098.
-Memory consumption went from 205.4 MB to 200.1 MB.
-Total: 12.257200 ms (FindLiveObjects: 0.669500 ms CreateObjectMapping: 0.868200 ms MarkObjects: 7.626800 ms  DeleteObjects: 3.091200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1693796.222204 seconds.
-  path: Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Cylinder.009_bottle.001_0_95_0.asset
-  artifactKey: Guid(f7c8614dd1cff5843a793ee22bbf9eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Cylinder.009_bottle.001_0_95_0.asset using Guid(f7c8614dd1cff5843a793ee22bbf9eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '591609fafc4bdb6ff80eba546205ef7a') in 0.0980224 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Cylinder.034_Material.005_0_34_0.asset
-  artifactKey: Guid(414dca48b58ee564f83d0592b178169b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Cylinder.034_Material.005_0_34_0.asset using Guid(414dca48b58ee564f83d0592b178169b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7dc4471f2295ea0ead186984c16c6442') in 0.0088723 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000073 seconds.
-  path: Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Cylinder.022_Material.007_0_21_0.asset
-  artifactKey: Guid(8600a5aea84aff14bb53e710cd251e3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Cylinder.022_Material.007_0_21_0.asset using Guid(8600a5aea84aff14bb53e710cd251e3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0fa64622964192118bed29035b352734') in 0.0077486 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Cylinder.009_lid.001_0_96_0.asset
-  artifactKey: Guid(9b2429186a027d249b0f0f7bcb12c1ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Cylinder.009_lid.001_0_96_0.asset using Guid(9b2429186a027d249b0f0f7bcb12c1ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6b6bd382c973550dd5ac9d8ee2bf7f0d') in 0.0133853 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000124 seconds.
-  path: Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Cylinder.020_Material.007_0_19_0.asset
-  artifactKey: Guid(8afe498cdad25954483b59495dc9f8e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Cylinder.020_Material.007_0_19_0.asset using Guid(8afe498cdad25954483b59495dc9f8e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e13e4624a33270552f7f9c799ec53d25') in 0.0165306 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.498010 seconds.
-  path: Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Cylinder.042_Material.005_0_50_0.asset
-  artifactKey: Guid(29b327950994d484995c1b67fca5922e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Cylinder.042_Material.005_0_50_0.asset using Guid(29b327950994d484995c1b67fca5922e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd496e99daf6830e91a4da9f192968dd7') in 0.0106509 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000104 seconds.
-  path: Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Plane.001_Material.015_0_100_0.asset
-  artifactKey: Guid(8730e485a7d8dc14ca5e7adbcfdeaebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Plane.001_Material.015_0_100_0.asset using Guid(8730e485a7d8dc14ca5e7adbcfdeaebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '90f26a2fedb9a879d9026748d6291d41') in 0.028231 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000100 seconds.
-  path: Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Plane_Material.003_0_0_0.asset
-  artifactKey: Guid(7f03df80320e71248a5e01480ad88029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Plane_Material.003_0_0_0.asset using Guid(7f03df80320e71248a5e01480ad88029) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0658f66ccc3848446ea65211d58e5b30') in 0.0125035 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Cylinder.057_Material.005_0_75_0.asset
-  artifactKey: Guid(533cf5d5ac738694a96aa6378ea5eeaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Multi_Supermarket_Assetpack_VOL.2/meshes/Cylinder.057_Material.005_0_75_0.asset using Guid(533cf5d5ac738694a96aa6378ea5eeaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '32e254d3a7a2dd257dfe692a14e96476') in 0.0087364 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+Unloading 7416 unused Assets / (6.9 MB). Loaded Objects now: 8098.
+Memory consumption went from 209.3 MB to 202.4 MB.
+Total: 15.575000 ms (FindLiveObjects: 0.963400 ms CreateObjectMapping: 0.945400 ms MarkObjects: 9.724400 ms  DeleteObjects: 3.939600 ms)
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
