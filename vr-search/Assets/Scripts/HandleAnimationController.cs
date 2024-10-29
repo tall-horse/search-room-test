@@ -9,7 +9,7 @@ public class HandleAnimationController : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         interactable = GetComponentInChildren<XRGrabInteractable>();
     }
-     private void OnEnable()
+    private void OnEnable()
     {
         interactable.selectEntered.AddListener(OnGrab);
         interactable.selectExited.AddListener(OnRelease);
