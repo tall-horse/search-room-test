@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -14,24 +13,23 @@ public class TooltipController : MonoBehaviour
         tooltips = GameObject.FindGameObjectsWithTag(TooltipTag).ToList();
         tooltips.ForEach(t => t.SetActive(false));
         SubscribeShowTooltip();
-    }
-
-    private void SubscribeShowTooltip()
-    {
-        showTooltipAction.action.Enable();
-        showTooltipAction.action.performed += ToggleTooltip;
-    }
-
-    private void ToggleTooltip(InputAction.CallbackContext context)
-    {
-        tooltips.ForEach(t => t.SetActive(!t.activeSelf));
+        InputSystem.onDeviceChange += OnDeviceChange;
     }
 
     private void OnDestroy()
     {
         UnsubscribeShowTooltip();
+        InputSystem.onDeviceChange -= OnDeviceChange;
     }
-
+    private void ToggleTooltip(InputAction.CallbackContext context)
+    {
+        tooltips.ForEach(t => t.SetActive(!t.activeSelf));
+    }
+    private void SubscribeShowTooltip()
+    {
+        showTooltipAction.action.Enable();
+        showTooltipAction.action.performed += ToggleTooltip;
+    }
     private void UnsubscribeShowTooltip()
     {
         showTooltipAction.action.Disable();
