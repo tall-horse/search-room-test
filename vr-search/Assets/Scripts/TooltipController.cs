@@ -11,9 +11,13 @@ public class TooltipController : MonoBehaviour
     private void Awake()
     {
         tooltips = GameObject.FindGameObjectsWithTag(TooltipTag).ToList();
-        tooltips.ForEach(t => t.SetActive(false));
         SubscribeShowTooltip();
         InputSystem.onDeviceChange += OnDeviceChange;
+    }
+
+    private void Start()
+    {
+        tooltips.ForEach(t => t.SetActive(false));
     }
 
     private void OnDestroy()
