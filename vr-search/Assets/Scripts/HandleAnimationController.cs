@@ -7,13 +7,11 @@ public class HandleAnimationController : MonoBehaviour
     private XRGrabInteractable interactable;
     private void Awake()
     {
-        Debug.Log("Awake");
         animator = GetComponentInChildren<Animator>();
         interactable = GetComponentInChildren<XRGrabInteractable>();
     }
     private void OnEnable()
     {
-        Debug.Log("OnEnable");
         interactable.selectEntered.AddListener(OnGrab);
         interactable.selectExited.AddListener(OnRelease);
     }
