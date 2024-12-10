@@ -7,11 +7,11 @@ public class LockElementSwitcherUI : MonoBehaviour
 {
 
     [SerializeField] private RawImage columnIcon;
-    private List<Texture> cryptoIcons;
+    private DictionarySerializer cryptoIcons;
     private LockElementSwitcher lockElementSwitcher;
     private void Awake()
     {
-        cryptoIcons = GetComponent<CryptoIconsContainer>().CryptoIcons;
+        cryptoIcons = GetComponentInParent<DictionarySerializer>();
         lockElementSwitcher = GetComponent<LockElementSwitcher>();
     }
     private void Start()
@@ -21,6 +21,6 @@ public class LockElementSwitcherUI : MonoBehaviour
 
     private void UpdateIconUI(int index)
     {
-        columnIcon.texture = cryptoIcons[index];
+        columnIcon.texture = cryptoIcons.AccessByIndex(index).Key;
     }
 }
