@@ -1,22 +1,26 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LockElementSwitcherUI : MonoBehaviour
 {
-    [SerializeField] private RawImage columnIcon;
-    [SerializeField] private List<Texture> cryptoIcons;
-    private int currentIndex = 0;
 
-    public void ScrollUp()
+    [SerializeField] private RawImage columnIcon;
+    private List<Texture> cryptoIcons;
+    private LockElementSwitcher lockElementSwitcher;
+    private void Awake()
     {
-        currentIndex = (currentIndex + 1) % cryptoIcons.Count;
-        columnIcon.texture = cryptoIcons[currentIndex];
+        cryptoIcons = GetComponent<CryptoIconsContainer>().CryptoIcons;
+        lockElementSwitcher = GetComponent<LockElementSwitcher>();
+    }
+    private void Start()
+    {
+        lockElementSwitcher.OnCurrentIndexChanged += UpdateIconUI;
     }
 
-    public void ScrollDown()
+    private void UpdateIconUI(int index)
     {
-        currentIndex = (currentIndex - 1 + cryptoIcons.Count) % cryptoIcons.Count;
-        columnIcon.texture = cryptoIcons[currentIndex];
+        columnIcon.texture = cryptoIcons[index];
     }
 }
