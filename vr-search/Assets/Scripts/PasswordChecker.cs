@@ -47,7 +47,7 @@ public class PasswordChecker : MonoBehaviour
         List<int> availableElements = new List<int>();
         int randomIndex;
         int lastGeneratedNumber = -1;
-
+        if (dictionarySerializer.iconsWithNames == null) Debug.Log("ds is null ");
         for (int i = 0; i < dictionarySerializer.iconsWithNames.Count; i++)
         {
             availableElements.Add(i);

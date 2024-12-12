@@ -7,17 +7,15 @@ public class DictionarySerializer : MonoBehaviour
     [SerializeField] string thisObjectName;
     [SerializeField] NewDict newDict;
     public Dictionary<Texture, string> iconsWithNames;
-    private void Start()
+    private void Awake()
     {
         iconsWithNames = newDict.ToDictionary();
 
     }
     public KeyValuePair<Texture, string> AccessByIndex(int index)
     {
-        // Convert the dictionary to a list of KeyValuePair objects
         var list = new List<KeyValuePair<Texture, string>>(iconsWithNames);
 
-        // Access the key-value pair at the specified index
         if (index >= 0 && index < list.Count)
         {
             var item = list[index];
