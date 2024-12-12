@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 398573467069547746}
   - component: {fileID: 6107261418935761489}
   - component: {fileID: 6500928770203317029}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DoorFrame_Apt_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 7393905671874202951}
   - component: {fileID: 2650472451953149778}
   - component: {fileID: 8991887733788623979}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 5190762890301120858}
   - component: {fileID: 6542294779858906056}
   - component: {fileID: 211899025289789401}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,6 +507,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4965906381211047157}
     m_Modifications:
+    - target: {fileID: 836131131019370457, guid: 821a7fde28a570a469e762a1360c59bc, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6122110378220169237, guid: 821a7fde28a570a469e762a1360c59bc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.042965293
@@ -547,9 +551,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7265483409730987349, guid: 821a7fde28a570a469e762a1360c59bc, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 8737677301097792284, guid: 821a7fde28a570a469e762a1360c59bc, type: 3}
       propertyPath: m_Name
       value: Handle Animated
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737677301097792284, guid: 821a7fde28a570a469e762a1360c59bc, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
