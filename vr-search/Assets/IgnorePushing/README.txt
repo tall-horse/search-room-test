@@ -1,0 +1,1 @@
+Trezor Model-T Case by ErbanDesign on Thingiverse: https://www.thingiverse.com/thing:4934125
