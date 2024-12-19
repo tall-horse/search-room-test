@@ -1,8 +1,5 @@
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class DoorUnlocker : MonoBehaviour
@@ -27,11 +24,14 @@ public class DoorUnlocker : MonoBehaviour
 
     private void UnlockDoor(SelectEnterEventArgs arg0)
     {
+        var keyComponent = arg0.interactableObject.colliders[0].gameObject.GetComponent<Key>();
+        if (keyComponent == null)
+            return;
+        if (keyComponent.DoorToUnlock != door)
+            return;
         animator.SetBool(IsOpened, true);
-        IXRSelectInteractable key = arg0.interactableObject;
-        var keyObj = key.colliders[0].gameObject;
-        keyObj.transform.SetParent(keyObj.transform);
-        keyObj.GetComponent<Key>().TurnKey();
+        keyComponent.transform.SetParent(keyComponent.transform);
+        keyComponent.TurnKey();
     }
 
     public void OpenDoor()
