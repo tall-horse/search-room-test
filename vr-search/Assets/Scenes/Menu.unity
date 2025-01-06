@@ -468,7 +468,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 170777533}
-  - component: {fileID: 170777534}
   - component: {fileID: 170777535}
   m_Layer: 0
   m_Name: AutoLogin
@@ -492,21 +491,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &170777534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170777531}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c11ab61111591cd48bfc32f599947d45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelId: c451eaec-8bb4-11ef-950b-02d0291c7b0c
-  email: 402965@student.fontys.nl
-  password: jO!$QJtA7nR^AbFQ
 --- !u!114 &170777535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2897,6 +2881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4433362078129563821, guid: 9285c44e75645f24e9acbc2aa725e7fb, type: 3}
+      propertyPath: m_NearFarEnableTeleportDuringNearInteraction
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4955132838206061418, guid: 9285c44e75645f24e9acbc2aa725e7fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.944
@@ -2936,6 +2924,10 @@ PrefabInstance:
     - target: {fileID: 4955132838206061418, guid: 9285c44e75645f24e9acbc2aa725e7fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722254073484633808, guid: 9285c44e75645f24e9acbc2aa725e7fb, type: 3}
+      propertyPath: m_LeftHandTurnInput.m_InputActionReference
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
