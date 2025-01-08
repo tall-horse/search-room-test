@@ -29,7 +29,7 @@ public class XRTeleportAction : Action
     {
         foreach (Interactable interactable in Interactables)
         {
-            interactable.GetComponent<PlayerTeleporter>().TeleportPlayer();
+            interactable.GetComponent<PlayerTeleporter>().TeleportToStart();
             OnFinished();
         }
     }

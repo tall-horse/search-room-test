@@ -12,7 +12,7 @@ public class AreaTeleporter : MonoBehaviour
     {
         if (other.gameObject.GetComponent<XROrigin>() != null)
         {
-            playerTeleporter.TeleportPlayer();
+            playerTeleporter.TeleportToStart();
         }
     }
 }

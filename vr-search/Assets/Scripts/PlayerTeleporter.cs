@@ -3,14 +3,33 @@ using UnityEngine;
 
 public class PlayerTeleporter : MonoBehaviour
 {
-     private XROrigin player;
-    [SerializeField] private Transform teleportPoint;
-    private void Awake() {
+    private XROrigin player;
+    [SerializeField] private Transform initialPlayerPosition;
+    [SerializeField] private Transform startTutorialPosition;
+    [SerializeField] private Transform startSearchPosition;
+    private void Awake()
+    {
         player = FindAnyObjectByType<XROrigin>();
     }
-    public void TeleportPlayer()
+    private void Start()
     {
-        player.transform.position = teleportPoint.position;
-        player.transform.rotation = teleportPoint.rotation;
+        TeleportToStart();
+    }
+    private void TeleportPlayer(Transform teleportTo)
+    {
+        player.transform.position = teleportTo.position;
+        player.transform.rotation = teleportTo.rotation;
+    }
+    public void TeleportToStart()
+    {
+        TeleportPlayer(initialPlayerPosition);
+    }
+    public void TeleportToTutorial()
+    {
+        TeleportPlayer(startTutorialPosition);
+    }
+    public void TeleportToApartment()
+    {
+        TeleportPlayer(startSearchPosition);
     }
 }
