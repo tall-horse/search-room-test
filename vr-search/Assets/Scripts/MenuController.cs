@@ -4,17 +4,35 @@ using UnityEngine.InputSystem;
 public class MenuController : MonoBehaviour
 {
     [SerializeField] private InputActionReference menuAction;
+    [SerializeField] private GameObject menu;
     private bool isPaused = false;
     private void Awake()
     {
+        Time.timeScale = 1;
         SubscribeMenu();
         InputSystem.onDeviceChange += OnDeviceChange;
+        menu.SetActive(false);
     }
     private void ToggleMenu(InputAction.CallbackContext context)
     {
         isPaused = !isPaused;
-        Debug.Log("Pause is: " + isPaused);
+        ChangeTimeScale();
     }
+
+    private void ChangeTimeScale()
+    {
+        if (isPaused)
+        {
+            menu.SetActive(true);
+            //Time.timeScale = 0;
+        }
+        else
+        {
+            menu.SetActive(false);
+            //Time.timeScale = 1;
+        }
+    }
+
     private void SubscribeMenu()
     {
         menuAction.action.Enable();
