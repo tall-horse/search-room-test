@@ -6,13 +6,13 @@ public class AreaTeleporter : MonoBehaviour
     private PlayerTeleporter playerTeleporter;
     private void Awake()
     {
-        playerTeleporter = GetComponent<PlayerTeleporter>();
+        playerTeleporter = FindAnyObjectByType<PlayerTeleporter>();
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<XROrigin>() != null)
         {
-            playerTeleporter.TeleportToStart();
+            playerTeleporter.TeleportToApartment();
         }
     }
 }
