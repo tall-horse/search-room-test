@@ -54,7 +54,8 @@ namespace Unity.VRTemplate
             {
                 m_VideoPlayer.playOnAwake = true; // Set play on awake for next enable.
                 m_VideoPlayer.Play(); // Play video to load first frame.
-                VideoStop(); // Stop the video to set correct state and pause frame.
+                StartCoroutine(VideoStopStart());
+                //VideoStop(); // Stop the video to set correct state and pause frame.
             }
             else
             {
@@ -64,7 +65,11 @@ namespace Unity.VRTemplate
             if (m_ButtonPlayOrPause != null)
                 m_ButtonPlayOrPause.SetActive(false);
         }
-
+        private IEnumerator VideoStopStart()
+        {
+            yield return new WaitForSeconds(.1f);
+            VideoStop();
+        }
         void OnEnable()
         {
             if (m_VideoPlayer != null)

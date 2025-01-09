@@ -1,8 +1,11 @@
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerTeleporter : MonoBehaviour
 {
+    public UnityEvent OnPlayerTeleportedToTutorial;
+    public UnityEvent OnPlayerTeleportedToApartment;
     private XROrigin player;
     [SerializeField] private Transform initialPlayerPosition;
     [SerializeField] private Transform startTutorialPosition;
@@ -27,9 +30,11 @@ public class PlayerTeleporter : MonoBehaviour
     public void TeleportToTutorial()
     {
         TeleportPlayer(startTutorialPosition);
+        OnPlayerTeleportedToTutorial?.Invoke();
     }
     public void TeleportToApartment()
     {
         TeleportPlayer(startSearchPosition);
+        OnPlayerTeleportedToApartment?.Invoke();
     }
 }
