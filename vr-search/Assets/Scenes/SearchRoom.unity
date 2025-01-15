@@ -22197,13 +22197,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnPlayerTeleportedToTutorial:
     m_PersistentCalls:
-      m_Calls: []
-  OnPlayerTeleportedToApartment:
-    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1402221752}
-        m_TargetAssemblyTypeName: UnityEngine.Video.VideoPlayer, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 1646545980}
+        m_TargetAssemblyTypeName: Unity.VRTemplate.VideoTimeScrubControl, Assembly-CSharp
+        m_MethodName: VideoPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22213,6 +22210,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnPlayerTeleportedToApartment:
+    m_PersistentCalls:
+      m_Calls: []
   initialPlayerPosition: {fileID: 1987545155}
   startTutorialPosition: {fileID: 542337417}
   startSearchPosition: {fileID: 906172324}
@@ -30330,11 +30330,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc067c577ec1b854684d789b6e727cc0, type: 3}
---- !u!328 &1402221752 stripped
-VideoPlayer:
-  m_CorrespondingSourceObject: {fileID: 4415745982179208543, guid: dc067c577ec1b854684d789b6e727cc0, type: 3}
-  m_PrefabInstance: {fileID: 1402221751}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1407950499
 GameObject:
   m_ObjectHideFlags: 0
@@ -37349,6 +37344,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1017606091530846216, guid: c5be39b879c83f54d9bbfebe68c809be, type: 3}
   m_PrefabInstance: {fileID: 1741854878}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1646545980 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2133582561668262315, guid: dc067c577ec1b854684d789b6e727cc0, type: 3}
+  m_PrefabInstance: {fileID: 1402221751}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca75f292f7449044807f6ba9e6f954c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1646718359 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3431769699281883590, guid: 9e5c2bb5031891140882f5e81a01c0c7, type: 3}

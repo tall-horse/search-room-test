@@ -186,7 +186,7 @@ namespace Unity.VRTemplate
             m_ButtonPlayOrPause.SetActive(true);
         }
 
-        void VideoPlay()
+        public void VideoPlay()
         {
             m_VideoIsPlaying = true;
             m_VideoPlayer.Play();
