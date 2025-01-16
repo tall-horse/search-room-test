@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 5340978177648326020}
   - component: {fileID: 1713338851057455775}
   - component: {fileID: 4629241124612565136}
-  - component: {fileID: 271735875303763867}
+  - component: {fileID: 6297388672416258140}
   m_Layer: 0
   m_Name: Ledger_Nano_S
   m_TagString: Untagged
@@ -378,7 +378,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &271735875303763867
+--- !u!114 &6297388672416258140
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -387,10 +387,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6570757710024724290}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 954d36d183a18254e8bda1d94e3914b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9266cd66f46702c48b8ffe101dc7412f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScore: 5
+  scoreSource: {fileID: 11400000, guid: a7f1c5db910af5d47ad35eee0ee5ecf8, type: 2}
+  itemScore: 0
 --- !u!1 &8271799376830123668
 GameObject:
   m_ObjectHideFlags: 0

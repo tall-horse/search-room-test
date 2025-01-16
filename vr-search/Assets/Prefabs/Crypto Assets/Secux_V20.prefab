@@ -2038,7 +2038,7 @@ GameObject:
   - component: {fileID: 1737179906821314296}
   - component: {fileID: 2180334969217380584}
   - component: {fileID: 491199786188710318}
-  - component: {fileID: 8003736906972386933}
+  - component: {fileID: 5761819771799036195}
   m_Layer: 0
   m_Name: Secux_V20
   m_TagString: Untagged
@@ -2211,7 +2211,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &8003736906972386933
+--- !u!114 &5761819771799036195
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2220,10 +2220,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8117426714867470301}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 954d36d183a18254e8bda1d94e3914b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9266cd66f46702c48b8ffe101dc7412f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScore: 0
+  scoreSource: {fileID: 11400000, guid: a7f1c5db910af5d47ad35eee0ee5ecf8, type: 2}
+  itemScore: 0
 --- !u!1 &8201085421207270129
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7103878418113634086}
   - component: {fileID: 648010638846943683}
   - component: {fileID: 8196522889771156506}
-  - component: {fileID: 6862831774479611006}
+  - component: {fileID: -5471177306351052521}
   m_Layer: 0
   m_Name: Trezor_Keep_Metal
   m_TagString: Untagged
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &6862831774479611006
+--- !u!114 &-5471177306351052521
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,10 +215,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 126019848567400829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 954d36d183a18254e8bda1d94e3914b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9266cd66f46702c48b8ffe101dc7412f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScore: 5
+  scoreSource: {fileID: 11400000, guid: a7f1c5db910af5d47ad35eee0ee5ecf8, type: 2}
+  itemScore: 0
 --- !u!1 &1333205268346244285
 GameObject:
   m_ObjectHideFlags: 0

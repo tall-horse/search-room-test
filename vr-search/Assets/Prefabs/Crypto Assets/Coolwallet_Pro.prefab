@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 624735735107954567}
   - component: {fileID: 1745157681074881534}
   - component: {fileID: 9075556032189856774}
-  - component: {fileID: 2695770847595361965}
+  - component: {fileID: -6547904923044507335}
   m_Layer: 0
   m_Name: Coolwallet_Pro
   m_TagString: Untagged
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &2695770847595361965
+--- !u!114 &-6547904923044507335
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -462,10 +462,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7153217947925107090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 954d36d183a18254e8bda1d94e3914b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9266cd66f46702c48b8ffe101dc7412f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScore: 5
+  scoreSource: {fileID: 11400000, guid: a7f1c5db910af5d47ad35eee0ee5ecf8, type: 2}
+  itemScore: 0
 --- !u!1 &7848080416293213810
 GameObject:
   m_ObjectHideFlags: 0

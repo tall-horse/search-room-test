@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 4187527026298240904}
   - component: {fileID: 7808647209861939440}
   - component: {fileID: 2470254512701621850}
-  - component: {fileID: 3289456413540042602}
+  - component: {fileID: -3157225233680896977}
   m_Layer: 0
   m_Name: Jade
   m_TagString: Untagged
@@ -813,7 +813,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &3289456413540042602
+--- !u!114 &-3157225233680896977
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -822,10 +822,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5178679450279505341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 954d36d183a18254e8bda1d94e3914b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9266cd66f46702c48b8ffe101dc7412f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScore: 5
+  scoreSource: {fileID: 11400000, guid: a7f1c5db910af5d47ad35eee0ee5ecf8, type: 2}
+  itemScore: 0
 --- !u!1 &6527494462944449716
 GameObject:
   m_ObjectHideFlags: 0

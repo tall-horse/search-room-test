@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 7311996327068690967}
   - component: {fileID: 3973170376965195376}
   - component: {fileID: 1848062776420880700}
-  - component: {fileID: 1509804819039571347}
+  - component: {fileID: 4061714849404299264}
   m_Layer: 0
   m_Name: Open_Dime
   m_TagString: Untagged
@@ -660,7 +660,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &1509804819039571347
+--- !u!114 &4061714849404299264
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -669,10 +669,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5787922826705943838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 954d36d183a18254e8bda1d94e3914b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9266cd66f46702c48b8ffe101dc7412f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScore: 5
+  scoreSource: {fileID: 11400000, guid: a7f1c5db910af5d47ad35eee0ee5ecf8, type: 2}
+  itemScore: 0
 --- !u!1 &6159741097879475958
 GameObject:
   m_ObjectHideFlags: 0

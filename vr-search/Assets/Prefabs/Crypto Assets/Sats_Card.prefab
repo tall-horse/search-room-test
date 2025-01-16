@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4212266085955724442}
   - component: {fileID: 7959611359638852371}
   - component: {fileID: 312104020773634256}
-  - component: {fileID: 6108127055293252657}
+  - component: {fileID: 1890941044431923461}
   m_Layer: 0
   m_Name: Sats_Card
   m_TagString: Untagged
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &6108127055293252657
+--- !u!114 &1890941044431923461
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,10 +193,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3668908955675653958}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 954d36d183a18254e8bda1d94e3914b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9266cd66f46702c48b8ffe101dc7412f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScore: 0
+  scoreSource: {fileID: 11400000, guid: a7f1c5db910af5d47ad35eee0ee5ecf8, type: 2}
+  itemScore: 0
 --- !u!1 &4921122993849812650
 GameObject:
   m_ObjectHideFlags: 0

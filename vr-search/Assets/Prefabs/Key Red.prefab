@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 6174578478260564717}
   - component: {fileID: 4424584138216104713}
   - component: {fileID: 2071817508603179811}
+  - component: {fileID: -8355786277550864903}
   m_Layer: 0
   m_Name: Key Red
   m_TagString: Untagged
@@ -251,6 +252,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <DoorToUnlock>k__BackingField: {fileID: 0}
+--- !u!114 &-8355786277550864903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944156978056719660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9266cd66f46702c48b8ffe101dc7412f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreSource: {fileID: 11400000, guid: a7f1c5db910af5d47ad35eee0ee5ecf8, type: 2}
+  itemType: 2
+  itemScore: 0
 --- !u!1001 &4337820359929134345
 PrefabInstance:
   m_ObjectHideFlags: 0

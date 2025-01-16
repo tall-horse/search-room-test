@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 2522669529368824531}
   - component: {fileID: 1326140460540724519}
   - component: {fileID: 3560888729363064834}
-  - component: {fileID: 9152253265013576608}
+  - component: {fileID: -6722688322286481259}
   m_Layer: 0
   m_Name: Binance_Card
   m_TagString: Untagged
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &9152253265013576608
+--- !u!114 &-6722688322286481259
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -365,10 +365,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7022810763268667864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 954d36d183a18254e8bda1d94e3914b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9266cd66f46702c48b8ffe101dc7412f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScore: 5
+  scoreSource: {fileID: 11400000, guid: a7f1c5db910af5d47ad35eee0ee5ecf8, type: 2}
+  itemScore: 0
 --- !u!1 &8074321612130758564
 GameObject:
   m_ObjectHideFlags: 0
