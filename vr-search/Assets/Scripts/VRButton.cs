@@ -25,22 +25,6 @@ public class VRButton : MonoBehaviour
             StartCoroutine(WaitForDeadTime());
         }
     }
-    // private void OnCollisionEnter(Collision other)
-    // {
-    //     if (other.gameObject.CompareTag(ButtonTag) && !_deadTimeActive)
-    //     {
-    //         onPressed?.Invoke();
-    //     }
-    // }
-
-    // private void OnCollisionExit(Collision other)
-    // {
-    //     if (other.gameObject.CompareTag(ButtonTag) && !_deadTimeActive)
-    //     {
-    //         onReleased?.Invoke();
-    //         StartCoroutine(WaitForDeadTime());
-    //     }
-    // }
 
     //Locks button activity until deadTime has passed and reactivates button activity.
     IEnumerator WaitForDeadTime()
