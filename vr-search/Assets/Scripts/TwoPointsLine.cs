@@ -6,13 +6,14 @@ public class TwoPointsLine : MonoBehaviour
     [SerializeField] private Transform pointA;
     [SerializeField] private Transform pointB;
     private LineRenderer line;
-    private void Awake() {
+    private void Awake()
+    {
         line = GetComponent<LineRenderer>();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-         line.positionCount = 2;
+        line.positionCount = 2;
     }
 
     // Update is called once per frame
