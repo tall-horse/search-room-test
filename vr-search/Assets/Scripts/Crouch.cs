@@ -26,12 +26,12 @@ public class Crouch : MonoBehaviour
         isCrouching = !isCrouching;
         xROrigin.CameraYOffset = isCrouching ? crouchHeight : standHeight;
     }
-    private void SubscribeCrouch()
+    public void SubscribeCrouch()
     {
         crouchAction.action.Enable();
         crouchAction.action.performed += ToggleCrouch;
     }
-    private void UnsubscribeCrouch()
+    public void UnsubscribeCrouch()
     {
         crouchAction.action.Disable();
         crouchAction.action.performed -= ToggleCrouch;

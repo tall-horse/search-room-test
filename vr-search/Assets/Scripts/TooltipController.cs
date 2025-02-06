@@ -29,12 +29,12 @@ public class TooltipController : MonoBehaviour
     {
         tooltips.ForEach(t => t.SetActive(!t.activeSelf));
     }
-    private void SubscribeShowTooltip()
+    public void SubscribeShowTooltip()
     {
         showTooltipAction.action.Enable();
         showTooltipAction.action.performed += ToggleTooltip;
     }
-    private void UnsubscribeShowTooltip()
+    public void UnsubscribeShowTooltip()
     {
         showTooltipAction.action.Disable();
         showTooltipAction.action.performed -= ToggleTooltip;
