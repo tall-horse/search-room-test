@@ -9,11 +9,13 @@ public class DoorUnlocker : MonoBehaviour
     private Animator animator;
     private XRSocketInteractor socketInteractor;
     private Rigidbody doorRigidbody;
+    private AudioSource audioSource;
     private void Awake()
     {
         doorRigidbody = GetComponentInParent<HingeJoint>().gameObject.GetComponent<Rigidbody>();
         animator = GetComponentInParent<Animator>();
         socketInteractor = GetComponentInParent<XRSocketInteractor>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -32,12 +34,13 @@ public class DoorUnlocker : MonoBehaviour
         animator.SetBool(IsOpened, true);
         keyComponent.transform.SetParent(keyComponent.transform);
         keyComponent.TurnKey();
+        audioSource.Play();
     }
 
     public void OpenDoor()
     {
         doorRigidbody.isKinematic = false;
-        transform.parent.gameObject.SetActive(false);
-        gameObject.SetActive(false);
+        //transform.parent.gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 }

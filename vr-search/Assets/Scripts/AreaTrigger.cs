@@ -5,16 +5,10 @@ public class AreaTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject toOpen;
     [SerializeField] private XRGrabInteractable key;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private AudioSource audioSource;
+    private void Awake()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        audioSource = GetComponent<AudioSource>();
     }
     private void OnTriggerStay(Collider other)
     {
@@ -26,6 +20,7 @@ public class AreaTrigger : MonoBehaviour
             if (key.isSelected == false)
             {
                 toOpen.SetActive(false);
+                audioSource.Play();
             }
         }
     }
