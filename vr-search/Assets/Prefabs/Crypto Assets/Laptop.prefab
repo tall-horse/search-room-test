@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7778932973105090421}
   - component: {fileID: 2005238926729010215}
   - component: {fileID: 4592489309021393071}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 425754889219052837}
   - component: {fileID: 3882400463214409963}
   - component: {fileID: 609013434460970087}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: laptop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 413382851712584920}
   - component: {fileID: 3097560237727789635}
   - component: {fileID: -9119039331350535285}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Laptop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_SmoothScale: 0
   m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
-  m_ThrowOnDetach: 1
+  m_ThrowOnDetach: 0
   m_ThrowSmoothingDuration: 0.25
   m_ThrowSmoothingCurve:
     serializedVersion: 2
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreSource: {fileID: 11400000, guid: a7f1c5db910af5d47ad35eee0ee5ecf8, type: 2}
   itemType: 0
-  itemScore: 0
+  isCollisionTriggered: 0
 --- !u!1 &6857513024226457573
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3071002379237237552}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Attach Transform
   m_TagString: Untagged
   m_Icon: {fileID: 0}

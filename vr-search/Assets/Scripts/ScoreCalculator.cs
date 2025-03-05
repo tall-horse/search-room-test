@@ -15,7 +15,6 @@ public class ScoreCalculator : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var item = other.GetComponentInParent<ScoreItem>();
-        Debug.Log(item);
         if (item == false || isStillCalculatingScore == false)
             return;
 
@@ -23,6 +22,8 @@ public class ScoreCalculator : MonoBehaviour
         {
             IncreaseScore(item.ItemScore);
             item.TriggerCollision();
+            //item.isCollisionTriggered = true;
+            Debug.Log("Score +");
         }
     }
 
@@ -30,13 +31,15 @@ public class ScoreCalculator : MonoBehaviour
     {
         var item = other.GetComponentInParent<ScoreItem>();
 
-        if (item == false || isStillCalculatingScore == false)
+        if (item == false || isStillCalculatingScore == false || item.isCollisionTriggered == false)
             return;
 
         if (item.isCollisionTriggered == true || isStillCalculatingScore == true)
         {
             IncreaseScore(-item.ItemScore);
             item.TriggerCollision();
+            //item.isCollisionTriggered = false;
+            Debug.Log("Score -");
         }
     }
 
