@@ -1,10 +1,11 @@
 using UnityEngine;
 
-[ExecuteInEditMode]
+// [ExecuteInEditMode]
 public class VerticalBillboard : MonoBehaviour
 {
     private Camera target;
-    private void Awake() {
+    private void Awake()
+    {
         target = Camera.main;
     }
 

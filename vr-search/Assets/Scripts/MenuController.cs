@@ -24,12 +24,10 @@ public class MenuController : MonoBehaviour
         if (isPaused)
         {
             menu.SetActive(true);
-            //Time.timeScale = 0;
         }
         else
         {
             menu.SetActive(false);
-            //Time.timeScale = 1;
         }
     }
 
@@ -54,16 +52,5 @@ public class MenuController : MonoBehaviour
                 SubscribeMenu();
                 break;
         }
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
