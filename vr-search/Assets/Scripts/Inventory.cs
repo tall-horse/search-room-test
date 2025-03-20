@@ -1,33 +1,82 @@
+using System;
+using System.Linq;
+using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion.Turning;
+using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 public class Inventory : MonoBehaviour
 {
-    private CallbackTest callbackTest;
-    public XRGrabInteractable hoveredInteractable;
-    public XRGrabInteractable leftHandGrabbedInteractable;
-    public XRGrabInteractable rightHandGrabbedInteractable;
-    private void Awake() {
-        callbackTest = FindAnyObjectByType<CallbackTest>();
-    }
-
-    private void Start() {
-        callbackTest.OnGrabbed += Grab;
-        callbackTest.OnDropped += Drop;
-    }
-    private void Grab()
+    public event Action<bool> OnInventoryToggled;
+    [SerializeField] private InputActionReference inventoryAction;
+    [SerializeField] private GameObject inventoryObject;
+    private DynamicMoveProvider movement;
+    private SnapTurnProvider turning;
+    public bool IsOpened { get; private set; } = false;
+    private void Awake()
     {
-        //leftHandGrabbedInteractable = 
+        movement = GetComponentInChildren<DynamicMoveProvider>();
+        turning = GetComponentInChildren<SnapTurnProvider>();
+        SubscribeInventory();
+        InputSystem.onDeviceChange += OnDeviceChange;
+    }
+    void Start()
+    {
+        ActivateSlots(false);
     }
 
-    private void Drop()
+    private void SubscribeInventory()
     {
-
+        inventoryAction.action.Enable();
+        inventoryAction.action.performed += ToggleInventory;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ToggleInventory(InputAction.CallbackContext context)
     {
-        
+        IsOpened = !IsOpened;
+        ActivateSlots(IsOpened);
+    }
+
+    private void ActivateSlots(bool toActivate)
+    {
+        OnInventoryToggled?.Invoke(toActivate);
+        var slotChildren = inventoryObject.GetComponentsInChildren<Transform>().ToList();
+        foreach (var child in slotChildren)
+        {
+            MeshRenderer childVisual;
+            child.TryGetComponent(out childVisual);
+            if (childVisual != null)
+            {
+                childVisual.enabled = toActivate;
+            }
+            Collider slotCollider;
+            child.TryGetComponent(out slotCollider);
+            if (slotCollider != null)
+            {
+                slotCollider.enabled = toActivate;
+            }
+        }
+        movement.enabled = !toActivate;
+        turning.enabled = !toActivate;
+    }
+
+    private void UnSubscribeInventory()
+    {
+        inventoryAction.action.Disable();
+        inventoryAction.action.performed -= ToggleInventory;
+    }
+    private void OnDeviceChange(InputDevice device, InputDeviceChange change)
+    {
+        switch (change)
+        {
+            case InputDeviceChange.Disconnected:
+                UnSubscribeInventory();
+                break;
+            case InputDeviceChange.Reconnected:
+                SubscribeInventory();
+                break;
+        }
     }
 }
