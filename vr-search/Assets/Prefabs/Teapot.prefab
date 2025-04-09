@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1191540345481882938}
   - component: {fileID: 1570373606483156912}
   - component: {fileID: 5394998203209335188}
-  - component: {fileID: 7465950545153347434}
   m_Layer: 0
   m_Name: TeapotLid
   m_TagString: Untagged
@@ -87,28 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7465950545153347434
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387426557153881461}
-  m_Material: {fileID: 13400000, guid: 81e91c1b1b2ef0f47b5f1f601e6c3609, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300210, guid: 8635ad619200dd0488f99cbb185e8363, type: 3}
 --- !u!1 &6273158929078809307
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,7 +128,6 @@ GameObject:
   - component: {fileID: 2113679941436049827}
   - component: {fileID: 6909653028993040384}
   - component: {fileID: 2112981091019891715}
-  - component: {fileID: 929707649982900402}
   m_Layer: 0
   m_Name: TeapotBase
   m_TagString: Untagged
@@ -227,28 +203,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &929707649982900402
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6397131349607310309}
-  m_Material: {fileID: 13400000, guid: 81e91c1b1b2ef0f47b5f1f601e6c3609, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300218, guid: 8635ad619200dd0488f99cbb185e8363, type: 3}
 --- !u!1 &8137201249423192451
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +214,8 @@ GameObject:
   - component: {fileID: 3016506033099398575}
   - component: {fileID: 6695117824629674951}
   - component: {fileID: 4440904412592683574}
+  - component: {fileID: 3004071803774270852}
+  - component: {fileID: 7174293405685184338}
   m_Layer: 0
   m_Name: Teapot
   m_TagString: Untagged
@@ -277,7 +233,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.54513836, y: 1.4666317, z: 8.175123}
-  m_LocalScale: {x: 1.5, y: 1.548, z: 1.548}
+  m_LocalScale: {x: 1.5000001, y: 1.5479999, z: 1.5479997}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2113679941436049827}
@@ -443,3 +399,39 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
+--- !u!114 &3004071803774270852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8137201249423192451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9266cd66f46702c48b8ffe101dc7412f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreSource: {fileID: 11400000, guid: a7f1c5db910af5d47ad35eee0ee5ecf8, type: 2}
+  itemType: 2
+  isCollisionTriggered: 0
+--- !u!65 &7174293405685184338
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8137201249423192451}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2610496, y: 0.1393382, z: 0.16288804}
+  m_Center: {x: 0.012824148, y: 0.069730505, z: -0.000000007450581}
