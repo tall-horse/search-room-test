@@ -40,7 +40,5 @@ public class DoorUnlocker : MonoBehaviour
     public void OpenDoor()
     {
         doorRigidbody.isKinematic = false;
-        //transform.parent.gameObject.SetActive(false);
-        //gameObject.SetActive(false);
     }
 }
