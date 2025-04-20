@@ -21,7 +21,6 @@ public class PasswordChecker : MonoBehaviour
         dictionarySerializer = GetComponent<DictionarySerializer>();
         passwordElements = GetComponentsInChildren<LockElementSwitcher>().ToList();
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
@@ -29,7 +28,6 @@ public class PasswordChecker : MonoBehaviour
         GeneratePassword();
         SetupPasswordComponents(passwordLength);
     }
-
     private void GeneratePassword()
     {
         password = new List<int>();
