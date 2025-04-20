@@ -30,33 +30,9 @@ public class PasswordChecker : MonoBehaviour
     }
     private void GeneratePassword()
     {
-        password = new List<int>();
-        List<int> availableElements = new List<int>();
-        int randomIndex;
-        int lastGeneratedNumber = -1;
-        if (dictionarySerializer.iconsWithNames == null) Debug.Log("ds is null ");
-        for (int i = 0; i < dictionarySerializer.iconsWithNames.Count; i++)
-        {
-            availableElements.Add(i);
-        }
-
-        for (int i = 0; i < passwordLength; i++)
-        {
-            do
-            {
-                randomIndex = random.Next(0, availableElements.Count);
-            }
-            while (availableElements[randomIndex] == lastGeneratedNumber);
-            int selectedNumber = availableElements[randomIndex];
-
-            availableElements.RemoveAt(randomIndex);
-            password.Add(selectedNumber);
-            lastGeneratedNumber = selectedNumber;
-        }
-        foreach (var item in password)
-        {
-            intermediateResult.Add(false);
-        }
+        var generator = new PasswordGenerator(dictionarySerializer);
+        password = generator.Generate(passwordLength);
+        intermediateResult = password.Select(_ => false).ToList();
     }
     private void SetupPasswordComponents(int passwordLength)
     {
