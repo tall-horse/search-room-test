@@ -9,9 +9,9 @@ public class PasswordChecker : MonoBehaviour
 {
     public UnityEvent OnSafeOpened;
     public event Action<SafeLockSectionHint, string> OnNameSent;
-    private List<LockElementSwitcher> passwordElements = new List<LockElementSwitcher>();
+    private List<LockElementSwitcher> passwordUIElements = new List<LockElementSwitcher>();
     private List<int> password;
-    private PasswordElement[] passwordElementComponents;
+    private PasswordElement[] passwordLogicElements;
     private DictionarySerializer dictionarySerializer;
     private System.Random random = new System.Random();
     private PasswordValidator passwordValidator;
@@ -19,13 +19,13 @@ public class PasswordChecker : MonoBehaviour
     private void Awake()
     {
         dictionarySerializer = GetComponent<DictionarySerializer>();
-        passwordElements = GetComponentsInChildren<LockElementSwitcher>().ToList();
+        passwordUIElements = GetComponentsInChildren<LockElementSwitcher>().ToList();
     }
     void Start()
     {
 
-        passwordLength = passwordElements.Count(); //3
-        passwordElementComponents = new PasswordElement[passwordLength];
+        passwordLength = passwordUIElements.Count(); //3
+        passwordLogicElements = new PasswordElement[passwordLength];
         passwordValidator = new PasswordValidator(passwordLength);
         GeneratePassword();
         SetupPasswordComponents(passwordLength);
@@ -40,10 +40,10 @@ public class PasswordChecker : MonoBehaviour
         SafeLockSectionHint[] safeLockHints = GetComponentsInChildren<SafeLockSectionHint>();
         for (int i = 0; i < passwordLength; i++)
         {
-            passwordElementComponents[i] = new PasswordElement(password[i], i, passwordValidator);
-            passwordElements[i].OnCurrentIndexChanged += passwordElementComponents[i].ChangeValue;
+            passwordLogicElements[i] = new PasswordElement(password[i], i, passwordValidator);
+            passwordUIElements[i].OnCurrentIndexChanged += passwordLogicElements[i].ChangeValue;
             OnNameSent?.Invoke(safeLockHints[i], dictionarySerializer.AccessByIndex(password[i]).Value);
-            passwordElementComponents[i].OnValueChanged += CheckPassword;
+            passwordLogicElements[i].OnValueChanged += CheckPassword;
         }
     }
 
