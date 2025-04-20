@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class PasswordChecker : MonoBehaviour
 {
     public UnityEvent OnSafeOpened;
-    public event Action<string> OnNameSent;
+    public event Action<SafeLockSectionHint, string> OnNameSent;
     private List<LockElementSwitcher> passwordElements = new List<LockElementSwitcher>();
     private List<int> password;
     [HideInInspector] public List<bool> intermediateResult = new List<bool>();
@@ -25,20 +25,9 @@ public class PasswordChecker : MonoBehaviour
     void Start()
     {
 
-        passwordLength = passwordElements.Count();
+        passwordLength = passwordElements.Count(); //3
         GeneratePassword();
         SetupPasswordComponents(passwordLength);
-    }
-
-    private void SetupPasswordComponents(int passwordLength)
-    {
-        for (int i = 0; i < passwordLength; i++)
-        {
-            passwordElementComponents.Add(new PasswordElement(this, password[i], i));
-            passwordElements[i].OnCurrentIndexChanged += passwordElementComponents[i].ChangeValue;
-            passwordElements[i].GetComponentInChildren<TextMeshProUGUI>().text = dictionarySerializer.AccessByIndex(password[i]).Value;
-            passwordElementComponents[i].OnValueChanged += CheckPassword;
-        }
     }
 
     private void GeneratePassword()
@@ -71,6 +60,18 @@ public class PasswordChecker : MonoBehaviour
             intermediateResult.Add(false);
         }
     }
+    private void SetupPasswordComponents(int passwordLength)
+    {
+        SafeLockSectionHint[] safeLockHints = GetComponentsInChildren<SafeLockSectionHint>();
+        for (int i = 0; i < passwordLength; i++)
+        {
+            passwordElementComponents.Add(new PasswordElement(this, password[i], i));
+            passwordElements[i].OnCurrentIndexChanged += passwordElementComponents[i].ChangeValue;
+            OnNameSent?.Invoke(safeLockHints[i], dictionarySerializer.AccessByIndex(password[i]).Value);
+            passwordElementComponents[i].OnValueChanged += CheckPassword;
+        }
+    }
+
 
     private void CheckPassword()
     {

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LockElementSwitcher : MonoBehaviour
 {
-    public event Action<string> OnNameSent;
     public event Action<int> OnCurrentIndexChanged;
     private DictionarySerializer cryptoIcons;
     public int CurrentIndex { get; private set; } = 0;

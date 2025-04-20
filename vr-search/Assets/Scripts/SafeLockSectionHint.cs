@@ -10,14 +10,31 @@ public class SafeLockSectionHint : MonoBehaviour
         hintText = GetComponent<TextMeshProUGUI>();
         passwordChecker = GetComponentInParent<PasswordChecker>();
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
-        passwordChecker.OnNameSent += DisplayName;
+        passwordChecker.OnNameSent += (hint, value) =>
+    {
+        if (hint == this)
+            DisplayName(value);
+    };
     }
 
     private void DisplayName(string name)
     {
+        if (name != "" && name != null)
+        {
+            Debug.Log("Hint: " + name);
+        }
+        if (name == "")
+        {
+            Debug.Log("Empty string");
+        }
+        if (name == null)
+        {
+            Debug.LogError("name is null");
+            return;
+        }
         hintText.text = name;
     }
 }
