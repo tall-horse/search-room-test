@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class SafeLockSectionHint : MonoBehaviour
 {
-    private PasswordChecker passwordChecker;
+    private PasswordProgressTracker passwordChecker;
     private TextMeshProUGUI hintText;
     private void Awake()
     {
         hintText = GetComponent<TextMeshProUGUI>();
-        passwordChecker = GetComponentInParent<PasswordChecker>();
+        passwordChecker = GetComponentInParent<PasswordProgressTracker>();
     }
 
     void Start()

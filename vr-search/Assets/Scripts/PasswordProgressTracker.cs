@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PasswordChecker : MonoBehaviour
+public class PasswordProgressTracker : MonoBehaviour
 {
     public UnityEvent OnSafeOpened;
     public event Action<SafeLockSectionHint, string> OnNameSent;

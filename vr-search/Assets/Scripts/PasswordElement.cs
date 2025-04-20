@@ -11,7 +11,7 @@ public class PasswordElement
     }
 
     private PasswordValidator _validator;
-    private PasswordChecker _passwordChecker;
+    private PasswordProgressTracker _passwordChecker;
     private int currentvalue = 0;
     private int _correctValue;
     private int _digitNumber;
