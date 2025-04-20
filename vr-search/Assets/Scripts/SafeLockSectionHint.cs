@@ -14,10 +14,10 @@ public class SafeLockSectionHint : MonoBehaviour
     void Start()
     {
         passwordChecker.OnNameSent += (hint, value) =>
-    {
-        if (hint == this)
-            DisplayName(value);
-    };
+        {
+            if (hint == this)
+                DisplayName(value);
+        };
     }
 
     private void DisplayName(string name)
