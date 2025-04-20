@@ -13,7 +13,6 @@ public class PasswordProgressTracker : MonoBehaviour
     private List<int> password;
     private PasswordElement[] passwordLogicElements;
     private DictionarySerializer dictionarySerializer;
-    private System.Random random = new System.Random();
     private PasswordValidator passwordValidator;
     private int passwordLength;
     private void Awake()
