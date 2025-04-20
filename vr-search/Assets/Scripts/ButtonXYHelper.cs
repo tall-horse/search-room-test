@@ -1,10 +1,9 @@
 using UnityEngine;
 
-public class ButtonYHelper : MonoBehaviour
+public class ButtonXYHelper : MonoBehaviour
 {
     private Transform initialTransform;
     private float initialXPosition;
-
     private float initialYPosition;
     private Rigidbody doorRb;
     private void Awake()
@@ -12,14 +11,11 @@ public class ButtonYHelper : MonoBehaviour
         initialTransform = GetComponent<Transform>();
         doorRb = GetComponentInParent<HingeJoint>().gameObject.GetComponent<Rigidbody>();
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         initialXPosition = initialTransform.position.x;
         initialYPosition = initialTransform.position.y;
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (doorRb.isKinematic == false)
