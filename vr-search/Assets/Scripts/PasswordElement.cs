@@ -2,13 +2,15 @@ using System;
 
 public class PasswordElement
 {
-    public PasswordElement(PasswordChecker passwordChecker, int correctValue, int digitNumber)
+    public PasswordElement(int correctValue, int digitNumber, PasswordValidator validator)
     {
-        _passwordChecker = passwordChecker;
         _correctValue = correctValue;
         _digitNumber = digitNumber;
+        _validator = validator;
         ChangeValue(currentvalue);
     }
+
+    private PasswordValidator _validator;
     private PasswordChecker _passwordChecker;
     private int currentvalue = 0;
     private int _correctValue;
@@ -18,12 +20,12 @@ public class PasswordElement
     public void CheckValue()
     {
         IsValueCorrect = currentvalue == _correctValue;
+        _validator.Update(_digitNumber, IsValueCorrect);
     }
     public void ChangeValue(int newValue)
     {
         currentvalue = newValue;
         CheckValue();
-        _passwordChecker.intermediateResult[_digitNumber] = IsValueCorrect;
         OnValueChanged?.Invoke();
     }
 }

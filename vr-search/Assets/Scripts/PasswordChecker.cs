@@ -11,10 +11,10 @@ public class PasswordChecker : MonoBehaviour
     public event Action<SafeLockSectionHint, string> OnNameSent;
     private List<LockElementSwitcher> passwordElements = new List<LockElementSwitcher>();
     private List<int> password;
-    [HideInInspector] public List<bool> intermediateResult = new List<bool>();
-    private List<PasswordElement> passwordElementComponents = new List<PasswordElement>();
+    private PasswordElement[] passwordElementComponents;
     private DictionarySerializer dictionarySerializer;
     private System.Random random = new System.Random();
+    private PasswordValidator passwordValidator;
     private int passwordLength;
     private void Awake()
     {
@@ -25,6 +25,8 @@ public class PasswordChecker : MonoBehaviour
     {
 
         passwordLength = passwordElements.Count(); //3
+        passwordElementComponents = new PasswordElement[passwordLength];
+        passwordValidator = new PasswordValidator(passwordLength);
         GeneratePassword();
         SetupPasswordComponents(passwordLength);
     }
@@ -32,25 +34,22 @@ public class PasswordChecker : MonoBehaviour
     {
         var generator = new PasswordGenerator(dictionarySerializer);
         password = generator.Generate(passwordLength);
-        intermediateResult = password.Select(_ => false).ToList();
     }
     private void SetupPasswordComponents(int passwordLength)
     {
         SafeLockSectionHint[] safeLockHints = GetComponentsInChildren<SafeLockSectionHint>();
         for (int i = 0; i < passwordLength; i++)
         {
-            passwordElementComponents.Add(new PasswordElement(this, password[i], i));
+            passwordElementComponents[i] = new PasswordElement(password[i], i, passwordValidator);
             passwordElements[i].OnCurrentIndexChanged += passwordElementComponents[i].ChangeValue;
             OnNameSent?.Invoke(safeLockHints[i], dictionarySerializer.AccessByIndex(password[i]).Value);
             passwordElementComponents[i].OnValueChanged += CheckPassword;
         }
     }
 
-
     private void CheckPassword()
     {
-        bool allTrue = intermediateResult.All(b => b);
-        if (allTrue)
+        if (passwordValidator.IsPasswordCorrect)
         {
             OnSafeOpened.Invoke();
         }
