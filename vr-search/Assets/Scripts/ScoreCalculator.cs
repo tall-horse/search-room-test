@@ -22,7 +22,6 @@ public class ScoreCalculator : MonoBehaviour
         {
             IncreaseScore(item.ItemScore);
             item.TriggerCollision();
-            //item.isCollisionTriggered = true;
             Debug.Log("Score +");
         }
     }
@@ -38,7 +37,6 @@ public class ScoreCalculator : MonoBehaviour
         {
             IncreaseScore(-item.ItemScore);
             item.TriggerCollision();
-            //item.isCollisionTriggered = false;
             Debug.Log("Score -");
         }
     }

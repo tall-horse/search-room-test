@@ -7,7 +7,6 @@ public class Timer : MonoBehaviour
     private float remainingTime;
     private bool isTicking = false;
     public event Action<int, int> OnTimerTicked;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         remainingTime = totalSeconds;
@@ -27,9 +26,9 @@ public class Timer : MonoBehaviour
 
     private void UpdateTimer()
     {
-        if(isTicking == false)
+        if (isTicking == false)
             return;
-        
+
         remainingTime -= 1f;
 
         if (remainingTime < 0)
