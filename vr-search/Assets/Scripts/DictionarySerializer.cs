@@ -5,38 +5,38 @@ using UnityEngine;
 public class DictionarySerializer : MonoBehaviour
 {
     [SerializeField] string thisObjectName;
-    [SerializeField] NewDict newDict;
-    public Dictionary<Texture, string> iconsWithNames;
+    [SerializeField] CryptoDictionary cryptoDictionary;
+    public Dictionary<Texture, string> iconsWithNamesDictionary;
     private void Awake()
     {
-        iconsWithNames = newDict.ToDictionary();
+        iconsWithNamesDictionary = cryptoDictionary.ToDictionary();
 
     }
     public KeyValuePair<Texture, string> AccessByIndex(int index)
     {
-        var list = new List<KeyValuePair<Texture, string>>(iconsWithNames);
+        var listOfCrypto = new List<KeyValuePair<Texture, string>>(iconsWithNamesDictionary);
 
-        if (index >= 0 && index < list.Count)
+        if (index >= 0 && index < listOfCrypto.Count)
         {
-            var item = list[index];
-            return item;
+            var cryptoItem = listOfCrypto[index];
+            return cryptoItem;
         }
         else
         {
-            return list[0];
+            return listOfCrypto[0];
         }
     }
 }
 [Serializable]
-public class NewDict
+public class CryptoDictionary
 {
-    [SerializeField] NewDictItem[] thisDictItems;
+    [SerializeField] CryptoItem[] cryptoItems;
     public Dictionary<Texture, string> ToDictionary()
     {
         Dictionary<Texture, string> newDict = new Dictionary<Texture, string>();
-        foreach (var item in thisDictItems)
+        foreach (var cryptoItem in cryptoItems)
         {
-            newDict.Add(item.icon, item.iconName);
+            newDict.Add(cryptoItem.icon, cryptoItem.iconName);
         }
         return newDict;
 
@@ -45,7 +45,7 @@ public class NewDict
 
 [Serializable]
 
-public class NewDictItem
+public class CryptoItem
 {
     [SerializeField] public Texture icon;
 

@@ -14,7 +14,7 @@ public class PasswordGenerator
     public List<int> Generate(int length)
     {
         var password = new List<int>();
-        var availableElements = Enumerable.Range(0, dictionary.iconsWithNames.Count).ToList();
+        var availableElements = Enumerable.Range(0, dictionary.iconsWithNamesDictionary.Count).ToList();
         int lastGenerated = -1;
 
         for (int i = 0; i < length; i++)

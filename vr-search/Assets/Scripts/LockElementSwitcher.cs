@@ -13,13 +13,13 @@ public class LockElementSwitcher : MonoBehaviour
     }
     public void ScrollUp()
     {
-        CurrentIndex = (CurrentIndex + 1) % cryptoIcons.iconsWithNames.Count;
+        CurrentIndex = (CurrentIndex + 1) % cryptoIcons.iconsWithNamesDictionary.Count;
         OnCurrentIndexChanged?.Invoke(CurrentIndex);
     }
 
     public void ScrollDown()
     {
-        CurrentIndex = (CurrentIndex - 1 + cryptoIcons.iconsWithNames.Count) % cryptoIcons.iconsWithNames.Count;
+        CurrentIndex = (CurrentIndex - 1 + cryptoIcons.iconsWithNamesDictionary.Count) % cryptoIcons.iconsWithNamesDictionary.Count;
         OnCurrentIndexChanged?.Invoke(CurrentIndex);
     }
 }
