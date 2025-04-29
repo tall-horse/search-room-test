@@ -9,16 +9,19 @@ public class SafeLockSectionHint : MonoBehaviour
     {
         hintText = GetComponent<TextMeshProUGUI>();
         passwordProgressTracker = GetComponentInParent<PasswordProgressTracker>();
-        passwordProgressTracker.OnNameSent += (hint, value) =>
-        {
-            if (hint == this)
-            {
-                DisplayName(value);
-
-            }
-        };
     }
 
+    private void Start()
+    {
+        passwordProgressTracker.OnNameSent += (hint, value) =>
+            {
+                if (hint == this)
+                {
+                    DisplayName(value);
+
+                }
+            };
+    }
     private void DisplayName(string name)
     {
         if (name == null)

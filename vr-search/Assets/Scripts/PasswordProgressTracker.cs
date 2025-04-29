@@ -24,10 +24,10 @@ public class PasswordProgressTracker : MonoBehaviour
         passwordLength = passwordUIElements.Count(); //3
         passwordLogicElements = new PasswordElement[passwordLength];
         passwordValidator = new PasswordValidator(passwordLength);
-        GeneratePassword();
     }
     void Start()
     {
+        GeneratePassword();
         SetupPasswordComponents(passwordLength);
     }
     private void GeneratePassword()
