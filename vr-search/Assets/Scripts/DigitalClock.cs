@@ -1,18 +1,12 @@
 using UnityEngine;
-using UnityEngine.UI;
 using System;
-using System.Net.NetworkInformation;
 using System.Collections;
 using TMPro;
 
 public class DigitalClock : MonoBehaviour
 {
     public TextMeshProUGUI timeText;
-
     private string alternativeTime = "12:34";
-
-    private bool blinkColon = true;
-
     void Start()
     {
         StartCoroutine(UpdateTimeCoroutine());
@@ -22,11 +16,13 @@ public class DigitalClock : MonoBehaviour
     {
         while (true)
         {
-            if (IsInternetAvailable())
+            bool internetAvailable = false;
+            yield return StartCoroutine(CheckInternetConnection((isAvailable) => internetAvailable = isAvailable));
+
+            if (internetAvailable)
             {
                 DateTime currentTime = DateTime.Now;
                 string timeString = currentTime.ToString("HH:mm");
-
                 timeText.text = timeString;
             }
             else
@@ -38,37 +34,26 @@ public class DigitalClock : MonoBehaviour
         }
     }
 
-    string BlinkColon(string time)
+    IEnumerator CheckInternetConnection(Action<bool> callback)
     {
-        if (blinkColon)
+        using (var request = new UnityEngine.Networking.UnityWebRequest("https://www.google.com"))
         {
-            return time;
-        }
-        else
-        {
-            return time.Substring(0, 2) + " " + time.Substring(3, 2);
-        }
-    }
+            request.method = UnityEngine.Networking.UnityWebRequest.kHttpVerbHEAD;
+            request.timeout = 2;
+            yield return request.SendWebRequest();
 
-    bool IsInternetAvailable()
-    {
-        try
-        {
-
-            using (System.Net.NetworkInformation.Ping ping = new System.Net.NetworkInformation.Ping())
+#if UNITY_2020_1_OR_NEWER
+            if (request.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
+#else
+        if (!request.isNetworkError && !request.isHttpError)
+#endif
             {
-                PingReply reply = ping.Send("8.8.8.8", 1000); // Google DNS
-                return (reply.Status == IPStatus.Success);
+                callback(true);
+            }
+            else
+            {
+                callback(false);
             }
         }
-        catch
-        {
-            return false;
-        }
-    }
-
-    void Update()
-    {
-        blinkColon = !blinkColon;
     }
 }
