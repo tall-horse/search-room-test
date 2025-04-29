@@ -15,18 +15,19 @@ public class PasswordProgressTracker : MonoBehaviour
     private DictionarySerializer dictionarySerializer;
     private PasswordValidator passwordValidator;
     private int passwordLength;
+    private SafeLockSectionHint[] safeLockHints;
     private void Awake()
     {
+        safeLockHints = GetComponentsInChildren<SafeLockSectionHint>();
         dictionarySerializer = GetComponent<DictionarySerializer>();
         passwordUIElements = GetComponentsInChildren<LockElementSwitcher>().ToList();
-    }
-    void Start()
-    {
-
         passwordLength = passwordUIElements.Count(); //3
         passwordLogicElements = new PasswordElement[passwordLength];
         passwordValidator = new PasswordValidator(passwordLength);
         GeneratePassword();
+    }
+    void Start()
+    {
         SetupPasswordComponents(passwordLength);
     }
     private void GeneratePassword()
@@ -36,12 +37,12 @@ public class PasswordProgressTracker : MonoBehaviour
     }
     private void SetupPasswordComponents(int passwordLength)
     {
-        SafeLockSectionHint[] safeLockHints = GetComponentsInChildren<SafeLockSectionHint>();
         for (int i = 0; i < passwordLength; i++)
         {
             passwordLogicElements[i] = new PasswordElement(password[i], i, passwordValidator);
             passwordUIElements[i].OnCurrentIndexChanged += passwordLogicElements[i].ChangeValue;
-            OnNameSent?.Invoke(safeLockHints[i], dictionarySerializer.AccessByIndex(password[i]).Value);
+            string hint = dictionarySerializer.AccessByIndex(password[i]).Value;
+            OnNameSent?.Invoke(safeLockHints[i], hint);
             passwordLogicElements[i].OnValueChanged += CheckPassword;
         }
     }

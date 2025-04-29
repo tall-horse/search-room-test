@@ -3,36 +3,32 @@ using UnityEngine;
 
 public class SafeLockSectionHint : MonoBehaviour
 {
-    private PasswordProgressTracker passwordChecker;
+    private PasswordProgressTracker passwordProgressTracker;
     private TextMeshProUGUI hintText;
     private void Awake()
     {
         hintText = GetComponent<TextMeshProUGUI>();
-        passwordChecker = GetComponentInParent<PasswordProgressTracker>();
-    }
-
-    void Start()
-    {
-        passwordChecker.OnNameSent += (hint, value) =>
+        passwordProgressTracker = GetComponentInParent<PasswordProgressTracker>();
+        passwordProgressTracker.OnNameSent += (hint, value) =>
         {
             if (hint == this)
+            {
                 DisplayName(value);
+
+            }
         };
     }
 
     private void DisplayName(string name)
     {
-        if (name != "" && name != null)
+        if (name == null)
         {
-            Debug.Log("Hint: " + name);
+            Debug.LogError("Hint: is null");
+            return;
         }
         if (name == "")
         {
-            Debug.Log("Empty string");
-        }
-        if (name == null)
-        {
-            Debug.LogError("name is null");
+            Debug.LogError("Hint is an empty string");
             return;
         }
         hintText.text = name;
