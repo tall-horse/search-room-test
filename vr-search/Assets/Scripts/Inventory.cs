@@ -2,21 +2,15 @@ using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.XR.Interaction.Toolkit.Locomotion.Turning;
-using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 public class Inventory : MonoBehaviour
 {
     public event Action<bool> OnInventoryToggled;
     [SerializeField] private InputActionReference inventoryAction;
     [SerializeField] private GameObject inventoryObject;
-    private DynamicMoveProvider movement;
-    private SnapTurnProvider turning;
     public bool IsOpened { get; private set; } = false;
     private void Awake()
     {
-        movement = GetComponentInChildren<DynamicMoveProvider>();
-        turning = GetComponentInChildren<SnapTurnProvider>();
         SubscribeInventory();
         InputSystem.onDeviceChange += OnDeviceChange;
     }
@@ -56,8 +50,6 @@ public class Inventory : MonoBehaviour
                 slotCollider.enabled = toActivate;
             }
         }
-        movement.enabled = !toActivate;
-        turning.enabled = !toActivate;
     }
 
     private void UnSubscribeInventory()
