@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1794930213024132294}
   - component: {fileID: 2989543212321395726}
   - component: {fileID: 383426189811508518}
+  - component: {fileID: 6753621245090985890}
   m_Layer: 0
   m_Name: Pillow_Apt_01.001
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871284884161347450}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.085, y: 0.3827249, z: -0.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -268,3 +269,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9002668, y: 0.30814725, z: 1.460786}
   m_Center: {x: 0.0000009536743, y: -0.00000017136335, z: -0.00000023841858}
+--- !u!114 &6753621245090985890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871284884161347450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9266cd66f46702c48b8ffe101dc7412f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreSource: {fileID: 11400000, guid: a7f1c5db910af5d47ad35eee0ee5ecf8, type: 2}
+  itemType: 3
+  isCollisionTriggered: 0

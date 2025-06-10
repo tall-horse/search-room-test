@@ -10,6 +10,7 @@ public class ScoreItem : MonoBehaviour
     {
         CRYPTO,
         USEFULNONCRYPTO,
+        NEUTRAL,
         NONCRYPTO
     }
     void Start()
@@ -32,6 +33,10 @@ public class ScoreItem : MonoBehaviour
 
             case ItemType.USEFULNONCRYPTO:
                 ItemScore = scoreSource.UsefulNonCryptoScore;
+                break;
+
+            case ItemType.NEUTRAL:
+                ItemScore = scoreSource.NeutralScore;
                 break;
 
             case ItemType.NONCRYPTO:

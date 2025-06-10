@@ -1,4 +1,5 @@
 using UnityEngine;
+[ExecuteInEditMode]
 public class VerticalBillboard : MonoBehaviour
 {
     private Camera target;

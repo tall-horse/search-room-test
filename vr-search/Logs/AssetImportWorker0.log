@@ -15,7 +15,7 @@ C:/Dima/Projects/search-room-test/vr-search
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52749
+53357
 -job-worker-count
 15
 -background-job-worker-count
@@ -59,16 +59,14 @@ C:/Dima/Projects/search-room-test/vr-search
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [46472]  Target information:
+Player connection [4228]  Target information:
 
-Player connection [46472]  * "[IP] 169.254.19.238 [Port] 0 [Flags] 2 [Guid] 2370308776 [EditorId] 2370308776 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [4228]  * "[IP] 10.2.0.2 [Port] 0 [Flags] 2 [Guid] 317056366 [EditorId] 317056366 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [46472]  * "[IP] 10.2.0.2 [Port] 0 [Flags] 2 [Guid] 2370308776 [EditorId] 2370308776 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [4228]  * "[IP] 192.168.1.84 [Port] 0 [Flags] 2 [Guid] 317056366 [EditorId] 317056366 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [46472]  * "[IP] 192.168.1.84 [Port] 0 [Flags] 2 [Guid] 2370308776 [EditorId] 2370308776 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
-
-Player connection [46472] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [46472] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [4228] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [4228] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 15
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
@@ -79,8 +77,8 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 555.45 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.62 ms.
+Refreshing native plugins compatible for Editor in 511.65 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.98 ms.
 Initialize engine version: 6000.0.20f1 (05208a74e9aa)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Dima/Projects/search-room-test/vr-search/Assets
@@ -95,47 +93,47 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56192
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56320
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Registered in 0.003159 seconds.
-- Loaded All Assemblies, in  0.518 seconds
+Registered in 0.003593 seconds.
+- Loaded All Assemblies, in  0.431 seconds
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 324 ms
+Android Extension - Scanning For ADB Devices 2266 ms
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.606 seconds
-Domain Reload Profiling: 1122ms
-	BeginReloadAssembly (260ms)
+- Finished resetting the current domain, in  2.619 seconds
+Domain Reload Profiling: 3047ms
+	BeginReloadAssembly (215ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (26ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (184ms)
-		LoadAssemblies (258ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (44ms)
+	LoadAllAssembliesAndSetupDomain (127ms)
+		LoadAssemblies (210ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (182ms)
-			TypeCache.Refresh (181ms)
-				TypeCache.ScanAssembly (171ms)
+		AnalyzeDomain (125ms)
+			TypeCache.Refresh (123ms)
+				TypeCache.ScanAssembly (112ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (607ms)
+	FinalizeReload (2619ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (573ms)
+		SetupLoadedEditorAssemblies (2577ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (398ms)
+			InitializePlatformSupportModulesInManaged (2358ms)
 			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (102ms)
-			ProcessInitializeOnLoadMethodAttributes (62ms)
-			AfterProcessingInitializeOnLoad (4ms)
+			BeforeProcessingInitializeOnLoad (5ms)
+			ProcessInitializeOnLoadAttributes (136ms)
+			ProcessInitializeOnLoadMethodAttributes (69ms)
+			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (0ms)
@@ -143,10 +141,10 @@ Domain Reload Profiling: 1122ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  4.132 seconds
+- Loaded All Assemblies, in  2.514 seconds
 'Packages/com.unity.xr.openxr/Runtime/OpenXRLoader.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.xr.openxr/Runtime/OpenXRLoaderInternal.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 8.80 ms, found 13 plugins.
+Refreshing native plugins compatible for Editor in 14.71 ms, found 13 plugins.
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
@@ -154,8 +152,8 @@ Package Manager log level set to [2]
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00041] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:298 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000dd] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:283 
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:298 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0008c] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:283 
   at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
   at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
    --- End of inner exception stack trace ---
@@ -177,1434 +175,118 @@ Mono: successfully reloaded assembly
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  1.086 seconds
-Domain Reload Profiling: 5212ms
-	BeginReloadAssembly (1350ms)
+- Finished resetting the current domain, in  0.987 seconds
+Domain Reload Profiling: 3496ms
+	BeginReloadAssembly (1650ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (23ms)
+		CreateAndSetChildDomain (27ms)
 	RebuildCommonClasses (26ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (55ms)
-	LoadAllAssembliesAndSetupDomain (2686ms)
-		LoadAssemblies (2087ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (681ms)
-			TypeCache.Refresh (564ms)
-				TypeCache.ScanAssembly (470ms)
-			BuildScriptInfoCaches (102ms)
-			ResolveRequiredComponents (12ms)
-	FinalizeReload (1087ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (906ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (172ms)
-			ProcessInitializeOnLoadAttributes (562ms)
-			ProcessInitializeOnLoadMethodAttributes (143ms)
-			AfterProcessingInitializeOnLoad (13ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Refreshing native plugins compatible for Editor in 9.12 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 172 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7500 unused Assets / (7.6 MB). Loaded Objects now: 8200.
-Memory consumption went from 211.0 MB to 203.4 MB.
-Total: 11.307200 ms (FindLiveObjects: 0.448100 ms CreateObjectMapping: 0.286300 ms MarkObjects: 6.787700 ms  DeleteObjects: 3.783900 ms)
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.816 seconds
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoader.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoaderInternal.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 9.87 ms, found 13 plugins.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00041] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:298 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000dd] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:283 
-  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-   --- End of inner exception stack trace ---
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <72fbd834e62348cf8a5f322f2740f684>:0 
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-Mono: successfully reloaded assembly
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.915 seconds
-Domain Reload Profiling: 1728ms
-	BeginReloadAssembly (172ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (43ms)
-	RebuildCommonClasses (29ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (44ms)
-	LoadAllAssembliesAndSetupDomain (557ms)
-		LoadAssemblies (411ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (231ms)
-			TypeCache.Refresh (11ms)
-				TypeCache.ScanAssembly (2ms)
-			BuildScriptInfoCaches (205ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (915ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (726ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (156ms)
-			ProcessInitializeOnLoadAttributes (447ms)
-			ProcessInitializeOnLoadMethodAttributes (101ms)
-			AfterProcessingInitializeOnLoad (7ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
-Refreshing native plugins compatible for Editor in 8.51 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7498 unused Assets / (7.2 MB). Loaded Objects now: 8202.
-Memory consumption went from 210.0 MB to 202.8 MB.
-Total: 7.974000 ms (FindLiveObjects: 0.445000 ms CreateObjectMapping: 0.265500 ms MarkObjects: 3.952800 ms  DeleteObjects: 3.310000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.772 seconds
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoader.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoaderInternal.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 8.16 ms, found 13 plugins.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00041] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:298 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000dd] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:283 
-  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-   --- End of inner exception stack trace ---
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <72fbd834e62348cf8a5f322f2740f684>:0 
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-Mono: successfully reloaded assembly
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.866 seconds
-Domain Reload Profiling: 1635ms
-	BeginReloadAssembly (168ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (41ms)
-	RebuildCommonClasses (25ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (41ms)
-	LoadAllAssembliesAndSetupDomain (527ms)
-		LoadAssemblies (391ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (220ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (199ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (866ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (686ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (150ms)
-			ProcessInitializeOnLoadAttributes (422ms)
-			ProcessInitializeOnLoadMethodAttributes (92ms)
-			AfterProcessingInitializeOnLoad (7ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
-Refreshing native plugins compatible for Editor in 7.98 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7498 unused Assets / (7.4 MB). Loaded Objects now: 8205.
-Memory consumption went from 212.0 MB to 204.6 MB.
-Total: 7.010100 ms (FindLiveObjects: 0.509800 ms CreateObjectMapping: 0.301100 ms MarkObjects: 3.908600 ms  DeleteObjects: 2.289000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.775 seconds
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoader.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoaderInternal.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 8.78 ms, found 13 plugins.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00041] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:298 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000dd] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:283 
-  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-   --- End of inner exception stack trace ---
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <72fbd834e62348cf8a5f322f2740f684>:0 
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-Mono: successfully reloaded assembly
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.867 seconds
-Domain Reload Profiling: 1640ms
-	BeginReloadAssembly (167ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (3ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (43ms)
-	RebuildCommonClasses (24ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (43ms)
-	LoadAllAssembliesAndSetupDomain (530ms)
-		LoadAssemblies (386ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (221ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (199ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (867ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (680ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (130ms)
-			ProcessInitializeOnLoadAttributes (437ms)
-			ProcessInitializeOnLoadMethodAttributes (92ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
-Refreshing native plugins compatible for Editor in 9.32 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
-Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7498 unused Assets / (7.1 MB). Loaded Objects now: 8208.
-Memory consumption went from 212.0 MB to 205.0 MB.
-Total: 7.349400 ms (FindLiveObjects: 0.541100 ms CreateObjectMapping: 0.414300 ms MarkObjects: 4.006300 ms  DeleteObjects: 2.386100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.806 seconds
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoader.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoaderInternal.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 11.82 ms, found 13 plugins.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00041] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:298 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000dd] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:283 
-  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-   --- End of inner exception stack trace ---
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <72fbd834e62348cf8a5f322f2740f684>:0 
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-Mono: successfully reloaded assembly
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.828 seconds
-Domain Reload Profiling: 1633ms
-	BeginReloadAssembly (164ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (43ms)
-	RebuildCommonClasses (25ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (45ms)
-	LoadAllAssembliesAndSetupDomain (562ms)
-		LoadAssemblies (415ms)
+	initialDomainReloadingComplete (52ms)
+	LoadAllAssembliesAndSetupDomain (771ms)
+		LoadAssemblies (497ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (222ms)
-			TypeCache.Refresh (11ms)
-				TypeCache.ScanAssembly (2ms)
-			BuildScriptInfoCaches (198ms)
+		AnalyzeDomain (353ms)
+			TypeCache.Refresh (269ms)
+				TypeCache.ScanAssembly (242ms)
+			BuildScriptInfoCaches (70ms)
 			ResolveRequiredComponents (10ms)
-	FinalizeReload (829ms)
+	FinalizeReload (987ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (659ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (148ms)
-			ProcessInitializeOnLoadAttributes (404ms)
-			ProcessInitializeOnLoadMethodAttributes (87ms)
-			AfterProcessingInitializeOnLoad (7ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Refreshing native plugins compatible for Editor in 10.00 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7498 unused Assets / (7.5 MB). Loaded Objects now: 8211.
-Memory consumption went from 212.0 MB to 204.5 MB.
-Total: 7.539100 ms (FindLiveObjects: 0.690000 ms CreateObjectMapping: 0.413600 ms MarkObjects: 3.895500 ms  DeleteObjects: 2.539000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.741 seconds
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoader.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoaderInternal.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 8.47 ms, found 13 plugins.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00041] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:298 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000dd] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:283 
-  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-   --- End of inner exception stack trace ---
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <72fbd834e62348cf8a5f322f2740f684>:0 
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-Mono: successfully reloaded assembly
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.809 seconds
-Domain Reload Profiling: 1548ms
-	BeginReloadAssembly (153ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (3ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (38ms)
-	RebuildCommonClasses (24ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (44ms)
-	LoadAllAssembliesAndSetupDomain (508ms)
-		LoadAssemblies (372ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (208ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (188ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (810ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (640ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (10ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (126ms)
-			ProcessInitializeOnLoadAttributes (407ms)
-			ProcessInitializeOnLoadMethodAttributes (86ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Refreshing native plugins compatible for Editor in 11.33 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7498 unused Assets / (7.8 MB). Loaded Objects now: 8214.
-Memory consumption went from 219.7 MB to 212.0 MB.
-Total: 8.337300 ms (FindLiveObjects: 0.574200 ms CreateObjectMapping: 0.488700 ms MarkObjects: 4.302900 ms  DeleteObjects: 2.970500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.737 seconds
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoader.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoaderInternal.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 7.77 ms, found 13 plugins.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00041] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:298 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000dd] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:283 
-  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-   --- End of inner exception stack trace ---
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <72fbd834e62348cf8a5f322f2740f684>:0 
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-Mono: successfully reloaded assembly
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.835 seconds
-Domain Reload Profiling: 1569ms
-	BeginReloadAssembly (155ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (3ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (39ms)
-	RebuildCommonClasses (24ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (41ms)
-	LoadAllAssembliesAndSetupDomain (505ms)
-		LoadAssemblies (371ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (206ms)
-			TypeCache.Refresh (6ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (186ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (835ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (656ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (131ms)
-			ProcessInitializeOnLoadAttributes (419ms)
-			ProcessInitializeOnLoadMethodAttributes (87ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Refreshing native plugins compatible for Editor in 11.41 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7498 unused Assets / (7.3 MB). Loaded Objects now: 8217.
-Memory consumption went from 221.7 MB to 214.4 MB.
-Total: 7.721900 ms (FindLiveObjects: 0.558400 ms CreateObjectMapping: 0.353400 ms MarkObjects: 4.662400 ms  DeleteObjects: 2.146500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.790 seconds
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoader.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoaderInternal.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 9.02 ms, found 13 plugins.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00041] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:298 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000dd] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:283 
-  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-   --- End of inner exception stack trace ---
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <72fbd834e62348cf8a5f322f2740f684>:0 
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-Mono: successfully reloaded assembly
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.836 seconds
-Domain Reload Profiling: 1624ms
-	BeginReloadAssembly (165ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (40ms)
-	RebuildCommonClasses (29ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (48ms)
-	LoadAllAssembliesAndSetupDomain (536ms)
-		LoadAssemblies (398ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (217ms)
-			TypeCache.Refresh (11ms)
-				TypeCache.ScanAssembly (2ms)
-			BuildScriptInfoCaches (192ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (836ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (659ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (145ms)
-			ProcessInitializeOnLoadAttributes (401ms)
-			ProcessInitializeOnLoadMethodAttributes (93ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
-Refreshing native plugins compatible for Editor in 8.02 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7498 unused Assets / (7.4 MB). Loaded Objects now: 8220.
-Memory consumption went from 223.6 MB to 216.2 MB.
-Total: 7.830600 ms (FindLiveObjects: 0.528300 ms CreateObjectMapping: 0.322300 ms MarkObjects: 4.432800 ms  DeleteObjects: 2.546100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.804 seconds
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoader.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoaderInternal.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 8.51 ms, found 13 plugins.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00041] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:298 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000dd] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:283 
-  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-   --- End of inner exception stack trace ---
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <72fbd834e62348cf8a5f322f2740f684>:0 
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-Mono: successfully reloaded assembly
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.927 seconds
-Domain Reload Profiling: 1729ms
-	BeginReloadAssembly (170ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (42ms)
-	RebuildCommonClasses (26ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (47ms)
-	LoadAllAssembliesAndSetupDomain (549ms)
-		LoadAssemblies (392ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (237ms)
-			TypeCache.Refresh (8ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (214ms)
-			ResolveRequiredComponents (12ms)
-	FinalizeReload (927ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (735ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (147ms)
-			ProcessInitializeOnLoadAttributes (438ms)
-			ProcessInitializeOnLoadMethodAttributes (123ms)
-			AfterProcessingInitializeOnLoad (13ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
-Refreshing native plugins compatible for Editor in 8.50 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7498 unused Assets / (7.2 MB). Loaded Objects now: 8223.
-Memory consumption went from 223.6 MB to 216.4 MB.
-Total: 7.389500 ms (FindLiveObjects: 0.551900 ms CreateObjectMapping: 0.265200 ms MarkObjects: 4.221100 ms  DeleteObjects: 2.350500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.836 seconds
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoader.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoaderInternal.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 14.92 ms, found 13 plugins.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00041] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:298 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000dd] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:283 
-  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-   --- End of inner exception stack trace ---
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <72fbd834e62348cf8a5f322f2740f684>:0 
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-Mono: successfully reloaded assembly
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.942 seconds
-Domain Reload Profiling: 1775ms
-	BeginReloadAssembly (178ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (3ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (46ms)
-	RebuildCommonClasses (29ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (48ms)
-	LoadAllAssembliesAndSetupDomain (568ms)
-		LoadAssemblies (419ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (233ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (212ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (942ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (752ms)
+		SetupLoadedEditorAssemblies (762ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (162ms)
-			ProcessInitializeOnLoadAttributes (454ms)
-			ProcessInitializeOnLoadMethodAttributes (110ms)
-			AfterProcessingInitializeOnLoad (7ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (72ms)
+			ProcessInitializeOnLoadAttributes (543ms)
+			ProcessInitializeOnLoadMethodAttributes (125ms)
+			AfterProcessingInitializeOnLoad (8ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
-Refreshing native plugins compatible for Editor in 10.08 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
-Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7498 unused Assets / (6.6 MB). Loaded Objects now: 8226.
-Memory consumption went from 227.5 MB to 220.8 MB.
-Total: 7.903400 ms (FindLiveObjects: 0.776200 ms CreateObjectMapping: 0.448800 ms MarkObjects: 4.329500 ms  DeleteObjects: 2.347700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoader.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoaderInternal.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 10.94 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.17 ms.
-Unloading 31 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7436 unused Assets / (6.6 MB). Loaded Objects now: 8209.
-Memory consumption went from 200.6 MB to 194.0 MB.
-Total: 35.696800 ms (FindLiveObjects: 0.941600 ms CreateObjectMapping: 0.353800 ms MarkObjects: 32.138400 ms  DeleteObjects: 2.261300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.614 seconds
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoader.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoaderInternal.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 14.27 ms, found 13 plugins.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00041] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:298 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000dd] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:283 
-  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-   --- End of inner exception stack trace ---
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <72fbd834e62348cf8a5f322f2740f684>:0 
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-Mono: successfully reloaded assembly
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.990 seconds
-Domain Reload Profiling: 4603ms
-	BeginReloadAssembly (448ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (105ms)
-	RebuildCommonClasses (28ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (50ms)
-	LoadAllAssembliesAndSetupDomain (3077ms)
-		LoadAssemblies (2742ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (613ms)
-			TypeCache.Refresh (14ms)
-				TypeCache.ScanAssembly (2ms)
-			BuildScriptInfoCaches (584ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (991ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (804ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (16ms)
-			SetLoadedEditorAssemblies (8ms)
-			BeforeProcessingInitializeOnLoad (177ms)
-			ProcessInitializeOnLoadAttributes (498ms)
-			ProcessInitializeOnLoadMethodAttributes (98ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Refreshing native plugins compatible for Editor in 8.96 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.08 ms.
-Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7497 unused Assets / (7.2 MB). Loaded Objects now: 8228.
-Memory consumption went from 227.5 MB to 220.3 MB.
-Total: 8.413300 ms (FindLiveObjects: 0.465500 ms CreateObjectMapping: 0.283000 ms MarkObjects: 4.968700 ms  DeleteObjects: 2.695000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.792 seconds
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoader.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoaderInternal.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 9.21 ms, found 13 plugins.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00041] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:298 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000dd] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:283 
-  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-   --- End of inner exception stack trace ---
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <72fbd834e62348cf8a5f322f2740f684>:0 
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-Mono: successfully reloaded assembly
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.806 seconds
-Domain Reload Profiling: 1596ms
-	BeginReloadAssembly (162ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (40ms)
-	RebuildCommonClasses (26ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (43ms)
-	LoadAllAssembliesAndSetupDomain (549ms)
-		LoadAssemblies (406ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (219ms)
-			TypeCache.Refresh (11ms)
-				TypeCache.ScanAssembly (2ms)
-			BuildScriptInfoCaches (192ms)
-			ResolveRequiredComponents (12ms)
-	FinalizeReload (806ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (642ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (128ms)
-			ProcessInitializeOnLoadAttributes (402ms)
-			ProcessInitializeOnLoadMethodAttributes (91ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Refreshing native plugins compatible for Editor in 7.39 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7497 unused Assets / (7.1 MB). Loaded Objects now: 8231.
-Memory consumption went from 227.5 MB to 220.4 MB.
-Total: 6.897600 ms (FindLiveObjects: 0.430500 ms CreateObjectMapping: 0.259600 ms MarkObjects: 3.912900 ms  DeleteObjects: 2.293900 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.773 seconds
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoader.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.xr.openxr/Runtime/OpenXRLoaderInternal.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 8.41 ms, found 13 plugins.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00041] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:298 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000dd] in .\Library\PackageCache\com.unity.xr.oculus\Runtime\OculusLoader.cs:283 
-  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-   --- End of inner exception stack trace ---
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <321eb2db7c6d43ea8fc39b54eaca3452>:0 
-  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <72fbd834e62348cf8a5f322f2740f684>:0 
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-Mono: successfully reloaded assembly
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.792 seconds
-Domain Reload Profiling: 1562ms
-	BeginReloadAssembly (174ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (3ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (43ms)
-	RebuildCommonClasses (28ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (49ms)
-	LoadAllAssembliesAndSetupDomain (510ms)
-		LoadAssemblies (386ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (208ms)
-			TypeCache.Refresh (12ms)
-				TypeCache.ScanAssembly (2ms)
-			BuildScriptInfoCaches (182ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (792ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (637ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (126ms)
-			ProcessInitializeOnLoadAttributes (397ms)
-			ProcessInitializeOnLoadMethodAttributes (92ms)
-			AfterProcessingInitializeOnLoad (7ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Refreshing native plugins compatible for Editor in 7.68 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.06 ms.
-Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7497 unused Assets / (7.4 MB). Loaded Objects now: 8234.
-Memory consumption went from 227.5 MB to 220.1 MB.
-Total: 6.974100 ms (FindLiveObjects: 0.589000 ms CreateObjectMapping: 0.424800 ms MarkObjects: 3.764700 ms  DeleteObjects: 2.194100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 1723287.263957 seconds.
-  path: Assets/Import/textures/_0.png
-  artifactKey: Guid(4704078a7f0282f41a33428c0bf8ace1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/textures/_0.png using Guid(4704078a7f0282f41a33428c0bf8ace1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e85fd47c97e15956327c094827edfc82') in 0.6040169 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+		AwakeInstancesAfterBackupRestoration (4ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 11.44 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.16 ms.
+Unloading 172 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7498 unused Assets / (4.5 MB). Loaded Objects now: 8198.
+Memory consumption went from 232.6 MB to 228.1 MB.
+Total: 11.866300 ms (FindLiveObjects: 0.740100 ms CreateObjectMapping: 0.638900 ms MarkObjects: 7.359500 ms  DeleteObjects: 3.126200 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/IgnorePushing/Kitchen Asset/FBX/BottleMilk/Bottle/Materials/Bottle_DefaultMaterial_AlbedoTransparency.tga
-  artifactKey: Guid(8e7eda9494e3d0640b9355b55eef2b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Kitchen Asset/FBX/BottleMilk/Bottle/Materials/Bottle_DefaultMaterial_AlbedoTransparency.tga using Guid(8e7eda9494e3d0640b9355b55eef2b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c9bd4e9c799f0320549ad1d87e6de632') in 0.0437161 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000126 seconds.
-  path: Assets/Import/Cardboard_Boxes_45MB/textures/Cardboad_60H_B_normal_9.png
-  artifactKey: Guid(59c2de7f571b19343aa7201f012ce5f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Cardboard_Boxes_45MB/textures/Cardboad_60H_B_normal_9.png using Guid(59c2de7f571b19343aa7201f012ce5f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6b2d10e9e07d4bf57967b452c09c303f') in 0.0353855 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Import/textures/_5.png
-  artifactKey: Guid(0036ea94309c58944a538c5057f4955d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/textures/_5.png using Guid(0036ea94309c58944a538c5057f4955d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4dd567f187c51a2af2f3d4f1f754d8d9') in 0.0341505 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/IgnorePushing/Books/Textures/books.bmp
-  artifactKey: Guid(f2f1bd0c786ec5743b8bcc0a2402b6c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Books/Textures/books.bmp using Guid(f2f1bd0c786ec5743b8bcc0a2402b6c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e186d966aac43aa3a29e661c28c54093') in 0.0258307 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/IgnorePushing/[Free] Phone/Textures/AO512.png
-  artifactKey: Guid(c0877a39b6d107640864a0b4a4574319) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/[Free] Phone/Textures/AO512.png using Guid(c0877a39b6d107640864a0b4a4574319) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bbc3d95a506a13bd450c00f40e2787c9') in 0.0183255 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/IgnorePushing/Kitchen Asset/FBX/Cap/Cap/Materials/Cap_DefaultMaterial_MetallicSmoothness.tga
-  artifactKey: Guid(5b0a0dc8672f80940bd07ce7e6309b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Kitchen Asset/FBX/Cap/Cap/Materials/Cap_DefaultMaterial_MetallicSmoothness.tga using Guid(5b0a0dc8672f80940bd07ce7e6309b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cdd36e3cc14d428d8101ea4a927ace9d') in 0.062992 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000069 seconds.
-  path: Assets/IgnorePushing/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/Brick 02 Texture.png
-  artifactKey: Guid(91e6f6bf45b72bd478b59dcf22714424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/Brick 02 Texture.png using Guid(91e6f6bf45b72bd478b59dcf22714424) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6f7f2fc53e37ab3a3af9a03604322b53') in 0.0151092 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000157 seconds.
-  path: Assets/Import/Cardboard_Boxes_45MB/textures/Cardboad_60_A_normal_11.png
-  artifactKey: Guid(0119536dccdb6474a871f92e1084476e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Cardboard_Boxes_45MB/textures/Cardboad_60_A_normal_11.png using Guid(0119536dccdb6474a871f92e1084476e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '64fb2fdf619bf23c52dc2dbdebe851f9') in 0.0242004 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Import/Cardboard_Boxes_45MB/textures/Cardboad_80_B_normal_19.png
-  artifactKey: Guid(0734ad8409e7d5240bdad27c2e0cbe53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Cardboard_Boxes_45MB/textures/Cardboad_80_B_normal_19.png using Guid(0734ad8409e7d5240bdad27c2e0cbe53) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8d9e5b0207df2061911edb2571a3fd0d') in 0.0235968 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/IgnorePushing/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/Brick 02 bump.png
-  artifactKey: Guid(fa098cd5940b5aa4b90a84b905f80d18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/Brick 02 bump.png using Guid(fa098cd5940b5aa4b90a84b905f80d18) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3a015a1c072f7ad0000656bddae28cde') in 0.0132507 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 377732.821466 seconds.
+  path: Assets/Prefabs/winmau_pocket_scorer.prefab
+  artifactKey: Guid(afb46a4b60540b24c80d45cb985137b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/winmau_pocket_scorer.prefab using Guid(afb46a4b60540b24c80d45cb985137b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a8fcbf214323ae8be29be3bb98370252') in 0.1720046 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 142
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000027 seconds.
-  path: Assets/IgnorePushing/Brick Project Studio/_BPS Basic Assets/Common/Textures/Basic Asset/BS_Texture_map_SE.png
-  artifactKey: Guid(5582ded7245c6074b9e3c52d0ee70c84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Brick Project Studio/_BPS Basic Assets/Common/Textures/Basic Asset/BS_Texture_map_SE.png using Guid(5582ded7245c6074b9e3c52d0ee70c84) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8517b9a54b3aeffc6b3932fa536a53f5') in 0.0229133 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  path: Assets/Prefabs/Fork.prefab
+  artifactKey: Guid(281237abfb74ce34592a831e45697fd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Fork.prefab using Guid(281237abfb74ce34592a831e45697fd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f73c2286ddb041e0eccdedf100e3d336') in 0.0477038 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/IgnorePushing/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/ceiling_normal.png
-  artifactKey: Guid(618a287d815fdfe4396cbe668c8296d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/ceiling_normal.png using Guid(618a287d815fdfe4396cbe668c8296d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2b08105f53a08e55ce3e0fe56a1263e2') in 0.0233011 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000033 seconds.
+  path: Assets/Prefabs/Small_Box_Closed.prefab
+  artifactKey: Guid(44e4298ec07f6e746bfdddf51e6cc60b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Small_Box_Closed.prefab using Guid(44e4298ec07f6e746bfdddf51e6cc60b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '53d93469e10260949616072b4d5e4c86') in 0.0964261 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/IgnorePushing/Kitchen Asset/FBX/BottleMilk/Bottle/Materials/Bottle_DefaultMaterial_Normal.tga
-  artifactKey: Guid(b0b98af896e028a4fbc2cb622740aa9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Kitchen Asset/FBX/BottleMilk/Bottle/Materials/Bottle_DefaultMaterial_Normal.tga using Guid(b0b98af896e028a4fbc2cb622740aa9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '21263573be33fe785e0412aedd043cc4') in 0.0301418 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000038 seconds.
+  path: Assets/Prefabs/TooltipL.prefab
+  artifactKey: Guid(c6b4bfcb771a4f545ba21f97a0ee1ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/TooltipL.prefab using Guid(c6b4bfcb771a4f545ba21f97a0ee1ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bda148312fc89b9ac860dc02d5f4eac5') in 0.0593862 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 41
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/IgnorePushing/Kitchen Asset/FBX/Cap/Cap/Materials/Cap_DefaultMaterial_AlbedoTransparency.tga
-  artifactKey: Guid(cba56ef27acbe604a91dada1f13a8892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Kitchen Asset/FBX/Cap/Cap/Materials/Cap_DefaultMaterial_AlbedoTransparency.tga using Guid(cba56ef27acbe604a91dada1f13a8892) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '02d930810b8a474c9501f0704f75874f') in 0.0346685 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000021 seconds.
+  path: Assets/Prefabs/Key Red.prefab
+  artifactKey: Guid(8f8156f1ab59aef4cb6967fd45fc5af6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Key Red.prefab using Guid(8f8156f1ab59aef4cb6967fd45fc5af6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'deae901ba3ea8a092c3d3a8f089537f3') in 0.0591178 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 38
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Import/Cardboard_Boxes_45MB/textures/Cardboad_140_A_normal_1.png
-  artifactKey: Guid(9e63e3602ac0512429a8482769a8c7e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Cardboard_Boxes_45MB/textures/Cardboad_140_A_normal_1.png using Guid(9e63e3602ac0512429a8482769a8c7e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '146150bff2e070ba16f91a963edb1a43') in 0.0262167 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000022 seconds.
+  path: Assets/Prefabs/Book_1.prefab
+  artifactKey: Guid(89f3ac48d148626459ab423c1ab3f79c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Book_1.prefab using Guid(89f3ac48d148626459ab423c1ab3f79c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3514eb5413762e20324a326b1ecc3db0') in 0.0226777 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000092 seconds.
-  path: Assets/IgnorePushing/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/ceiling.png
-  artifactKey: Guid(2a909c6b0c3249d4b8fc74ae5d6d52dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/ceiling.png using Guid(2a909c6b0c3249d4b8fc74ae5d6d52dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a671aa2a584ff648ff53e87a80609a95') in 0.0160634 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000063 seconds.
+  path: Assets/Prefabs/Pan.prefab
+  artifactKey: Guid(4927fdffbb0d5ff4eba43bbe64863f72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Pan.prefab using Guid(4927fdffbb0d5ff4eba43bbe64863f72) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5487284302f173ea3e6c3d36a2ddf726') in 0.0397124 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 26
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Import/textures/_3.png
-  artifactKey: Guid(c7e2527139c1ec9469a4e05b8b04f56e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/textures/_3.png using Guid(c7e2527139c1ec9469a4e05b8b04f56e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4a610b09223852cca1b6fea1ab839fd0') in 0.0204446 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000027 seconds.
+  path: Assets/Prefabs/RollingPin.prefab
+  artifactKey: Guid(ddcbd8d81b5fc8543aaaf7d540193f3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/RollingPin.prefab using Guid(ddcbd8d81b5fc8543aaaf7d540193f3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '688b921d8ce1cabc423a71b0b3d188ba') in 0.044352 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 26
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Images/bonus.png
-  artifactKey: Guid(fa89958cece56ec459ec6b2731ed3a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/bonus.png using Guid(fa89958cece56ec459ec6b2731ed3a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4142ad39a073253f8996c197c62c03df') in 0.0215787 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000253 seconds.
-  path: Assets/Import/Cardboard_Boxes_45MB/textures/Cardboad_60H_A_normal_7.png
-  artifactKey: Guid(a268664607fa94b47a797e0d2909b1c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Cardboard_Boxes_45MB/textures/Cardboad_60H_A_normal_7.png using Guid(a268664607fa94b47a797e0d2909b1c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fa47c5d80a04faf392f18b8b9b2c497a') in 0.027072 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000450 seconds.
-  path: Assets/Import/Cardboard_Boxes_45MB/textures/Cardboad_80_C_normal_21.png
-  artifactKey: Guid(4c53380ab80493648bfb3d024d1cc21b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Cardboard_Boxes_45MB/textures/Cardboad_80_C_normal_21.png using Guid(4c53380ab80493648bfb3d024d1cc21b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '809f1be9b564d87f7b054ad69b7f3948') in 0.0199182 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000083 seconds.
-  path: Assets/Import/textures/_1.png
-  artifactKey: Guid(f9b9ab43277dbf049a1dc874a0a77d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/textures/_1.png using Guid(f9b9ab43277dbf049a1dc874a0a77d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c6cae3c5abcfec6b6e73b9acc51db59a') in 0.0473613 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Import/textures/_4.png
-  artifactKey: Guid(c0e92a278fc16af47a86c7026e26dace) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/textures/_4.png using Guid(c0e92a278fc16af47a86c7026e26dace) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8a315ee8c2f8855b977befa0e0a9a3b2') in 0.0189291 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.889179 seconds.
-  path: Assets/VRTemplateAssets/Sprites/Icons/Checkmark.png
-  artifactKey: Guid(4aafc51823472ec4ea8ab57045fb659a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/VRTemplateAssets/Sprites/Icons/Checkmark.png using Guid(4aafc51823472ec4ea8ab57045fb659a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '03ac014c4926a9f6db177835bc07b1bd') in 0.0347682 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.011502 seconds.
-  path: Assets/VRTemplateAssets/Sprites/CoachingCards/Coaching Step 1.png
-  artifactKey: Guid(aa1e07d3e3ba968489f3cba3bbe76b41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/VRTemplateAssets/Sprites/CoachingCards/Coaching Step 1.png using Guid(aa1e07d3e3ba968489f3cba3bbe76b41) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cb0f313ad3ed982eb1b3ccf54a5900b8') in 0.0296571 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000768 seconds.
-  path: Assets/VRTemplateAssets/Sprites/CoachingCards/Coaching Step 6.png
-  artifactKey: Guid(7e45b5b7749d93e4baa70a7908635dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/VRTemplateAssets/Sprites/CoachingCards/Coaching Step 6.png using Guid(7e45b5b7749d93e4baa70a7908635dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ca081e468ffba668c16e4cd7055495e1') in 0.0439921 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/VRTemplateAssets/Materials/Environment/Concrete_Metallic.tif
-  artifactKey: Guid(5d6f91bab10f9f345aa741e70bc0fd6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/VRTemplateAssets/Materials/Environment/Concrete_Metallic.tif using Guid(5d6f91bab10f9f345aa741e70bc0fd6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '35801350f5222798c845ee3be487298e') in 0.0420892 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.293366 seconds.
-  path: Assets/IgnorePushing/Kitchen Asset/FBX/CornFlakes/Materials/CornFlakes_DefaultMaterial_MetallicSmoothness.tga
-  artifactKey: Guid(10f5ed8b08f525e4482f28f78e7abd52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Kitchen Asset/FBX/CornFlakes/Materials/CornFlakes_DefaultMaterial_MetallicSmoothness.tga using Guid(10f5ed8b08f525e4482f28f78e7abd52) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0b97169b7c2fd67f1f6d62ce8eddb255') in 0.1114887 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/IgnorePushing/Kitchen Asset/FBX/Plates/Plate3/Materials/Plate_DefaultMaterial_MetallicSmoothness.tga
-  artifactKey: Guid(a347a5d3b23acbc4e9d860d6893fbba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Kitchen Asset/FBX/Plates/Plate3/Materials/Plate_DefaultMaterial_MetallicSmoothness.tga using Guid(a347a5d3b23acbc4e9d860d6893fbba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd2255cd849b85496c52fff99d37ba16b') in 0.0282 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000270 seconds.
-  path: Assets/Import/Usb_Stick/textures/Material.001_metallicRoughness_1_metal.png
-  artifactKey: Guid(a8633d3e08993f04a8caed36f83f7cc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Usb_Stick/textures/Material.001_metallicRoughness_1_metal.png using Guid(a8633d3e08993f04a8caed36f83f7cc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e961f53a1155a3912567170837601f22') in 0.0668796 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000087 seconds.
-  path: Assets/IgnorePushing/Kitchen Asset/FBX/DeepPlate/Materials/DeepPlate_DefaultMaterial_MetallicSmoothness.tga
-  artifactKey: Guid(24472e17a6e7fde4c979566fbc767aa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Kitchen Asset/FBX/DeepPlate/Materials/DeepPlate_DefaultMaterial_MetallicSmoothness.tga using Guid(24472e17a6e7fde4c979566fbc767aa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c57b781498f84c1824220fa041802c76') in 0.0513389 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/IgnorePushing/[Free] Phone/Textures/Metallic512.png
-  artifactKey: Guid(9b7e0b2f9fb923842929316372f4cf7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/[Free] Phone/Textures/Metallic512.png using Guid(9b7e0b2f9fb923842929316372f4cf7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a89e786d0d2aa22e1d265042a507c808') in 0.0200163 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/VRTemplateAssets/Materials/Primitive/fabric_Metallic.png
-  artifactKey: Guid(7e51390506d6084449db036c4dde2bda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/VRTemplateAssets/Materials/Primitive/fabric_Metallic.png using Guid(7e51390506d6084449db036c4dde2bda) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '193626f83439079512293a643a4ce610') in 0.0136899 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000081 seconds.
-  path: Assets/IgnorePushing/[Free] Phone/Textures/Diffuse512.png
-  artifactKey: Guid(2cf7898d3dda2ea4990e8b3b2a260f59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/[Free] Phone/Textures/Diffuse512.png using Guid(2cf7898d3dda2ea4990e8b3b2a260f59) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '85162c7e5c2e58d805d41331a52b6961') in 0.0210696 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/IgnorePushing/Brick Project Studio/_BPS Basic Assets/Common/Textures/Fire/Fire_Texture_02.tga
-  artifactKey: Guid(c8b0b917072902c4f90273607a87d9b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Brick Project Studio/_BPS Basic Assets/Common/Textures/Fire/Fire_Texture_02.tga using Guid(c8b0b917072902c4f90273607a87d9b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'eac67550787ac05171b2c7fcca349347') in 0.019424 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/TextMesh Pro/Sprites/EmojiOne.png
-  artifactKey: Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Sprites/EmojiOne.png using Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8b831f2cd992f486440cdadd874d39b8') in 0.0319644 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/VRTemplateAssets/Materials/Primitive/torus_Metallic.png
-  artifactKey: Guid(287310663f2f35d40ab48eb40247cbfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/VRTemplateAssets/Materials/Primitive/torus_Metallic.png using Guid(287310663f2f35d40ab48eb40247cbfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd4d5c656b101069e7f223b4b63925ee2') in 0.0174397 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000157 seconds.
-  path: Assets/Import/Usb_Stick/textures/Material.001_metallicRoughness_1.png
-  artifactKey: Guid(158cc59672a614a4789f044725b9efc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Usb_Stick/textures/Material.001_metallicRoughness_1.png using Guid(158cc59672a614a4789f044725b9efc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1b685cba57d158515150039169e19b43') in 0.0266548 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.643065 seconds.
-  path: Packages/com.bluetea.ui/Runtime/UI/Resources/Images/Components/Language/fr_FR.png
-  artifactKey: Guid(87dfc6beda240b54da6cc2269f2838dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.bluetea.ui/Runtime/UI/Resources/Images/Components/Language/fr_FR.png using Guid(87dfc6beda240b54da6cc2269f2838dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1a47e6728618215683973b2dd9624ed2') in 0.0169222 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003681 seconds.
-  path: Packages/com.bluetea.ui/Runtime/UI/Resources/Images/Views/Pause/gradient.png
-  artifactKey: Guid(36292ea3f3ab3804ca6cb050bcb61dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.bluetea.ui/Runtime/UI/Resources/Images/Views/Pause/gradient.png using Guid(36292ea3f3ab3804ca6cb050bcb61dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f1322970a4b3026a4fadb5df9f2c3d9a') in 0.0156641 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003887 seconds.
-  path: Assets/IgnorePushing/Kitchen Asset/FBX/BottleMilk/Handle/Materials/handle3_DefaultMaterial_AlbedoTransparency.tga
-  artifactKey: Guid(d34dd89eef344f54a916628eed30acbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Kitchen Asset/FBX/BottleMilk/Handle/Materials/handle3_DefaultMaterial_AlbedoTransparency.tga using Guid(d34dd89eef344f54a916628eed30acbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4e0e705dcdf94ffc168af845f37624fe') in 0.0587737 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000221 seconds.
-  path: Packages/com.bluetea.ui/Runtime/UI/Resources/Images/Icons/icon-arrow.png
-  artifactKey: Guid(c6e608ece41b5634cbb081f3707814d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.bluetea.ui/Runtime/UI/Resources/Images/Icons/icon-arrow.png using Guid(c6e608ece41b5634cbb081f3707814d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f6dd96eb7f1d2b02109827a7c524f203') in 0.0229298 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.543462 seconds.
-  path: Assets/IgnorePushing/devotid/Lighter/Textures/Lighter_FBX_Lighter_AlbedoTransparency.bmp
-  artifactKey: Guid(ec5f059a318baf04aac1b6db60b05263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/devotid/Lighter/Textures/Lighter_FBX_Lighter_AlbedoTransparency.bmp using Guid(ec5f059a318baf04aac1b6db60b05263) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dea157f2bd85e430f7af26dd0618669e') in 0.028836 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.002441 seconds.
-  path: Assets/IgnorePushing/Kitchen Asset/FBX/Lemon/Materials/Lemon_DefaultMaterial_Normal.tga
-  artifactKey: Guid(be8e9d8e180a44e4790c9f01bdd87132) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Kitchen Asset/FBX/Lemon/Materials/Lemon_DefaultMaterial_Normal.tga using Guid(be8e9d8e180a44e4790c9f01bdd87132) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4721f1c057fc3ec426769ee4987e3a98') in 0.0486582 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.556007 seconds.
-  path: Assets/Import/Keep_Key/textures/material_7_diffuse_6.png
-  artifactKey: Guid(5361d788fde2a794b8aa7b422267e1a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Keep_Key/textures/material_7_diffuse_6.png using Guid(5361d788fde2a794b8aa7b422267e1a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3e1da9fa35457233558a39e006cae904') in 0.0349432 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000091 seconds.
-  path: Assets/Import/Cardboard_Boxes_45MB/textures/Paper_B_baseColor_23.png
-  artifactKey: Guid(31cb0b1bcc1e9d645bd3ab1028972f63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Cardboard_Boxes_45MB/textures/Paper_B_baseColor_23.png using Guid(31cb0b1bcc1e9d645bd3ab1028972f63) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '37ff28805e96d48d0b6d7ab0901ebe4f') in 0.0190743 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Import/Coolwallet_Pro/textures/material_diffuse_0.png
-  artifactKey: Guid(706a79509043db049b915b4ce3d2ff4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Coolwallet_Pro/textures/material_diffuse_0.png using Guid(706a79509043db049b915b4ce3d2ff4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8baefb878853b4a36742c9664facbecf') in 0.0256992 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/IgnorePushing/DigitalKonstrukt/Prototyping_Pack_Free/Resources/Textures/proto_1.png
-  artifactKey: Guid(183cc34fb39cd6e48854ccb835b53869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/DigitalKonstrukt/Prototyping_Pack_Free/Resources/Textures/proto_1.png using Guid(183cc34fb39cd6e48854ccb835b53869) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '241478e1197cf22c4f1284c71cb3d7b4') in 0.0324656 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/IgnorePushing/DigitalKonstrukt/Prototyping_Pack_Free/Resources/Textures/Proto_1024.png
-  artifactKey: Guid(c0ac9c1f50050be448e74bfe03c4ea49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/DigitalKonstrukt/Prototyping_Pack_Free/Resources/Textures/Proto_1024.png using Guid(c0ac9c1f50050be448e74bfe03c4ea49) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6adccbbeb965c4845b53f1fb9eb8c4d8') in 0.0345959 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000105 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.0.5/Starter Assets/DemoSceneAssets/Sprites/Round Radius 4.png
-  artifactKey: Guid(affa059594145a843b81788037b4ee21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/XR Interaction Toolkit/3.0.5/Starter Assets/DemoSceneAssets/Sprites/Round Radius 4.png using Guid(affa059594145a843b81788037b4ee21) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3c1500077475fbe00943c9cfd67881dc') in 0.0228652 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/IgnorePushing/Brick Project Studio/_BPS Basic Assets/Common/Textures/Restroom/RR_Soap.png
-  artifactKey: Guid(50db091480042264c8a7037d6712c054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Brick Project Studio/_BPS Basic Assets/Common/Textures/Restroom/RR_Soap.png using Guid(50db091480042264c8a7037d6712c054) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6a16aa279e5698abbba5f5befa8a282e') in 0.0179087 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000075 seconds.
-  path: Assets/VRTemplateAssets/Sprites/Icons/Scroll Left.png
-  artifactKey: Guid(3708b1d8e45366b489c18df71670cecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/VRTemplateAssets/Sprites/Icons/Scroll Left.png using Guid(3708b1d8e45366b489c18df71670cecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5b1f3f35742c342be1172681c3d97ee9') in 0.0188809 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/IgnorePushing/DigitalKonstrukt/Prototyping_Pack_Free/Demo/New Terrain 1.asset
-  artifactKey: Guid(100162f69dfa99f4a9114658ab5543df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/DigitalKonstrukt/Prototyping_Pack_Free/Demo/New Terrain 1.asset using Guid(100162f69dfa99f4a9114658ab5543df) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6d78679e5d6371b03e3cf003f278eca5') in 0.0415246 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Import/Cardboard_Boxes_45MB/textures/Paper_A_baseColor_22.png
-  artifactKey: Guid(dd184e9cc20db7440b500bb079b1e394) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Cardboard_Boxes_45MB/textures/Paper_A_baseColor_22.png using Guid(dd184e9cc20db7440b500bb079b1e394) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c782d36d1dd4cef25d3d8c1ec79103d1') in 0.0147729 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.076434 seconds.
-  path: Assets/Import/Coolwallet_Pro/textures/material_1_diffuse_1.png
-  artifactKey: Guid(afe07477c22becc45a30ffdbfc6b5c6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Import/Coolwallet_Pro/textures/material_1_diffuse_1.png using Guid(afe07477c22becc45a30ffdbfc6b5c6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '496fbf5ced5665a76af29240b9073b05') in 0.0334575 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/IgnorePushing/USB hub/Textures/USB_01/USB_01_bc.tga
-  artifactKey: Guid(2ce06b859d674d44db3274b89c7c64b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/USB hub/Textures/USB_01/USB_01_bc.tga using Guid(2ce06b859d674d44db3274b89c7c64b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '51d3ed8c2d086f886f5f9af909624cb0') in 0.0250819 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000111 seconds.
-  path: Assets/VRTemplateAssets/Materials/Primitive/torus_Normal_OpenGL.png
-  artifactKey: Guid(61033fc91ee928747a8829f85e481e0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/VRTemplateAssets/Materials/Primitive/torus_Normal_OpenGL.png using Guid(61033fc91ee928747a8829f85e481e0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'de2c1b9d3de0fe1dda7d5b56206a3bbb') in 0.020845 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/IgnorePushing/USB hub/Textures/USB_01/USB_01_m_s.tga
-  artifactKey: Guid(5b8fc8c084d95b04687e240f4921318b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/USB hub/Textures/USB_01/USB_01_m_s.tga using Guid(5b8fc8c084d95b04687e240f4921318b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '62e260d66de6c1bd390afa377d182aaf') in 0.0254605 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.811366 seconds.
-  path: Assets/IgnorePushing/Kitchen Asset/FBX/Knife2/Materials/Knife2_DefaultMaterial_Normal.tga
-  artifactKey: Guid(800b388ace55b4d48a2c25c930348277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Kitchen Asset/FBX/Knife2/Materials/Knife2_DefaultMaterial_Normal.tga using Guid(800b388ace55b4d48a2c25c930348277) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '47dc821fda4273d07ef0854597f87b61') in 0.0495626 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.876758 seconds.
-  path: Assets/IgnorePushing/Kitchen Asset/FBX/Table/Materials/table_DefaultMaterial_AlbedoTransparency.tga
-  artifactKey: Guid(64c283ca7a8081e4aaf58bd973d786f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgnorePushing/Kitchen Asset/FBX/Table/Materials/table_DefaultMaterial_AlbedoTransparency.tga using Guid(64c283ca7a8081e4aaf58bd973d786f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '95059d5c1c6327fe1f3f7e6af6007ea8') in 0.1013505 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000181 seconds.
-  path: Assets/VRTemplateAssets/Materials/Environment/wall_Base_color.png
-  artifactKey: Guid(89c4d70ec8a71624f9f1ea880312974b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/VRTemplateAssets/Materials/Environment/wall_Base_color.png using Guid(89c4d70ec8a71624f9f1ea880312974b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f9b80717061f75027d08b0ed2811b49f') in 0.0433549 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 14.226645 seconds.
+  path: Assets/Prefabs/TooltipL.prefab
+  artifactKey: Guid(c6b4bfcb771a4f545ba21f97a0ee1ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/TooltipL.prefab using Guid(c6b4bfcb771a4f545ba21f97a0ee1ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3eb38911b95b7672730aa1e45e6eb17e') in 0.0258203 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 41
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server

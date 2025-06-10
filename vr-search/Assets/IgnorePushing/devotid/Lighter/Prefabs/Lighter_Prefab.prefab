@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 829604054080703749}
   - component: {fileID: 1930267196122242164}
   - component: {fileID: 2568594365408135139}
-  m_Layer: 0
+  - component: {fileID: 6393700265429717957}
+  m_Layer: 7
   m_Name: Lighter_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,6 +210,21 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
+--- !u!114 &6393700265429717957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179789650271714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9266cd66f46702c48b8ffe101dc7412f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreSource: {fileID: 11400000, guid: a7f1c5db910af5d47ad35eee0ee5ecf8, type: 2}
+  itemType: 3
+  isCollisionTriggered: 0
 --- !u!1 &1207515084871104
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +236,7 @@ GameObject:
   - component: {fileID: 4706033272369340}
   - component: {fileID: 33258554375369876}
   - component: {fileID: 23351892738787070}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flint Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +322,7 @@ GameObject:
   - component: {fileID: 4451064901888670}
   - component: {fileID: 33126703989708300}
   - component: {fileID: 23929010018570928}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fuel Adjuster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +408,7 @@ GameObject:
   - component: {fileID: 4807054546100076}
   - component: {fileID: 33971581611604926}
   - component: {fileID: 23246513251343488}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fuel Lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +494,7 @@ GameObject:
   - component: {fileID: 4846824965983810}
   - component: {fileID: 33240686486374022}
   - component: {fileID: 23585483847524460}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lighter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6960168381447543339}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Attach Transform
   m_TagString: Untagged
   m_Icon: {fileID: 0}

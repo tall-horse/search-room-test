@@ -359,6 +359,7 @@ GameObject:
   - component: {fileID: 4295149294265102521}
   - component: {fileID: 5227017883926716861}
   - component: {fileID: 3321211928065345765}
+  - component: {fileID: 5461381065693169439}
   m_Layer: 0
   m_Name: Table_Lamp_Apt_01
   m_TagString: Untagged
@@ -374,7 +375,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6257560814295449409}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.2699995, y: 1.0676944, z: -10.38993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -616,6 +617,21 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &5461381065693169439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6257560814295449409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9266cd66f46702c48b8ffe101dc7412f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreSource: {fileID: 11400000, guid: a7f1c5db910af5d47ad35eee0ee5ecf8, type: 2}
+  itemType: 3
+  isCollisionTriggered: 0
 --- !u!1 &8429294821074453713
 GameObject:
   m_ObjectHideFlags: 0
